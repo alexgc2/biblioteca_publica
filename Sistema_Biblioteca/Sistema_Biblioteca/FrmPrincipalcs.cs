@@ -56,5 +56,11 @@ namespace Sistema_Biblioteca
             Tipo_Membresias tipo = new Tipo_Membresias();
             tipo.Show();
         }
+
+        private void consultaDeLibroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Consultar_libro frm = new Consultar_libro();
+            frm.Show();
+        }
     }
 }

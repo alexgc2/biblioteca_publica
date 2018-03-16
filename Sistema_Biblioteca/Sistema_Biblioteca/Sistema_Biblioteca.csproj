@@ -61,6 +61,12 @@
       <DependentUpon>BIBLIOTECA_PUBLICADataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Conexion.cs" />
+    <Compile Include="Consultar libro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultar libro.Designer.cs">
+      <DependentUpon>Consultar libro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     </Compile>
     <EmbeddedResource Include="Agregar_Autor.resx">
       <DependentUpon>Agregar_Autor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultar libro.resx">
+      <DependentUpon>Consultar libro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -188,6 +197,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\button_refresh_15001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -31,23 +31,24 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipalcs));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.librosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.membresiasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.computadorasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrarLibroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.moidificarLibroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarLibroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.membresiasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarMiembroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarMiembroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarTipoDeMembresiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.computadorasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.consultaDeLibroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -72,6 +73,17 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Biblioteca Manager";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Sistema_Biblioteca.Properties.Resources.book_3725;
+            this.pictureBox1.Location = new System.Drawing.Point(11, 7);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -91,10 +103,31 @@
             this.librosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registrarLibroToolStripMenuItem,
             this.moidificarLibroToolStripMenuItem,
-            this.modificarLibroToolStripMenuItem});
+            this.modificarLibroToolStripMenuItem,
+            this.consultaDeLibroToolStripMenuItem});
             this.librosToolStripMenuItem.Name = "librosToolStripMenuItem";
             this.librosToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
             this.librosToolStripMenuItem.Text = "Libros";
+            // 
+            // registrarLibroToolStripMenuItem
+            // 
+            this.registrarLibroToolStripMenuItem.Name = "registrarLibroToolStripMenuItem";
+            this.registrarLibroToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.registrarLibroToolStripMenuItem.Text = "Prestamo";
+            // 
+            // moidificarLibroToolStripMenuItem
+            // 
+            this.moidificarLibroToolStripMenuItem.Name = "moidificarLibroToolStripMenuItem";
+            this.moidificarLibroToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.moidificarLibroToolStripMenuItem.Text = "Registro Libro";
+            this.moidificarLibroToolStripMenuItem.Click += new System.EventHandler(this.moidificarLibroToolStripMenuItem_Click);
+            // 
+            // modificarLibroToolStripMenuItem
+            // 
+            this.modificarLibroToolStripMenuItem.Name = "modificarLibroToolStripMenuItem";
+            this.modificarLibroToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.modificarLibroToolStripMenuItem.Text = "Modificar Libro";
+            this.modificarLibroToolStripMenuItem.Click += new System.EventHandler(this.modificarLibroToolStripMenuItem_Click);
             // 
             // membresiasToolStripMenuItem
             // 
@@ -105,38 +138,6 @@
             this.membresiasToolStripMenuItem.Name = "membresiasToolStripMenuItem";
             this.membresiasToolStripMenuItem.Size = new System.Drawing.Size(83, 20);
             this.membresiasToolStripMenuItem.Text = "Membresias";
-            // 
-            // salasToolStripMenuItem
-            // 
-            this.salasToolStripMenuItem.Name = "salasToolStripMenuItem";
-            this.salasToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
-            this.salasToolStripMenuItem.Text = "Salas";
-            // 
-            // computadorasToolStripMenuItem
-            // 
-            this.computadorasToolStripMenuItem.Name = "computadorasToolStripMenuItem";
-            this.computadorasToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
-            this.computadorasToolStripMenuItem.Text = "Computadoras";
-            // 
-            // registrarLibroToolStripMenuItem
-            // 
-            this.registrarLibroToolStripMenuItem.Name = "registrarLibroToolStripMenuItem";
-            this.registrarLibroToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-            this.registrarLibroToolStripMenuItem.Text = "Prestamo";
-            // 
-            // moidificarLibroToolStripMenuItem
-            // 
-            this.moidificarLibroToolStripMenuItem.Name = "moidificarLibroToolStripMenuItem";
-            this.moidificarLibroToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-            this.moidificarLibroToolStripMenuItem.Text = "Registro Libro";
-            this.moidificarLibroToolStripMenuItem.Click += new System.EventHandler(this.moidificarLibroToolStripMenuItem_Click);
-            // 
-            // modificarLibroToolStripMenuItem
-            // 
-            this.modificarLibroToolStripMenuItem.Name = "modificarLibroToolStripMenuItem";
-            this.modificarLibroToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-            this.modificarLibroToolStripMenuItem.Text = "Modificar Libro";
-            this.modificarLibroToolStripMenuItem.Click += new System.EventHandler(this.modificarLibroToolStripMenuItem_Click);
             // 
             // agregarMiembroToolStripMenuItem
             // 
@@ -159,6 +160,18 @@
             this.agregarTipoDeMembresiaToolStripMenuItem.Text = "Agregar Tipo de Membresia";
             this.agregarTipoDeMembresiaToolStripMenuItem.Click += new System.EventHandler(this.agregarTipoDeMembresiaToolStripMenuItem_Click);
             // 
+            // salasToolStripMenuItem
+            // 
+            this.salasToolStripMenuItem.Name = "salasToolStripMenuItem";
+            this.salasToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
+            this.salasToolStripMenuItem.Text = "Salas";
+            // 
+            // computadorasToolStripMenuItem
+            // 
+            this.computadorasToolStripMenuItem.Name = "computadorasToolStripMenuItem";
+            this.computadorasToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
+            this.computadorasToolStripMenuItem.Text = "Computadoras";
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Sistema_Biblioteca.Properties.Resources.Google_Play_Books_icon_icons_com_75718__1_;
@@ -170,16 +183,12 @@
             this.pictureBox2.TabIndex = 33;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
+            // consultaDeLibroToolStripMenuItem
             // 
-            this.pictureBox1.Image = global::Sistema_Biblioteca.Properties.Resources.book_3725;
-            this.pictureBox1.Location = new System.Drawing.Point(11, 7);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.consultaDeLibroToolStripMenuItem.Name = "consultaDeLibroToolStripMenuItem";
+            this.consultaDeLibroToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.consultaDeLibroToolStripMenuItem.Text = "Consulta de Libro";
+            this.consultaDeLibroToolStripMenuItem.Click += new System.EventHandler(this.consultaDeLibroToolStripMenuItem_Click);
             // 
             // FrmPrincipalcs
             // 
@@ -197,10 +206,10 @@
             this.Text = "Bblioteca Manager";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,5 +232,6 @@
         private System.Windows.Forms.ToolStripMenuItem computadorasToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ToolStripMenuItem agregarTipoDeMembresiaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultaDeLibroToolStripMenuItem;
     }
 }

@@ -16,13 +16,17 @@ namespace Sistema_Biblioteca
         SqlConnection cn;
         SqlCommand cmd, cmp;
         SqlDataReader dr;
+        DataSet ds;
+        string query;
+        SqlDataAdapter da;
         int contador = 0;
 
         public Conexion()
         {
             try
             {
-                cn = new SqlConnection("Data Source=.;Initial Catalog=BIBLIOTECA_PUBLICA;integrated security=yes");
+                //cn = new SqlConnection("Data Source=.;Initial Catalog=BIBLIOTECA_PUBLICA;integrated security=yes");
+                cn = new SqlConnection(@"Data Source=LAPTOP-SPOD9GPG\SQLEXPRESS;Initial Catalog=BIBLIOTECA_PUBLICA;Integrated Security=False;Trusted_Connection=True;");
             }
             catch (Exception ex)
             {
@@ -266,5 +270,33 @@ namespace Sistema_Biblioteca
             }
             return salida;
         }
+
+        /// <summary>
+        /// Método encargado de la consulta principal de libros
+        /// </summary>
+        /// <param name="Filtros">Lista de Filtros que serán utilizados para el query</param>
+        /// <returns>DataSet</returns>
+        public DataSet ConsultarLibros(List<string> Filtros)
+        {
+            query = "select codigo, isbn, autor, nombre, area, perfil  from LIBROS";
+
+
+            /*Aplicar Filtros más adelante aqui*/
+            cmd = new SqlCommand(query, cn);
+            cmd.CommandType = CommandType.Text;
+
+            da = new SqlDataAdapter(cmd);
+            ds = new DataSet();
+            da.Fill(ds, "LIBROS");
+
+
+            cn.Open();
+            dr = cmd.ExecuteReader();
+            cn.Close();
+
+
+            return ds;
+        }
+
     }
 }
