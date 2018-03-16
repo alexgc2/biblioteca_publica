@@ -25,8 +25,10 @@ namespace Sistema_Biblioteca
         {
             try
             {
-                //cn = new SqlConnection("Data Source=.;Initial Catalog=BIBLIOTECA_PUBLICA;integrated security=yes");
-                cn = new SqlConnection(@"Data Source=LAPTOP-SPOD9GPG\SQLEXPRESS;Initial Catalog=BIBLIOTECA_PUBLICA;Integrated Security=False;Trusted_Connection=True;");
+                cn = new SqlConnection("Data Source=.;Initial Catalog=BIBLIOTECA_PUBLICA;integrated security=yes");
+                //Yo uso la conexión de abajo, porfa no la borren, mi instancia es medio especial
+                //Alex
+                //cn = new SqlConnection(@"Data Source=LAPTOP-SPOD9GPG\SQLEXPRESS;Initial Catalog=BIBLIOTECA_PUBLICA;Integrated Security=False;Trusted_Connection=True;");
             }
             catch (Exception ex)
             {
