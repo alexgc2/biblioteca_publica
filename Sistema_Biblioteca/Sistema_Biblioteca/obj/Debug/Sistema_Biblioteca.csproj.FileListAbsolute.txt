@@ -1,0 +1,60 @@
+c:\users\miguel\documents\visual studio 2012\Projects\Sistema_Biblioteca\Sistema_Biblioteca\bin\Debug\Sistema_Biblioteca.exe.config
+c:\users\miguel\documents\visual studio 2012\Projects\Sistema_Biblioteca\Sistema_Biblioteca\bin\Debug\Sistema_Biblioteca.exe
+c:\users\miguel\documents\visual studio 2012\Projects\Sistema_Biblioteca\Sistema_Biblioteca\bin\Debug\Sistema_Biblioteca.pdb
+c:\users\miguel\documents\visual studio 2012\Projects\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.csprojResolveAssemblyReference.cache
+c:\users\miguel\documents\visual studio 2012\Projects\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.Form1.resources
+c:\users\miguel\documents\visual studio 2012\Projects\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.Properties.Resources.resources
+c:\users\miguel\documents\visual studio 2012\Projects\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.Registro_Libro.resources
+c:\users\miguel\documents\visual studio 2012\Projects\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.csproj.GenerateResource.Cache
+c:\users\miguel\documents\visual studio 2012\Projects\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.exe
+c:\users\miguel\documents\visual studio 2012\Projects\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.pdb
+c:\users\miguel\documents\visual studio 2012\Projects\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.Agregar_Autor.resources
+C:\Users\MIGUEL\Documents\Visual Studio 2012\Projects\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.FrmPrincipalcs.resources
+C:\Users\MIGUEL\Documents\Visual Studio 2012\Projects\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.Modificar_libro.resources
+C:\Users\MIGUEL\Documents\Visual Studio 2012\Projects\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.Modificar_Miembro.resources
+C:\Users\MIGUEL\Documents\Visual Studio 2012\Projects\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.Tipo_Membresias.resources
+E:\Sistema_Biblioteca\Sistema_Biblioteca\bin\Debug\Sistema_Biblioteca.exe.config
+E:\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.exe
+E:\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.pdb
+E:\Sistema_Biblioteca\Sistema_Biblioteca\bin\Debug\Sistema_Biblioteca.exe
+E:\Sistema_Biblioteca\Sistema_Biblioteca\bin\Debug\Sistema_Biblioteca.pdb
+E:\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.csprojResolveAssemblyReference.cache
+E:\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.Agregar_Autor.resources
+E:\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.Form1.resources
+E:\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.FrmPrincipalcs.resources
+E:\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.Modificar_libro.resources
+E:\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.Modificar_Miembro.resources
+E:\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.Properties.Resources.resources
+E:\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.Registro_Libro.resources
+E:\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.Tipo_Membresias.resources
+E:\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.csproj.GenerateResource.Cache
+H:\Sistema_Biblioteca\Sistema_Biblioteca\bin\Debug\Sistema_Biblioteca.exe.config
+H:\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.exe
+H:\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.pdb
+H:\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.csprojResolveAssemblyReference.cache
+H:\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.Agregar_Autor.resources
+H:\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.Form1.resources
+H:\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.FrmPrincipalcs.resources
+H:\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.Modificar_libro.resources
+H:\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.Modificar_Miembro.resources
+H:\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.Properties.Resources.resources
+H:\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.Registro_Libro.resources
+H:\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.Tipo_Membresias.resources
+H:\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.csproj.GenerateResource.Cache
+H:\Sistema_Biblioteca\Sistema_Biblioteca\bin\Debug\Sistema_Biblioteca.exe
+H:\Sistema_Biblioteca\Sistema_Biblioteca\bin\Debug\Sistema_Biblioteca.pdb
+G:\Sistema_Biblioteca\Sistema_Biblioteca\bin\Debug\Sistema_Biblioteca.exe.config
+G:\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.exe
+G:\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.pdb
+G:\Sistema_Biblioteca\Sistema_Biblioteca\bin\Debug\Sistema_Biblioteca.exe
+G:\Sistema_Biblioteca\Sistema_Biblioteca\bin\Debug\Sistema_Biblioteca.pdb
+G:\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.csprojResolveAssemblyReference.cache
+G:\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.Agregar_Autor.resources
+G:\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.Form1.resources
+G:\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.FrmPrincipalcs.resources
+G:\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.Modificar_libro.resources
+G:\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.Modificar_Miembro.resources
+G:\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.Properties.Resources.resources
+G:\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.Registro_Libro.resources
+G:\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.Tipo_Membresias.resources
+G:\Sistema_Biblioteca\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.csproj.GenerateResource.Cache
