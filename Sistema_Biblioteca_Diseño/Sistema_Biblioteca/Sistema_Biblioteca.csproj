@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BB4BB014-97FD-4C91-9CCA-5FBF1F458844}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sistema_Biblioteca</RootNamespace>
+    <AssemblyName>Sistema_Biblioteca</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\Calidad de sw\Programas\Diseño\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConsultaMembresia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaMembresia.Designer.cs">
+      <DependentUpon>ConsultaMembresia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarLibros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarLibros.Designer.cs">
+      <DependentUpon>ConsultarLibros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsViejos\Agregar_Autor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsViejos\Agregar_Autor.Designer.cs">
+      <DependentUpon>Agregar_Autor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BIBLIOTECA_PUBLICADataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BIBLIOTECA_PUBLICADataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BIBLIOTECA_PUBLICADataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BIBLIOTECA_PUBLICADataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Conexion.cs" />
+    <Compile Include="FormsViejos\FrmMembresia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsViejos\FrmMembresia.Designer.cs">
+      <DependentUpon>FrmMembresia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsViejos\FrmPrincipalcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsViejos\FrmPrincipalcs.Designer.cs">
+      <DependentUpon>FrmPrincipalcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal.Designer.cs">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsViejos\Modificar libro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsViejos\Modificar libro.Designer.cs">
+      <DependentUpon>Modificar libro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsViejos\Modificar Miembro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsViejos\Modificar Miembro.Designer.cs">
+      <DependentUpon>Modificar Miembro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarLibros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarLibros.Designer.cs">
+      <DependentUpon>ModificarLibros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarMembresia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarMembresia.Designer.cs">
+      <DependentUpon>ModificarMembresia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FormsViejos\Registro Libro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsViejos\Registro Libro.Designer.cs">
+      <DependentUpon>Registro Libro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroLibros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroLibros.Designer.cs">
+      <DependentUpon>RegistroLibros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroMembresia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroMembresia.Designer.cs">
+      <DependentUpon>RegistroMembresia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsViejos\Tipo Membresias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsViejos\Tipo Membresias.Designer.cs">
+      <DependentUpon>Tipo Membresias.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ConsultaMembresia.resx">
+      <DependentUpon>ConsultaMembresia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarLibros.resx">
+      <DependentUpon>ConsultarLibros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsViejos\Agregar_Autor.resx">
+      <DependentUpon>Agregar_Autor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsViejos\FrmMembresia.resx">
+      <DependentUpon>FrmMembresia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsViejos\FrmPrincipalcs.resx">
+      <DependentUpon>FrmPrincipalcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsViejos\Modificar libro.resx">
+      <DependentUpon>Modificar libro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsViejos\Modificar Miembro.resx">
+      <DependentUpon>Modificar Miembro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarLibros.resx">
+      <DependentUpon>ModificarLibros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarMembresia.resx">
+      <DependentUpon>ModificarMembresia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="FormsViejos\Registro Libro.resx">
+      <DependentUpon>Registro Libro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroLibros.resx">
+      <DependentUpon>RegistroLibros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroMembresia.resx">
+      <DependentUpon>RegistroMembresia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsViejos\Tipo Membresias.resx">
+      <DependentUpon>Tipo Membresias.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="BIBLIOTECA_PUBLICADataSet.xsc">
+      <DependentUpon>BIBLIOTECA_PUBLICADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BIBLIOTECA_PUBLICADataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BIBLIOTECA_PUBLICADataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BIBLIOTECA_PUBLICADataSet.xss">
+      <DependentUpon>BIBLIOTECA_PUBLICADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BIBLIOTECA_PUBLICADataSet1.xsc">
+      <DependentUpon>BIBLIOTECA_PUBLICADataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BIBLIOTECA_PUBLICADataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BIBLIOTECA_PUBLICADataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BIBLIOTECA_PUBLICADataSet1.xss">
+      <DependentUpon>BIBLIOTECA_PUBLICADataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\add_icon-icons.com_74429.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sign-question-icon_34359.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-book_icon-icons.com_71795.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contactcard_contactcard_tarjetadecontacto_4815.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Google_Play_Books_icon-icons.com_75718.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Google_Play_Books_icon-icons.com_75718 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_3725.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_refresh_15001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-bookmarks-organize-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mimetypes_addressbookoffice_384.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tag_user_card_16777.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\computer_pc_10894.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business_library_books_book_file_2328.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutdown_off_close_exit_15253.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Books_icon-icons.com_76879.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\off_downnearexit_apagado_abajo_6017.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search_find_locate_1542.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\twitter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Facebook Icono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Instagram-grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search_find_locate_15421.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_insert_plus_1588.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BibliotecaManagerLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bienvenido.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BibliotecaManagerTitlw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page_document_empty_16752.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\events_rooms.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dollar_money_17872.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tag_user_card_167771.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\configura_info_user_16714.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\configura_book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_add_user_info_16706.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_book1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\configura_book1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find_search_card_user_16713.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_add_user_info_167061.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\configura_info_user_167141.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undoarrow_undo_1534.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
