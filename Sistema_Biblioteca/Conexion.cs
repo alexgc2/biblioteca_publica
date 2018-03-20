@@ -15,7 +15,7 @@ namespace Sistema_Biblioteca
     {
         SqlConnection cn;
         SqlCommand cmd;
-        SqlDataReader dr;
+        SqlDataReader dr;//
         DataSet ds;
         string query;
         SqlDataAdapter da;
