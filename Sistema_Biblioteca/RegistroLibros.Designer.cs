@@ -320,6 +320,7 @@
             this.btnBuscarAutor.TabIndex = 69;
             this.btnBuscarAutor.TabStop = false;
             this.btnBuscarAutor.Zoom = 10;
+            this.btnBuscarAutor.Click += new System.EventHandler(this.btnBuscarAutor_Click);
             // 
             // btnAgregarAutor
             // 

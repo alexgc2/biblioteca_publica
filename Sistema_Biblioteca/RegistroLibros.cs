@@ -136,5 +136,11 @@ namespace Sistema_Biblioteca
                 return;
             }
         }
+
+        private void btnBuscarAutor_Click(object sender, EventArgs e)
+        {
+            ConsultarAutores ConsultarAutores = new ConsultarAutores();
+            ConsultarAutores.Show();
+        }
     }
 }

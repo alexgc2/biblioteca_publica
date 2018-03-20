@@ -194,21 +194,14 @@ namespace Sistema_Biblioteca
             query = "select codigo, isbn, autor, nombre, area, perfil  from LIBROS where STATUS = 'ACTIVO' ";
             if (nombre != "")
                 query +="and nombre like '%" + nombre + "%'";
-
-            /*Aplicar Filtros más adelante aqui*/
             cmd = new SqlCommand(query, cn);
             cmd.CommandType = CommandType.Text;
-
             da = new SqlDataAdapter(cmd);
             ds = new DataSet();
             da.Fill(ds, "LIBROS");
-
-
             cn.Open();
             dr = cmd.ExecuteReader();
             cn.Close();
-
-
             return ds;
         }
 
@@ -218,21 +211,31 @@ namespace Sistema_Biblioteca
             query = "select id_miembro, nombre, apellido, ocupacion, telefono, tipo, status  from membresia where STATUS = 'ACTIVO' ";
             if (Filtro != "")
                 query += "and nombre like '%" + Filtro + "%' or apellido like '%" + Filtro + "%'";
-
-            /*Aplicar Filtros más adelante aqui*/
             cmd = new SqlCommand(query, cn);
             cmd.CommandType = CommandType.Text;
-
             da = new SqlDataAdapter(cmd);
             ds = new DataSet();
             da.Fill(ds, "membresia");
-
-
             cn.Open();
             dr = cmd.ExecuteReader();
             cn.Close();
+            return ds;
+        }
 
+        public DataSet ConsultarAutores(string Filtro)
+        {
+            query = "select nombre, area, perfil from autores ";
+            if (Filtro != "")
+                query += "where nombre like '%" + Filtro + "%'";
 
+            cmd = new SqlCommand(query, cn);
+            cmd.CommandType = CommandType.Text;
+            da = new SqlDataAdapter(cmd);
+            ds = new DataSet();
+            da.Fill(ds, "autores");
+            cn.Open();
+            dr = cmd.ExecuteReader();
+            cn.Close();
             return ds;
         }
 
