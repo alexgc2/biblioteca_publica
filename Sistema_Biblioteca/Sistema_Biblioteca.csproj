@@ -54,6 +54,12 @@
     <Compile Include="ConsultaMembresia.Designer.cs">
       <DependentUpon>ConsultaMembresia.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultarAutores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarAutores.Designer.cs">
+      <DependentUpon>ConsultarAutores.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsultarLibros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     </Compile>
     <EmbeddedResource Include="ConsultaMembresia.resx">
       <DependentUpon>ConsultaMembresia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarAutores.resx">
+      <DependentUpon>ConsultarAutores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarLibros.resx">
       <DependentUpon>ConsultarLibros.cs</DependentUpon>

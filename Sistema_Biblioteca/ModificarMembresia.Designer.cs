@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModificarMembresia));
             this.pContent = new System.Windows.Forms.Panel();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.lblID = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.btnModificarMem = new Bunifu.Framework.UI.BunifuThinButton2();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbxEstatus = new System.Windows.Forms.ComboBox();
@@ -65,9 +68,6 @@
             this.pTitulo = new System.Windows.Forms.Panel();
             this.lblRegistro = new System.Windows.Forms.Label();
             this.btnSalir = new Bunifu.Framework.UI.BunifuImageButton();
-            this.lblID = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
             this.pContent.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
@@ -95,6 +95,38 @@
             this.pContent.Size = new System.Drawing.Size(656, 355);
             this.pContent.TabIndex = 105;
             this.pContent.Paint += new System.Windows.Forms.PaintEventHandler(this.pContent_Paint);
+            // 
+            // txtID
+            // 
+            this.txtID.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.Location = new System.Drawing.Point(145, 304);
+            this.txtID.Margin = new System.Windows.Forms.Padding(2);
+            this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
+            this.txtID.Size = new System.Drawing.Size(78, 26);
+            this.txtID.TabIndex = 75;
+            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.Location = new System.Drawing.Point(145, 307);
+            this.lblID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(0, 18);
+            this.lblID.TabIndex = 116;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(46, 307);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(95, 18);
+            this.label8.TabIndex = 115;
+            this.label8.Text = "ID Miembro: ";
             // 
             // btnModificarMem
             // 
@@ -542,10 +574,10 @@
             // btnSalir
             // 
             this.btnSalir.BackColor = System.Drawing.Color.Transparent;
-            this.btnSalir.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnSalir.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnSalir.Image = global::Sistema_Biblioteca.Properties.Resources.undoarrow_undo_1534;
             this.btnSalir.ImageActive = null;
-            this.btnSalir.Location = new System.Drawing.Point(0, 0);
+            this.btnSalir.Location = new System.Drawing.Point(622, 0);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(30, 33);
             this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -553,38 +585,6 @@
             this.btnSalir.TabStop = false;
             this.btnSalir.Zoom = 10;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // lblID
-            // 
-            this.lblID.AutoSize = true;
-            this.lblID.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(145, 307);
-            this.lblID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(0, 18);
-            this.lblID.TabIndex = 116;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(46, 307);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(95, 18);
-            this.label8.TabIndex = 115;
-            this.label8.Text = "ID Miembro: ";
-            // 
-            // txtID
-            // 
-            this.txtID.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(145, 304);
-            this.txtID.Margin = new System.Windows.Forms.Padding(2);
-            this.txtID.Name = "txtID";
-            this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(78, 26);
-            this.txtID.TabIndex = 75;
-            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // ModificarMembresia
             // 

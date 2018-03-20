@@ -150,9 +150,9 @@
             this.label1.Location = new System.Drawing.Point(367, 303);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 18);
+            this.label1.Size = new System.Drawing.Size(56, 18);
             this.label1.TabIndex = 126;
-            this.label1.Text = "Status";
+            this.label1.Text = "Estatus";
             // 
             // btnBuscarLibro
             // 
@@ -565,10 +565,10 @@
             // btnSalir
             // 
             this.btnSalir.BackColor = System.Drawing.Color.Transparent;
-            this.btnSalir.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnSalir.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnSalir.Image = global::Sistema_Biblioteca.Properties.Resources.undoarrow_undo_1534;
             this.btnSalir.ImageActive = null;
-            this.btnSalir.Location = new System.Drawing.Point(0, 0);
+            this.btnSalir.Location = new System.Drawing.Point(622, 0);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(30, 33);
             this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

@@ -104,10 +104,10 @@
             // btnSalir
             // 
             this.btnSalir.BackColor = System.Drawing.Color.Transparent;
-            this.btnSalir.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnSalir.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnSalir.Image = global::Sistema_Biblioteca.Properties.Resources.undoarrow_undo_1534;
             this.btnSalir.ImageActive = null;
-            this.btnSalir.Location = new System.Drawing.Point(0, 0);
+            this.btnSalir.Location = new System.Drawing.Point(622, 0);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(30, 33);
             this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
