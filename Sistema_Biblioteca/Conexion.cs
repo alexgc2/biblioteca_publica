@@ -96,14 +96,14 @@ namespace Sistema_Biblioteca
             return contador;
         }
 
-        public string modificar_libro(string codigo, string nombre, string autor, string editorial, string edicion, string area, string perfil, int isbn, int cantidad, int año, string proveedor, string Estado)
+        public string modificar_libro(string codigo, string nombre, string autor, string editorial, string edicion, string area, string perfil, int isbn, int cantidad, int año, string proveedor, string status)
         {
             //string fecha = date.Value.Date.ToShortDateString();
             string salida = "Registrado Exitosamente";
             try
             {
                 cn.Open();
-                cmd = new SqlCommand("update libros set nombre='" + nombre + "', autor='" + autor + "', editorial='" + editorial + "', edicion='" + edicion + "', area='" + area + "', perfil='" + perfil + "', isbn=" + isbn + ", cantidad=" + cantidad + ", año=" + año + ", proveedor='" + proveedor + "', Estado='"+Estado+"' where codigo='"+codigo+"'", cn);
+                cmd = new SqlCommand("update libros set nombre='" + nombre + "', autor='" + autor + "', editorial='" + editorial + "', edicion='" + edicion + "', area='" + area + "', perfil='" + perfil + "', isbn=" + isbn + ", cantidad=" + cantidad + ", año=" + año + ", proveedor='" + proveedor + "', status='"+status+"' where codigo='"+codigo+"'", cn);
                 cmd.ExecuteNonQuery();
                 cn.Close();
             }
@@ -115,7 +115,7 @@ namespace Sistema_Biblioteca
             return salida;
         }
 
-        public void llenarModificarLibro(TextBox txtCodigo, TextBox txtTitulo, TextBox Autor, TextBox txtEditorial, TextBox txtEdicion, TextBox Area, TextBox txtPerfil, TextBox txtISBN, TextBox txtCantidad, TextBox txtAño, TextBox txtProveedor, ComboBox txtEstado, TextBox Fecha)
+        public void llenarModificarLibro(TextBox txtCodigo, TextBox txtTitulo, TextBox Autor, TextBox txtEditorial, TextBox txtEdicion, TextBox Area, TextBox txtPerfil, TextBox txtISBN, TextBox txtCantidad, TextBox txtAño, TextBox txtProveedor, ComboBox txtStatus, TextBox Fecha)
         {
             try
             {
@@ -134,7 +134,7 @@ namespace Sistema_Biblioteca
                     txtCantidad.Text = dr["cantidad"].ToString();
                     txtAño.Text = dr["año"].ToString();
                     txtProveedor.Text = dr["proveedor"].ToString();
-                    txtEstado.Text = dr["Estado"].ToString();
+                    txtStatus.Text = dr["status"].ToString();
                     Fecha.Text = dr["Fecha"].ToString();
                 }
                 dr.Close();
@@ -191,9 +191,9 @@ namespace Sistema_Biblioteca
 
         public DataSet ConsultarLibros(string nombre)
         {
-            query = "select codigo, isbn, autor, nombre, area, perfil  from LIBROS ";
+            query = "select codigo, isbn, autor, nombre, area, perfil  from LIBROS where STATUS = 'ACTIVO' ";
             if (nombre != "")
-                query +="where nombre like '%" + nombre + "%'";
+                query +="and nombre like '%" + nombre + "%'";
 
             /*Aplicar Filtros más adelante aqui*/
             cmd = new SqlCommand(query, cn);
@@ -213,10 +213,11 @@ namespace Sistema_Biblioteca
         }
 
 
-        public DataSet ConsultarMiembros(List<string> Filtros)
+        public DataSet ConsultarMiembros(string Filtro)
         {
-            query = "select id_miembro, nombre, apellido, ocupacion, telefono, tipo, status  from membresia";
-
+            query = "select id_miembro, nombre, apellido, ocupacion, telefono, tipo, status  from membresia where STATUS = 'ACTIVO' ";
+            if (Filtro != "")
+                query += "and nombre like '%" + Filtro + "%' or apellido like '%" + Filtro + "%'";
 
             /*Aplicar Filtros más adelante aqui*/
             cmd = new SqlCommand(query, cn);

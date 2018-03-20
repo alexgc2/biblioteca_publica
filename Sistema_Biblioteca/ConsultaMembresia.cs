@@ -13,7 +13,6 @@ namespace Sistema_Biblioteca
     public partial class ConsultaMembresia : Form
     {
         Conexion ObjQueries = new Conexion();
-        List<string> Filtros;
         public ConsultaMembresia()
         {
             InitializeComponent();
@@ -44,7 +43,7 @@ namespace Sistema_Biblioteca
         {
             dgvMiembros.AutoGenerateColumns = false;
             dgvMiembros.DataSource =
-                ObjQueries.ConsultarMiembros(Filtros).Tables["membresia"];
+                ObjQueries.ConsultarMiembros(txtNombre.Text).Tables["membresia"];
         }
 
         private void dgvMiembros_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -55,6 +54,11 @@ namespace Sistema_Biblioteca
             modMiembro.TopLevel = false;
             modMiembro.Parent = pContent;
             modMiembro.Show();
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            dgvMiembros.DataSource = ObjQueries.ConsultarMiembros(txtNombre.Text).Tables["membresia"];
         }
     }
 }

@@ -40,9 +40,8 @@
             this.btnSalir = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnAgregarM = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnModificarM = new Bunifu.Framework.UI.BunifuImageButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pbConsultaLibro = new System.Windows.Forms.PictureBox();
             this.dgvMiembros = new System.Windows.Forms.DataGridView();
             this.ID_Miembro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,12 +50,13 @@
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pbConsultaLibro = new System.Windows.Forms.PictureBox();
             this.pContent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregarM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnModificarM)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbConsultaLibro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMiembros)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbConsultaLibro)).BeginInit();
             this.SuspendLayout();
             // 
             // pContent
@@ -65,7 +65,7 @@
             this.pContent.Controls.Add(this.btnSalir);
             this.pContent.Controls.Add(this.btnAgregarM);
             this.pContent.Controls.Add(this.btnModificarM);
-            this.pContent.Controls.Add(this.textBox1);
+            this.pContent.Controls.Add(this.txtNombre);
             this.pContent.Controls.Add(this.label1);
             this.pContent.Controls.Add(this.dgvMiembros);
             this.pContent.Controls.Add(this.pbConsultaLibro);
@@ -119,13 +119,14 @@
             this.btnModificarM.Zoom = 10;
             this.btnModificarM.Click += new System.EventHandler(this.btnModificarM_Click);
             // 
-            // textBox1
+            // txtNombre
             // 
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(128, 95);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(269, 27);
-            this.textBox1.TabIndex = 117;
+            this.txtNombre.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(128, 95);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(269, 27);
+            this.txtNombre.TabIndex = 117;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // label1
             // 
@@ -136,17 +137,6 @@
             this.label1.Size = new System.Drawing.Size(227, 20);
             this.label1.TabIndex = 116;
             this.label1.Text = "Buscar por Nombre o Apellido: ";
-            // 
-            // pbConsultaLibro
-            // 
-            this.pbConsultaLibro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbConsultaLibro.BackgroundImage = global::Sistema_Biblioteca.Properties.Resources.find_search_card_user_16713;
-            this.pbConsultaLibro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbConsultaLibro.Location = new System.Drawing.Point(3, 35);
-            this.pbConsultaLibro.Name = "pbConsultaLibro";
-            this.pbConsultaLibro.Size = new System.Drawing.Size(111, 108);
-            this.pbConsultaLibro.TabIndex = 114;
-            this.pbConsultaLibro.TabStop = false;
             // 
             // dgvMiembros
             // 
@@ -245,6 +235,17 @@
             this.Status.HeaderText = "Estatus";
             this.Status.Name = "Status";
             // 
+            // pbConsultaLibro
+            // 
+            this.pbConsultaLibro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbConsultaLibro.BackgroundImage = global::Sistema_Biblioteca.Properties.Resources.find_search_card_user_16713;
+            this.pbConsultaLibro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbConsultaLibro.Location = new System.Drawing.Point(3, 35);
+            this.pbConsultaLibro.Name = "pbConsultaLibro";
+            this.pbConsultaLibro.Size = new System.Drawing.Size(111, 108);
+            this.pbConsultaLibro.TabIndex = 114;
+            this.pbConsultaLibro.TabStop = false;
+            // 
             // ConsultaMembresia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -263,8 +264,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregarM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnModificarM)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbConsultaLibro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMiembros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbConsultaLibro)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -275,7 +276,7 @@
         private Bunifu.Framework.UI.BunifuImageButton btnSalir;
         private Bunifu.Framework.UI.BunifuImageButton btnAgregarM;
         private Bunifu.Framework.UI.BunifuImageButton btnModificarM;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pbConsultaLibro;
         private System.Windows.Forms.DataGridView dgvMiembros;

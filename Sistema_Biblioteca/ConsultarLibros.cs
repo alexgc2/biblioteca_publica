@@ -62,11 +62,6 @@ namespace Sistema_Biblioteca
             modLibro.Show();
         }
 
-        private void txtBuscar_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtBuscar_KeyUp(object sender, KeyEventArgs e)
         {
             dgvLibros.DataSource = ObjQueries.ConsultarLibros(txtBuscar.Text).Tables["Libros"];

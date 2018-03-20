@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModificarLibros));
             this.pContent = new System.Windows.Forms.Panel();
+            this.cbxStatus = new System.Windows.Forms.ComboBox();
+            this.txtFecha = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBuscarLibro = new Bunifu.Framework.UI.BunifuImageButton();
             this.pbModificarL = new System.Windows.Forms.PictureBox();
@@ -69,8 +71,6 @@
             this.btnSalir = new Bunifu.Framework.UI.BunifuImageButton();
             this.toolTipAgregar = new System.Windows.Forms.ToolTip(this.components);
             this.toolTipBusqueda = new System.Windows.Forms.ToolTip(this.components);
-            this.txtFecha = new System.Windows.Forms.TextBox();
-            this.cbxEstatus = new System.Windows.Forms.ComboBox();
             this.pContent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscarLibro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbModificarL)).BeginInit();
@@ -85,7 +85,7 @@
             // 
             this.pContent.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pContent.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pContent.Controls.Add(this.cbxEstatus);
+            this.pContent.Controls.Add(this.cbxStatus);
             this.pContent.Controls.Add(this.txtFecha);
             this.pContent.Controls.Add(this.label1);
             this.pContent.Controls.Add(this.btnBuscarLibro);
@@ -119,16 +119,40 @@
             this.pContent.TabIndex = 104;
             this.pContent.Paint += new System.Windows.Forms.PaintEventHandler(this.pContent_Paint);
             // 
+            // cbxStatus
+            // 
+            this.cbxStatus.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbxStatus.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxStatus.FormattingEnabled = true;
+            this.cbxStatus.Items.AddRange(new object[] {
+            "ACTIVO",
+            "INACTIVO"});
+            this.cbxStatus.Location = new System.Drawing.Point(428, 300);
+            this.cbxStatus.Name = "cbxStatus";
+            this.cbxStatus.Size = new System.Drawing.Size(117, 26);
+            this.cbxStatus.TabIndex = 128;
+            // 
+            // txtFecha
+            // 
+            this.txtFecha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtFecha.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFecha.Location = new System.Drawing.Point(69, 145);
+            this.txtFecha.Margin = new System.Windows.Forms.Padding(2);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.ReadOnly = true;
+            this.txtFecha.Size = new System.Drawing.Size(111, 26);
+            this.txtFecha.TabIndex = 127;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(403, 303);
+            this.label1.Location = new System.Drawing.Point(367, 303);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 18);
+            this.label1.Size = new System.Drawing.Size(49, 18);
             this.label1.TabIndex = 126;
-            this.label1.Text = "Estatus";
+            this.label1.Text = "Status";
             // 
             // btnBuscarLibro
             // 
@@ -553,30 +577,6 @@
             this.btnSalir.Zoom = 10;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // txtFecha
-            // 
-            this.txtFecha.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtFecha.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFecha.Location = new System.Drawing.Point(69, 145);
-            this.txtFecha.Margin = new System.Windows.Forms.Padding(2);
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.ReadOnly = true;
-            this.txtFecha.Size = new System.Drawing.Size(111, 26);
-            this.txtFecha.TabIndex = 127;
-            // 
-            // cbxEstatus
-            // 
-            this.cbxEstatus.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbxEstatus.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxEstatus.FormattingEnabled = true;
-            this.cbxEstatus.Items.AddRange(new object[] {
-            "ALTA",
-            "BAJA"});
-            this.cbxEstatus.Location = new System.Drawing.Point(464, 300);
-            this.cbxEstatus.Name = "cbxEstatus";
-            this.cbxEstatus.Size = new System.Drawing.Size(81, 26);
-            this.cbxEstatus.TabIndex = 128;
-            // 
             // ModificarLibros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -646,7 +646,7 @@
         private System.Windows.Forms.ToolTip toolTipAgregar;
         private System.Windows.Forms.ToolTip toolTipBusqueda;
         private System.Windows.Forms.TextBox txtFecha;
-        private System.Windows.Forms.ComboBox cbxEstatus;
+        private System.Windows.Forms.ComboBox cbxStatus;
         public System.Windows.Forms.TextBox txtCodigoM;
     }
 }

@@ -61,13 +61,13 @@ namespace Sistema_Biblioteca
 
         private void btnModificarLibro_Click(object sender, EventArgs e)
         {
-            if (txtCodigoM.Text.Length == 0 || txtAreaM.Text.Length == 0 || txtPerfilM.Text.Length == 0 || txtNombreM.Text.Length == 0 || txtAñoM.Text.Length == 0 || txtCantidadM.Text.Length == 0 || txtEdicionM.Text.Length == 0 || txtEditorialM.Text.Length == 0 || txtIsbnM.Text.Length == 0 || txtProveedorM.Text.Length == 0 || txtTituloM.Text.Length == 0 || cbxEstatus.Text.Length ==0)
+            if (txtCodigoM.Text.Length == 0 || txtAreaM.Text.Length == 0 || txtPerfilM.Text.Length == 0 || txtNombreM.Text.Length == 0 || txtAñoM.Text.Length == 0 || txtCantidadM.Text.Length == 0 || txtEdicionM.Text.Length == 0 || txtEditorialM.Text.Length == 0 || txtIsbnM.Text.Length == 0 || txtProveedorM.Text.Length == 0 || txtTituloM.Text.Length == 0 || cbxStatus.Text.Length ==0)
             {
                 MessageBox.Show("Favor de llenar todos los campos correspondientes", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                conexion.modificar_libro(txtCodigoM.Text, txtTituloM.Text, txtNombreM.Text, txtEditorialM.Text, txtEdicionM.Text, txtAreaM.Text, txtPerfilM.Text, Convert.ToInt32(txtIsbnM.Text), Convert.ToInt32(txtCantidadM.Text), Convert.ToInt32(txtAñoM.Text), txtProveedorM.Text,cbxEstatus.Text);
+                conexion.modificar_libro(txtCodigoM.Text, txtTituloM.Text, txtNombreM.Text, txtEditorialM.Text, txtEdicionM.Text, txtAreaM.Text, txtPerfilM.Text, Convert.ToInt32(txtIsbnM.Text), Convert.ToInt32(txtCantidadM.Text), Convert.ToInt32(txtAñoM.Text), txtProveedorM.Text,cbxStatus.Text);
                 MessageBox.Show("Se modificaron los datos correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -139,7 +139,7 @@ namespace Sistema_Biblioteca
 
         private void txtCodigoM_TextChanged(object sender, EventArgs e)
         {
-            conexion.llenarModificarLibro(txtCodigoM, txtTituloM, txtNombreM, txtEditorialM, txtEdicionM, txtAreaM, txtPerfilM, txtIsbnM, txtCantidadM, txtAñoM, txtProveedorM, cbxEstatus, txtFecha);
+            conexion.llenarModificarLibro(txtCodigoM, txtTituloM, txtNombreM, txtEditorialM, txtEdicionM, txtAreaM, txtPerfilM, txtIsbnM, txtCantidadM, txtAñoM, txtProveedorM, cbxStatus, txtFecha);
         }
     }
 }
