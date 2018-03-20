@@ -48,9 +48,9 @@
             this.gbAutor = new System.Windows.Forms.GroupBox();
             this.btnAgregarAutor = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnBuscarAutorM = new Bunifu.Framework.UI.BunifuImageButton();
-            this.txtPerfilM = new System.Windows.Forms.TextBox();
-            this.txtAreaM = new System.Windows.Forms.TextBox();
-            this.txtNombreM = new System.Windows.Forms.TextBox();
+            this.txtPerfil = new System.Windows.Forms.TextBox();
+            this.txtArea = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -300,9 +300,9 @@
             this.gbAutor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gbAutor.Controls.Add(this.btnAgregarAutor);
             this.gbAutor.Controls.Add(this.btnBuscarAutorM);
-            this.gbAutor.Controls.Add(this.txtPerfilM);
-            this.gbAutor.Controls.Add(this.txtAreaM);
-            this.gbAutor.Controls.Add(this.txtNombreM);
+            this.gbAutor.Controls.Add(this.txtPerfil);
+            this.gbAutor.Controls.Add(this.txtArea);
+            this.gbAutor.Controls.Add(this.txtNombre);
             this.gbAutor.Controls.Add(this.label4);
             this.gbAutor.Controls.Add(this.label14);
             this.gbAutor.Controls.Add(this.label6);
@@ -341,33 +341,34 @@
             this.btnBuscarAutorM.TabIndex = 69;
             this.btnBuscarAutorM.TabStop = false;
             this.btnBuscarAutorM.Zoom = 10;
+            this.btnBuscarAutorM.Click += new System.EventHandler(this.btnBuscarAutorM_Click);
             // 
-            // txtPerfilM
+            // txtPerfil
             // 
-            this.txtPerfilM.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPerfilM.Location = new System.Drawing.Point(390, 66);
-            this.txtPerfilM.Name = "txtPerfilM";
-            this.txtPerfilM.Size = new System.Drawing.Size(155, 26);
-            this.txtPerfilM.TabIndex = 3;
-            this.txtPerfilM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPerfilM_KeyPress);
+            this.txtPerfil.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPerfil.Location = new System.Drawing.Point(390, 66);
+            this.txtPerfil.Name = "txtPerfil";
+            this.txtPerfil.Size = new System.Drawing.Size(155, 26);
+            this.txtPerfil.TabIndex = 3;
+            this.txtPerfil.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPerfilM_KeyPress);
             // 
-            // txtAreaM
+            // txtArea
             // 
-            this.txtAreaM.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAreaM.Location = new System.Drawing.Point(96, 66);
-            this.txtAreaM.Name = "txtAreaM";
-            this.txtAreaM.Size = new System.Drawing.Size(155, 26);
-            this.txtAreaM.TabIndex = 2;
-            this.txtAreaM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAreaM_KeyPress);
+            this.txtArea.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtArea.Location = new System.Drawing.Point(96, 66);
+            this.txtArea.Name = "txtArea";
+            this.txtArea.Size = new System.Drawing.Size(155, 26);
+            this.txtArea.TabIndex = 2;
+            this.txtArea.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAreaM_KeyPress);
             // 
-            // txtNombreM
+            // txtNombre
             // 
-            this.txtNombreM.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreM.Location = new System.Drawing.Point(96, 23);
-            this.txtNombreM.Name = "txtNombreM";
-            this.txtNombreM.Size = new System.Drawing.Size(377, 26);
-            this.txtNombreM.TabIndex = 1;
-            this.txtNombreM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreM_KeyPress);
+            this.txtNombre.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(96, 23);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(377, 26);
+            this.txtNombre.TabIndex = 1;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombreM_KeyPress);
             // 
             // label4
             // 
@@ -619,9 +620,9 @@
         private Bunifu.Framework.UI.BunifuThinButton2 btnModificarLibro;
         private System.Windows.Forms.GroupBox gbAutor;
         private Bunifu.Framework.UI.BunifuImageButton btnBuscarAutorM;
-        private System.Windows.Forms.TextBox txtPerfilM;
-        private System.Windows.Forms.TextBox txtAreaM;
-        private System.Windows.Forms.TextBox txtNombreM;
+        private System.Windows.Forms.TextBox txtPerfil;
+        private System.Windows.Forms.TextBox txtArea;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label6;

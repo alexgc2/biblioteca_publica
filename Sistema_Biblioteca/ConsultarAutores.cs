@@ -13,14 +13,17 @@ namespace Sistema_Biblioteca
     public partial class ConsultarAutores : Form
     {
         Conexion ObjQueries = new Conexion();
-        public ConsultarAutores()
+        ModificarLibros Mod;
+        RegistroLibros Reg;
+        DataGridViewCellCollection Celda;
+        public ConsultarAutores(ModificarLibros Caller)
         {
             InitializeComponent();
+            this.Mod = Caller;
         }
-
-        private void dgvAutores_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+        public ConsultarAutores(RegistroLibros Caller) {
+            InitializeComponent();
+            this.Reg = Caller;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -36,6 +39,17 @@ namespace Sistema_Biblioteca
         private void ConsultarAutores_Load(object sender, EventArgs e)
         {
             dgvAutores.DataSource = ObjQueries.ConsultarAutores(txtFiltro.Text).Tables["autores"];
+        }
+
+        private void dgvAutores_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Celda = dgvAutores.CurrentRow.Cells;
+            if (Mod == null)
+                Reg.RellenarAutor(Celda[0].Value.ToString(), Celda[1].Value.ToString(), Celda[2].Value.ToString());
+            else
+                Mod.RellenarAutor(Celda[0].Value.ToString(), Celda[1].Value.ToString(), Celda[2].Value.ToString());
+
+            this.Close();
         }
     }
 }

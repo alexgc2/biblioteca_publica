@@ -139,8 +139,15 @@ namespace Sistema_Biblioteca
 
         private void btnBuscarAutor_Click(object sender, EventArgs e)
         {
-            ConsultarAutores ConsultarAutores = new ConsultarAutores();
+            ConsultarAutores ConsultarAutores = new ConsultarAutores(this);
             ConsultarAutores.Show();
+        }
+
+        public void RellenarAutor(string autor, string area, string perfil)
+        {
+            txtArea.Text = area;
+            txtPerfil.Text = perfil;
+            txtNombre.Text = autor;
         }
     }
 }

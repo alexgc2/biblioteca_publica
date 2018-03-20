@@ -47,15 +47,17 @@
             this.Perfil});
             this.dgvAutores.Location = new System.Drawing.Point(12, 92);
             this.dgvAutores.Name = "dgvAutores";
+            this.dgvAutores.ReadOnly = true;
             this.dgvAutores.Size = new System.Drawing.Size(396, 260);
             this.dgvAutores.TabIndex = 0;
-            this.dgvAutores.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAutores_CellContentDoubleClick);
+            this.dgvAutores.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAutores_CellDoubleClick);
             // 
             // Nombre
             // 
             this.Nombre.DataPropertyName = "nombre";
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
             this.Nombre.Width = 150;
             // 
             // Area
@@ -63,12 +65,14 @@
             this.Area.DataPropertyName = "area";
             this.Area.HeaderText = "Area";
             this.Area.Name = "Area";
+            this.Area.ReadOnly = true;
             // 
             // Perfil
             // 
             this.Perfil.DataPropertyName = "perfil";
             this.Perfil.HeaderText = "Perfil";
             this.Perfil.Name = "Perfil";
+            this.Perfil.ReadOnly = true;
             // 
             // txtFiltro
             // 

@@ -34,11 +34,11 @@ namespace Sistema_Biblioteca
 
         private void btnAgregarAutor_Click(object sender, EventArgs e)
         {
-            if (txtNombreM.Text.Length > 0 && txtAreaM.Text.Length > 0 && txtPerfilM.Text.Length > 0)
+            if (txtNombre.Text.Length > 0 && txtArea.Text.Length > 0 && txtPerfil.Text.Length > 0)
             {
-                if (conexion.autor_registrado(txtNombreM.Text) == 0)
+                if (conexion.autor_registrado(txtNombre.Text) == 0)
                 {
-                    conexion.agregar_autor(txtNombreM.Text, txtAreaM.Text, txtPerfilM.Text);
+                    conexion.agregar_autor(txtNombre.Text, txtArea.Text, txtPerfil.Text);
                     MessageBox.Show(this, "Autor agregado exitosamente", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
                 else
@@ -61,13 +61,13 @@ namespace Sistema_Biblioteca
 
         private void btnModificarLibro_Click(object sender, EventArgs e)
         {
-            if (txtCodigoM.Text.Length == 0 || txtAreaM.Text.Length == 0 || txtPerfilM.Text.Length == 0 || txtNombreM.Text.Length == 0 || txtAñoM.Text.Length == 0 || txtCantidadM.Text.Length == 0 || txtEdicionM.Text.Length == 0 || txtEditorialM.Text.Length == 0 || txtIsbnM.Text.Length == 0 || txtProveedorM.Text.Length == 0 || txtTituloM.Text.Length == 0 || cbxStatus.Text.Length ==0)
+            if (txtCodigoM.Text.Length == 0 || txtArea.Text.Length == 0 || txtPerfil.Text.Length == 0 || txtNombre.Text.Length == 0 || txtAñoM.Text.Length == 0 || txtCantidadM.Text.Length == 0 || txtEdicionM.Text.Length == 0 || txtEditorialM.Text.Length == 0 || txtIsbnM.Text.Length == 0 || txtProveedorM.Text.Length == 0 || txtTituloM.Text.Length == 0 || cbxStatus.Text.Length ==0)
             {
                 MessageBox.Show("Favor de llenar todos los campos correspondientes", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                conexion.modificar_libro(txtCodigoM.Text, txtTituloM.Text, txtNombreM.Text, txtEditorialM.Text, txtEdicionM.Text, txtAreaM.Text, txtPerfilM.Text, Convert.ToInt32(txtIsbnM.Text), Convert.ToInt32(txtCantidadM.Text), Convert.ToInt32(txtAñoM.Text), txtProveedorM.Text,cbxStatus.Text);
+                conexion.modificar_libro(txtCodigoM.Text, txtTituloM.Text, txtNombre.Text, txtEditorialM.Text, txtEdicionM.Text, txtArea.Text, txtPerfil.Text, Convert.ToInt32(txtIsbnM.Text), Convert.ToInt32(txtCantidadM.Text), Convert.ToInt32(txtAñoM.Text), txtProveedorM.Text,cbxStatus.Text);
                 MessageBox.Show("Se modificaron los datos correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -139,7 +139,20 @@ namespace Sistema_Biblioteca
 
         private void txtCodigoM_TextChanged(object sender, EventArgs e)
         {
-            conexion.llenarModificarLibro(txtCodigoM, txtTituloM, txtNombreM, txtEditorialM, txtEdicionM, txtAreaM, txtPerfilM, txtIsbnM, txtCantidadM, txtAñoM, txtProveedorM, cbxStatus, txtFecha);
+            conexion.llenarModificarLibro(txtCodigoM, txtTituloM, txtNombre, txtEditorialM, txtEdicionM, txtArea, txtPerfil, txtIsbnM, txtCantidadM, txtAñoM, txtProveedorM, cbxStatus, txtFecha);
+        }
+
+        private void btnBuscarAutorM_Click(object sender, EventArgs e)
+        {
+            ConsultarAutores ConsultarAutores = new ConsultarAutores(this);
+            ConsultarAutores.Show();
+        }
+
+        public void RellenarAutor(string autor, string area, string perfil)
+        {
+            txtArea.Text = area;
+            txtPerfil.Text = perfil;
+            txtNombre.Text = autor;
         }
     }
 }
