@@ -199,9 +199,6 @@ namespace Sistema_Biblioteca
             da = new SqlDataAdapter(cmd);
             ds = new DataSet();
             da.Fill(ds, "LIBROS");
-            cn.Open();
-            dr = cmd.ExecuteReader();
-            cn.Close();
             return ds;
         }
 
@@ -216,9 +213,6 @@ namespace Sistema_Biblioteca
             da = new SqlDataAdapter(cmd);
             ds = new DataSet();
             da.Fill(ds, "membresia");
-            cn.Open();
-            dr = cmd.ExecuteReader();
-            cn.Close();
             return ds;
         }
 
@@ -233,9 +227,17 @@ namespace Sistema_Biblioteca
             da = new SqlDataAdapter(cmd);
             ds = new DataSet();
             da.Fill(ds, "autores");
-            cn.Open();
-            dr = cmd.ExecuteReader();
-            cn.Close();
+            return ds;
+        }
+
+        public DataSet ConsultarTiposMembresias() {
+            query = "select tipo, precio from tipo_membresia ";
+
+            cmd = new SqlCommand(query, cn);
+            cmd.CommandType = CommandType.Text;
+            da = new SqlDataAdapter(cmd);
+            ds = new DataSet();
+            da.Fill(ds, "tipo_membresia");
             return ds;
         }
 

@@ -66,6 +66,12 @@
     <Compile Include="ConsultarLibros.Designer.cs">
       <DependentUpon>ConsultarLibros.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultarTiposMembresias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarTiposMembresias.Designer.cs">
+      <DependentUpon>ConsultarTiposMembresias.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormsViejos\Agregar_Autor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarLibros.resx">
       <DependentUpon>ConsultarLibros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarTiposMembresias.resx">
+      <DependentUpon>ConsultarTiposMembresias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsViejos\Agregar_Autor.resx">
       <DependentUpon>Agregar_Autor.cs</DependentUpon>

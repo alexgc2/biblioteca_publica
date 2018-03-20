@@ -172,3 +172,4 @@ C:\Users\alex_\OneDrive\Git\biblioteca_publica\Sistema_Biblioteca\obj\Debug\Sist
 C:\Users\alex_\OneDrive\Git\biblioteca_publica\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.csproj.CoreCompileInputs.cache
 C:\Users\alex_\OneDrive\Git\biblioteca_publica\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.exe
 C:\Users\alex_\OneDrive\Git\biblioteca_publica\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.pdb
+C:\Users\alex_\OneDrive\Git\biblioteca_publica\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.ConsultarTiposMembresias.resources
