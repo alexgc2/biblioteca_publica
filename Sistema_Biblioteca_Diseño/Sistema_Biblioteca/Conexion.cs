@@ -24,7 +24,8 @@ namespace Sistema_Biblioteca
         {
             try
             {
-                cn = new SqlConnection("Data Source=.;Initial Catalog=BIBLIOTECA_PUBLICA;integrated security=yes");
+                //cn = new SqlConnection("Data Source=.;Initial Catalog=BIBLIOTECA_PUBLICA;integrated security=yes");
+                cn = new SqlConnection(@"Data Source=LAPTOP-SPOD9GPG\SQLEXPRESS;Initial Catalog=BIBLIOTECA_PUBLICA;Integrated Security=False;Trusted_Connection=True;");
             }
             catch (Exception ex)
             {
@@ -209,7 +210,7 @@ namespace Sistema_Biblioteca
             return ds;
         }
 
-        public DataSet ConsultarLibros_Busqueda(List<string> Filtros, string nombre)
+        public DataSet ConsultarLibros(string nombre)
         {
             query = "select codigo, isbn, autor, nombre, area, perfil  from LIBROS where nombre like '%" + nombre + "%'";
 

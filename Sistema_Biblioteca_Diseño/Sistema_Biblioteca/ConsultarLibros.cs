@@ -13,7 +13,6 @@ namespace Sistema_Biblioteca
     public partial class ConsultarLibros : Form
     {
         Conexion ObjQueries = new Conexion();
-        List<string> Filtros;
         public ConsultarLibros()
         {
             InitializeComponent();
@@ -44,7 +43,7 @@ namespace Sistema_Biblioteca
         {
             dgvLibros.AutoGenerateColumns = false;
             dgvLibros.DataSource =
-                ObjQueries.ConsultarLibros(Filtros).Tables["LIBROS"];
+                ObjQueries.ConsultarLibros(txtBuscar.Text).Tables["LIBROS"];
 
         }
 
@@ -70,8 +69,7 @@ namespace Sistema_Biblioteca
 
         private void txtBuscar_KeyUp(object sender, KeyEventArgs e)
         {
-            
-            dgvLibros.DataSource = ObjQueries.ConsultarLibros_Busqueda(Filtros, txtBuscar.Text).Tables["Libros"];
+            dgvLibros.DataSource = ObjQueries.ConsultarLibros(txtBuscar.Text).Tables["Libros"];
         }
     }
 }
