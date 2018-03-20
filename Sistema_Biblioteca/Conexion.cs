@@ -188,32 +188,12 @@ namespace Sistema_Biblioteca
             return contador;
         }
 
-        public DataSet ConsultarLibros(List<string> Filtros)
-        {
-            query = "select codigo, isbn, autor, nombre, area, perfil  from LIBROS";
-
-
-            /*Aplicar Filtros más adelante aqui*/
-            cmd = new SqlCommand(query, cn);
-            cmd.CommandType = CommandType.Text;
-
-            da = new SqlDataAdapter(cmd);
-            ds = new DataSet();
-            da.Fill(ds, "LIBROS");
-
-
-            cn.Open();
-            dr = cmd.ExecuteReader();
-            cn.Close();
-
-
-            return ds;
-        }
 
         public DataSet ConsultarLibros(string nombre)
         {
-            query = "select codigo, isbn, autor, nombre, area, perfil  from LIBROS where nombre like '%" + nombre + "%'";
-
+            query = "select codigo, isbn, autor, nombre, area, perfil  from LIBROS ";
+            if (nombre != "")
+                query +="where nombre like '%" + nombre + "%'";
 
             /*Aplicar Filtros más adelante aqui*/
             cmd = new SqlCommand(query, cn);
