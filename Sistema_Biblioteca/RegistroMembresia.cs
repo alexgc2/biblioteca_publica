@@ -131,5 +131,17 @@ namespace Sistema_Biblioteca
         {
             sexo = "MASCULINO";
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            ConsultarTiposMembresias ConsultarTiposMembresias = new ConsultarTiposMembresias(this);
+            ConsultarTiposMembresias.Show();
+        }
+
+        public void RellenarTipoMembresia(string tipo, string precio)
+        {
+            txtTipo.Text = tipo;
+            txtPrecio.Text = precio;
+        }
     }
 }

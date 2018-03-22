@@ -187,6 +187,7 @@
             this.btnBuscar.TabIndex = 71;
             this.btnBuscar.TabStop = false;
             this.btnBuscar.Zoom = 10;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnAgregar
             // 

@@ -33,7 +33,7 @@ namespace Sistema_Biblioteca
 
         private void btnModificarM_Click(object sender, EventArgs e)
         {
-            ModificarMembresia ModMm = new ModificarMembresia();
+            ModificarMembresia ModMm = new ModificarMembresia("");
             ModMm.TopLevel = false;
             ModMm.Parent = pContent;
             ModMm.Show();
@@ -48,9 +48,8 @@ namespace Sistema_Biblioteca
 
         private void dgvMiembros_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            ModificarMembresia modMiembro = new ModificarMembresia();
             string aux = Convert.ToString(dgvMiembros.CurrentRow.Cells[0].Value);
-            modMiembro.txtID.Text = aux;
+            ModificarMembresia modMiembro = new ModificarMembresia(aux);
             modMiembro.TopLevel = false;
             modMiembro.Parent = pContent;
             modMiembro.Show();

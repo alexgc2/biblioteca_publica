@@ -241,7 +241,7 @@ namespace Sistema_Biblioteca
             return ds;
         }
 
-        public void llenarModificarMiembro(int id, string sexo, TextBox txtNombre, TextBox txtApellido, TextBox cbxTipo, TextBox txtTelefono, TextBox txtDireccion, TextBox txtCorreo, TextBox ocupacion, TextBox txtPago, ComboBox txtStatus)
+        public void llenarModificarMiembro(int id, string sexo, TextBox txtNombre, TextBox txtApellido, TextBox cbxTipo, TextBox txtTelefono, TextBox txtDireccion, TextBox txtCorreo, TextBox ocupacion, TextBox txtPago, TextBox txtStatus)
         {
             try
             {

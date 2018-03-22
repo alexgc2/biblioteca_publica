@@ -45,10 +45,10 @@
             this.Nombre,
             this.Area,
             this.Perfil});
-            this.dgvAutores.Location = new System.Drawing.Point(12, 92);
+            this.dgvAutores.Location = new System.Drawing.Point(4, 41);
             this.dgvAutores.Name = "dgvAutores";
             this.dgvAutores.ReadOnly = true;
-            this.dgvAutores.Size = new System.Drawing.Size(396, 260);
+            this.dgvAutores.Size = new System.Drawing.Size(404, 260);
             this.dgvAutores.TabIndex = 0;
             this.dgvAutores.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAutores_CellDoubleClick);
             // 
@@ -76,9 +76,9 @@
             // 
             // txtFiltro
             // 
-            this.txtFiltro.Location = new System.Drawing.Point(12, 50);
+            this.txtFiltro.Location = new System.Drawing.Point(12, 15);
             this.txtFiltro.Name = "txtFiltro";
-            this.txtFiltro.Size = new System.Drawing.Size(394, 20);
+            this.txtFiltro.Size = new System.Drawing.Size(350, 20);
             this.txtFiltro.TabIndex = 1;
             this.txtFiltro.TextChanged += new System.EventHandler(this.txtFiltro_TextChanged);
             // 
@@ -101,18 +101,18 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(418, 364);
+            this.ClientSize = new System.Drawing.Size(412, 305);
             this.ControlBox = false;
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.txtFiltro);
             this.Controls.Add(this.dgvAutores);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ConsultarAutores";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.Text = "ConsultarAutores";
             this.Load += new System.EventHandler(this.ConsultarAutores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAutores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();

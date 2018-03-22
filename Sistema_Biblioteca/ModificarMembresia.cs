@@ -15,9 +15,10 @@ namespace Sistema_Biblioteca
         Conexion conexion = new Conexion();
         public string sexo = "";
       
-        public ModificarMembresia()
+        public ModificarMembresia(string ID_Membresia)
         {
             InitializeComponent();
+            txtID.Text = ID_Membresia;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -107,22 +108,33 @@ namespace Sistema_Biblioteca
 
         private void btnModificarMem_Click(object sender, EventArgs e)
         {
-            if (txtApellidoM.Text.Length == 0 || txtDireccionM.Text.Length == 0 || txtEmailM.Text.Length == 0 || txtNombreM.Text.Length == 0 || txtOcupacionM.Text.Length == 0 || txtPrecioM.Text.Length == 0 || txtTelefonoM.Text.Length == 0 || txtTipoMm.Text.Length == 0 || sexo == "" || cbxEstatus.Text.Length == 0)
+            if (txtApellidoM.Text.Length == 0 || txtDireccionM.Text.Length == 0 || txtEmailM.Text.Length == 0 || txtNombreM.Text.Length == 0 || txtOcupacionM.Text.Length == 0 || txtPrecio.Text.Length == 0 || txtTelefonoM.Text.Length == 0 || txtTipo.Text.Length == 0 || sexo == "")
             {
                 MessageBox.Show("Favor de llenar todos los campos correspondientes", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                conexion.modificar_miembro(Convert.ToInt32(txtID.Text),txtNombreM.Text, txtApellidoM.Text, txtOcupacionM.Text, txtDireccionM.Text, txtTelefonoM.Text, sexo, txtEmailM.Text, Convert.ToInt32(txtPrecioM.Text), txtTipoMm.Text,cbxEstatus.Text);
+                conexion.modificar_miembro(Convert.ToInt32(txtID.Text),txtNombreM.Text, txtApellidoM.Text, txtOcupacionM.Text, txtDireccionM.Text, txtTelefonoM.Text, sexo, txtEmailM.Text, Convert.ToInt32(txtPrecio.Text), txtTipo.Text,txtEstatus.Text);
                 MessageBox.Show("Se modificaron los datos correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         private void txtID_TextChanged(object sender, EventArgs e)
         {
-            conexion.llenarModificarMiembro(Convert.ToInt32(txtID.Text), sexo, txtNombreM, txtApellidoM, txtTipoMm, txtTelefonoM, txtDireccionM, txtEmailM, txtOcupacionM, txtPrecioM, cbxEstatus);
+            conexion.llenarModificarMiembro(Convert.ToInt32(txtID.Text), sexo, txtNombreM, txtApellidoM, txtTipo, txtTelefonoM, txtDireccionM, txtEmailM, txtOcupacionM, txtPrecio, txtEstatus);
         }
 
-        
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            ConsultarTiposMembresias ConsultarTiposMembresias = new ConsultarTiposMembresias(this);
+            ConsultarTiposMembresias.Show();
+        }
+
+        public void RellenarTipoMembresia(string tipo, string precio, string estatus)
+        {
+            txtTipo.Text = tipo;
+            txtPrecio.Text = precio;
+            txtEstatus.Text = estatus;
+        }
     }
 }
