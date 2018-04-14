@@ -47,12 +47,12 @@ namespace Sistema_Biblioteca
 
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private void txtBuscar_KeyUp(object sender, KeyEventArgs e)
         {
-
+            dgvLibros.DataSource = ObjQueries.ConsultarLibros(txtBuscar.Text).Tables["Libros"];
         }
 
-        private void dgvLibros_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvLibros_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             ModificarLibros modLibro = new ModificarLibros();
             string aux = Convert.ToString(dgvLibros.CurrentRow.Cells[0].Value);
@@ -60,11 +60,6 @@ namespace Sistema_Biblioteca
             modLibro.TopLevel = false;
             modLibro.Parent = pContent;
             modLibro.Show();
-        }
-
-        private void txtBuscar_KeyUp(object sender, KeyEventArgs e)
-        {
-            dgvLibros.DataSource = ObjQueries.ConsultarLibros(txtBuscar.Text).Tables["Libros"];
         }
     }
 }

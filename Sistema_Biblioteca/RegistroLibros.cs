@@ -12,6 +12,7 @@ namespace Sistema_Biblioteca
 {
     public partial class RegistroLibros : Form
     {
+        string id_autor;
         Conexion conexion = new Conexion();
         public RegistroLibros()
         {
@@ -56,13 +57,13 @@ namespace Sistema_Biblioteca
 
         private void btnAgregarLibro_Click(object sender, EventArgs e)
         {
-            if (txtCodigo.Text.Length == 0 || txtArea.Text.Length == 0 || txtPerfil.Text.Length == 0 || txtNombre.Text.Length == 0 || txtAño.Text.Length == 0 || txtCantidad.Text.Length == 0 || txtEdicion.Text.Length == 0 || txtEditorial.Text.Length == 0 || txtIsbn.Text.Length == 0 || txtProveedor.Text.Length == 0 || txtTitulo.Text.Length == 0 || cmbPerfilCodigo.Text.Length == 0)
+            if (txtCodigo.Text.Length == 0 || txtArea.Text.Length == 0 || txtPerfilCodigo.Text.Length == 0 || txtNombre.Text.Length == 0 || txtAño.Text.Length == 0 || txtCantidad.Text.Length == 0 || txtEdicion.Text.Length == 0 || txtEditorial.Text.Length == 0 || txtIsbn.Text.Length == 0 || txtProveedor.Text.Length == 0 || txtTitulo.Text.Length == 0 || txtPerfilCodigo.Text.Length == 0)
             {
                 MessageBox.Show("Favor de llenar todos los campos correspondientes", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                conexion.agregar_libro(txtCodigo.Text, txtTitulo.Text, txtNombre.Text, txtEditorial.Text, txtEdicion.Text, txtArea.Text, txtPerfil.Text, Convert.ToInt32(txtIsbn.Text), Convert.ToInt32(txtCantidad.Text), Convert.ToInt32(txtAño.Text), txtProveedor.Text, dtpFecha);
+                conexion.agregar_libro(txtCodigo.Text, txtTitulo.Text, txtNombre.Text, txtEditorial.Text, txtEdicion.Text, txtArea.Text,txtPerfilCodigo.Text, txtPerfil.Text, Convert.ToInt32(txtIsbn.Text), Convert.ToInt32(txtCantidad.Text), Convert.ToInt32(txtAño.Text), txtProveedor.Text, dtpFecha, id_autor);
                 MessageBox.Show("Libro registrado exitosamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -143,11 +144,15 @@ namespace Sistema_Biblioteca
             ConsultarAutores.Show();
         }
 
-        public void RellenarAutor(string autor, string area, string perfil)
+        public void RellenarAutor(string id_autor, string autor, string area, string perfil)
         {
+            this.id_autor = id_autor;
             txtArea.Text = area;
+            txtArea.ReadOnly = true;
             txtPerfil.Text = perfil;
+            txtPerfil.ReadOnly = true;
             txtNombre.Text = autor;
+            txtNombre.ReadOnly = true;
         }
     }
 }

@@ -33,7 +33,7 @@ namespace Sistema_Biblioteca
             }
         }
 
-        public string agregar_libro(string codigo, string nombre, string autor, string editorial, string edicion, string area, string perfil, int isbn, int cantidad, int año, string proveedor, DateTimePicker date)
+        public string agregar_libro(string codigo, string nombre, string autor, string editorial, string edicion, string area, string perfilLibro , string perfilAutor, int isbn, int cantidad, int año, string proveedor, DateTimePicker date, string id_autor)
         {
 
             string salida = "Registrado Exitosamente";
@@ -41,8 +41,12 @@ namespace Sistema_Biblioteca
             
             try
             {
+                if (id_autor == null)
+                {
+                    id_autor = BuscarIDAutor(autor, area, perfilAutor);
+                }
                 cn.Open();
-                cmd = new SqlCommand("insert into libros(codigo,nombre,autor, editorial, edicion, area, perfil, isbn, cantidad, año, proveedor, fecha)values('" + codigo + "','" + nombre + "','" + autor + "','" + editorial + "','"+edicion+"','"+area+"','"+perfil+"',"+isbn+","+cantidad+","+año+",'"+proveedor+"','"+fecha+"')", cn);
+                cmd = new SqlCommand("insert into libros(codigo,nombre, editorial, edicion, perfil, isbn, cantidad, año, proveedor, fecha, id_autor)values('" + codigo + "','" + nombre + "','" + editorial + "','"+edicion+"','"+perfilLibro+"',"+isbn+","+cantidad+","+año+",'"+proveedor+"','"+fecha+"', "+id_autor+")", cn);
                 cmd.ExecuteNonQuery();
                 cn.Close();
             }
@@ -52,6 +56,30 @@ namespace Sistema_Biblioteca
                 salida = "No se conecto: " + ex.ToString();
             }
             return salida;
+        }
+
+        public string BuscarIDAutor(string nombre, string autor, string perfil) {
+            string id;
+            try
+            {
+                cn.Open();
+                cmd = new SqlCommand("select id_autors from autores where nombre = '"+nombre + "' and area = '" + autor+ "' and perfil = '" +perfil+ "'", cn);
+                dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    id = dr["id_autors"].ToString();
+                    dr.Close();
+                    cn.Close();
+                    return id;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            dr.Close();
+            cn.Close();
+            return "-1";
         }
 
         public string agregar_autor(string nombre, string area, string perfil)
@@ -96,14 +124,18 @@ namespace Sistema_Biblioteca
             return contador;
         }
 
-        public string modificar_libro(string codigo, string nombre, string autor, string editorial, string edicion, string area, string perfil, int isbn, int cantidad, int año, string proveedor, string status)
+        public string modificar_libro(string codigo, string nombre, string autor, string editorial, string edicion, string area,string perfilAutor, string perfil, string isbn, string cantidad, int año, string proveedor, string status, string id_autor)
         {
             //string fecha = date.Value.Date.ToShortDateString();
             string salida = "Registrado Exitosamente";
+            if (id_autor == null)
+            {
+                id_autor = BuscarIDAutor(autor, area, perfilAutor);
+            }
             try
             {
                 cn.Open();
-                cmd = new SqlCommand("update libros set nombre='" + nombre + "', autor='" + autor + "', editorial='" + editorial + "', edicion='" + edicion + "', area='" + area + "', perfil='" + perfil + "', isbn=" + isbn + ", cantidad=" + cantidad + ", año=" + año + ", proveedor='" + proveedor + "', status='"+status+"' where codigo='"+codigo+"'", cn);
+                cmd = new SqlCommand("update libros set nombre='" + nombre + "', id_autor='" + id_autor + "', editorial='" + editorial + "', edicion='" + edicion + "', perfil='" + perfil + "', isbn='" + isbn + "', cantidad='" + cantidad + "', año=" + año + ", proveedor='" + proveedor + "', status='"+status+"' where codigo='"+codigo+"'", cn);
                 cmd.ExecuteNonQuery();
                 cn.Close();
             }
@@ -115,21 +147,25 @@ namespace Sistema_Biblioteca
             return salida;
         }
 
-        public void llenarModificarLibro(TextBox txtCodigo, TextBox txtTitulo, TextBox Autor, TextBox txtEditorial, TextBox txtEdicion, TextBox Area, TextBox txtPerfil, TextBox txtISBN, TextBox txtCantidad, TextBox txtAño, TextBox txtProveedor, ComboBox txtStatus, TextBox Fecha)
+        public void llenarModificarLibro(TextBox txtCodigo, TextBox txtPerfilCodigo, TextBox txtTitulo, TextBox Autor, TextBox txtEditorial, TextBox txtEdicion, TextBox Area, TextBox txtPerfil, TextBox txtISBN, TextBox txtCantidad, TextBox txtAño, TextBox txtProveedor, ComboBox txtStatus, TextBox Fecha)
         {
+            string id_autor ;
             try
             {
                 cn.Open();
-                cmd = new SqlCommand("select *from libros where codigo = "+txtCodigo.Text+" ", cn);
+                cmd = new SqlCommand("select libros.nombre as 'libros_nombre', libros.perfil as 'libros_perfil', autores.nombre as 'autores_nombre'," +
+                    "editorial, edicion, area, autores.perfil as 'autores_perfil', isbn, cantidad, año, proveedor, status, fecha" +
+                    " from libros inner join autores on libros.id_autor = autores.id_autors where codigo = "+txtCodigo.Text+" ", cn);
                 dr = cmd.ExecuteReader();
-                while (dr.Read())
+                if (dr.Read())
                 {
-                    txtTitulo.Text = dr["nombre"].ToString();
-                    Autor.Text = dr["autor"].ToString();
+                    txtTitulo.Text = dr["libros_nombre"].ToString();
+                    txtPerfilCodigo.Text = dr["libros_perfil"].ToString();
+                    Autor.Text = dr["autores_nombre"].ToString();
                     txtEditorial.Text = dr["editorial"].ToString();
                     txtEdicion.Text = dr["edicion"].ToString();
                     Area.Text = dr["area"].ToString();
-                    txtPerfil.Text = dr["perfil"].ToString();
+                    txtPerfil.Text = dr["autores_perfil"].ToString();
                     txtISBN.Text = dr["isbn"].ToString();
                     txtCantidad.Text = dr["cantidad"].ToString();
                     txtAño.Text = dr["año"].ToString();
@@ -191,7 +227,8 @@ namespace Sistema_Biblioteca
 
         public DataSet ConsultarLibros(string nombre)
         {
-            query = "select codigo, isbn, autor, nombre, area, perfil  from LIBROS where STATUS = 'ACTIVO' ";
+            query = "select codigo, isbn, autores.nombre as 'autor', libros.nombre, libros.perfil  from libros  " +
+                "INNER JOIN autores ON libros.id_autor = autores.id_autors where STATUS = 'ACTIVO'";
             if (nombre != "")
                 query +="and nombre like '%" + nombre + "%'";
             cmd = new SqlCommand(query, cn);
@@ -218,7 +255,7 @@ namespace Sistema_Biblioteca
 
         public DataSet ConsultarAutores(string Filtro)
         {
-            query = "select nombre, area, perfil from autores ";
+            query = "select id_autors, nombre, area, perfil from autores ";
             if (Filtro != "")
                 query += "where nombre like '%" + Filtro + "%'";
 

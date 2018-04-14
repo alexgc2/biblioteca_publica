@@ -12,6 +12,7 @@ namespace Sistema_Biblioteca
 {
     public partial class ModificarLibros : Form
     {
+        string id_autor;
         Conexion conexion = new Conexion();
         public ModificarLibros()
         {
@@ -67,7 +68,7 @@ namespace Sistema_Biblioteca
             }
             else
             {
-                conexion.modificar_libro(txtCodigoM.Text, txtTituloM.Text, txtNombre.Text, txtEditorialM.Text, txtEdicionM.Text, txtArea.Text, txtPerfil.Text, Convert.ToInt32(txtIsbnM.Text), Convert.ToInt32(txtCantidadM.Text), Convert.ToInt32(txtAñoM.Text), txtProveedorM.Text,cbxStatus.Text);
+                conexion.modificar_libro(txtCodigoM.Text, txtTituloM.Text, txtNombre.Text, txtEditorialM.Text, txtEdicionM.Text, txtArea.Text, txtPerfil.Text, txtPerfilCodigo.Text, txtIsbnM.Text, txtCantidadM.Text, Convert.ToInt32(txtAñoM.Text), txtProveedorM.Text,cbxStatus.Text, id_autor);
                 MessageBox.Show("Se modificaron los datos correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -139,7 +140,7 @@ namespace Sistema_Biblioteca
 
         private void txtCodigoM_TextChanged(object sender, EventArgs e)
         {
-            conexion.llenarModificarLibro(txtCodigoM, txtTituloM, txtNombre, txtEditorialM, txtEdicionM, txtArea, txtPerfil, txtIsbnM, txtCantidadM, txtAñoM, txtProveedorM, cbxStatus, txtFecha);
+            conexion.llenarModificarLibro(txtCodigoM, txtPerfilCodigo, txtTituloM, txtNombre, txtEditorialM, txtEdicionM, txtArea, txtPerfil, txtIsbnM, txtCantidadM, txtAñoM, txtProveedorM, cbxStatus, txtFecha);
         }
 
         private void btnBuscarAutorM_Click(object sender, EventArgs e)
@@ -148,11 +149,15 @@ namespace Sistema_Biblioteca
             ConsultarAutores.Show();
         }
 
-        public void RellenarAutor(string autor, string area, string perfil)
+        public void RellenarAutor(string id_autor,string autor, string area, string perfil)
         {
+            this.id_autor = id_autor;
             txtArea.Text = area;
+            txtArea.ReadOnly = true;
             txtPerfil.Text = perfil;
+            txtPerfil.ReadOnly = true;
             txtNombre.Text = autor;
+            txtNombre.ReadOnly = true;
         }
     }
 }

@@ -34,6 +34,7 @@
             this.lblRegistro = new System.Windows.Forms.Label();
             this.btnSalir = new Bunifu.Framework.UI.BunifuImageButton();
             this.pContent = new System.Windows.Forms.Panel();
+            this.txtPerfilCodigo = new System.Windows.Forms.TextBox();
             this.pbLibro = new System.Windows.Forms.PictureBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.lblFecha = new System.Windows.Forms.Label();
@@ -41,7 +42,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblPerfil = new System.Windows.Forms.Label();
-            this.cmbPerfilCodigo = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtEditorial = new System.Windows.Forms.TextBox();
             this.btnAgregarLibro = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -119,6 +119,7 @@
             // pContent
             // 
             this.pContent.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pContent.Controls.Add(this.txtPerfilCodigo);
             this.pContent.Controls.Add(this.pbLibro);
             this.pContent.Controls.Add(this.dtpFecha);
             this.pContent.Controls.Add(this.lblFecha);
@@ -126,7 +127,6 @@
             this.pContent.Controls.Add(this.label9);
             this.pContent.Controls.Add(this.txtCodigo);
             this.pContent.Controls.Add(this.lblPerfil);
-            this.pContent.Controls.Add(this.cmbPerfilCodigo);
             this.pContent.Controls.Add(this.label3);
             this.pContent.Controls.Add(this.txtEditorial);
             this.pContent.Controls.Add(this.btnAgregarLibro);
@@ -149,6 +149,16 @@
             this.pContent.Size = new System.Drawing.Size(656, 355);
             this.pContent.TabIndex = 102;
             this.pContent.Paint += new System.Windows.Forms.PaintEventHandler(this.pContent_Paint);
+            // 
+            // txtPerfilCodigo
+            // 
+            this.txtPerfilCodigo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtPerfilCodigo.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPerfilCodigo.Location = new System.Drawing.Point(86, 19);
+            this.txtPerfilCodigo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPerfilCodigo.Name = "txtPerfilCodigo";
+            this.txtPerfilCodigo.Size = new System.Drawing.Size(159, 26);
+            this.txtPerfilCodigo.TabIndex = 125;
             // 
             // pbLibro
             // 
@@ -227,19 +237,6 @@
             this.lblPerfil.TabIndex = 120;
             this.lblPerfil.Text = "Perfil";
             // 
-            // cmbPerfilCodigo
-            // 
-            this.cmbPerfilCodigo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmbPerfilCodigo.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbPerfilCodigo.FormattingEnabled = true;
-            this.cmbPerfilCodigo.Items.AddRange(new object[] {
-            "DOCENCIA",
-            "ENTRETENIMIENTO"});
-            this.cmbPerfilCodigo.Location = new System.Drawing.Point(86, 19);
-            this.cmbPerfilCodigo.Name = "cmbPerfilCodigo";
-            this.cmbPerfilCodigo.Size = new System.Drawing.Size(148, 26);
-            this.cmbPerfilCodigo.TabIndex = 0;
-            // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -280,7 +277,7 @@
             this.btnAgregarLibro.IdleFillColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAgregarLibro.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(162)))), ((int)(((byte)(255)))));
             this.btnAgregarLibro.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(162)))), ((int)(((byte)(255)))));
-            this.btnAgregarLibro.Location = new System.Drawing.Point(525, 293);
+            this.btnAgregarLibro.Location = new System.Drawing.Point(525, 300);
             this.btnAgregarLibro.Margin = new System.Windows.Forms.Padding(5);
             this.btnAgregarLibro.Name = "btnAgregarLibro";
             this.btnAgregarLibro.Size = new System.Drawing.Size(100, 39);
@@ -339,7 +336,7 @@
             // txtPerfil
             // 
             this.txtPerfil.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPerfil.Location = new System.Drawing.Point(379, 66);
+            this.txtPerfil.Location = new System.Drawing.Point(307, 69);
             this.txtPerfil.Name = "txtPerfil";
             this.txtPerfil.Size = new System.Drawing.Size(155, 26);
             this.txtPerfil.TabIndex = 3;
@@ -389,7 +386,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(317, 69);
+            this.label6.Location = new System.Drawing.Point(259, 69);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 18);
@@ -573,7 +570,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label lblPerfil;
-        private System.Windows.Forms.ComboBox cmbPerfilCodigo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtEditorial;
         private Bunifu.Framework.UI.BunifuThinButton2 btnAgregarLibro;
@@ -600,5 +596,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ToolTip toolTipAgregar;
         private System.Windows.Forms.ToolTip toolTipBusqueda;
+        private System.Windows.Forms.TextBox txtPerfilCodigo;
     }
 }

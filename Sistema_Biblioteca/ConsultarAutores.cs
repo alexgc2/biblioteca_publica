@@ -45,9 +45,9 @@ namespace Sistema_Biblioteca
         {
             Celda = dgvAutores.CurrentRow.Cells;
             if (Mod == null)
-                Reg.RellenarAutor(Celda[0].Value.ToString(), Celda[1].Value.ToString(), Celda[2].Value.ToString());
+                Reg.RellenarAutor(Celda[0].Value.ToString(), Celda[1].Value.ToString(), Celda[2].Value.ToString(), Celda[3].Value.ToString());
             else
-                Mod.RellenarAutor(Celda[0].Value.ToString(), Celda[1].Value.ToString(), Celda[2].Value.ToString());
+                Mod.RellenarAutor(Celda[0].Value.ToString(), Celda[1].Value.ToString(), Celda[2].Value.ToString(), Celda[3].Value.ToString());
 
             this.Close();
         }

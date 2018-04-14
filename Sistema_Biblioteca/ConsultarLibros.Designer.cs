@@ -31,12 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultarLibros));
             this.pContent = new System.Windows.Forms.Panel();
             this.dgvLibros = new System.Windows.Forms.DataGridView();
-            this.dgvBusquedaCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvBusquedaISBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvBusquedaAutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvBusquedaNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvBusquedaArea = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvBusquedaPerfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnBuscar = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnSalir = new Bunifu.Framework.UI.BunifuImageButton();
             this.pbConsultaLibro = new System.Windows.Forms.PictureBox();
@@ -44,6 +38,11 @@
             this.btnModificarLibro = new Bunifu.Framework.UI.BunifuImageButton();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.dgvBusquedaCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvBusquedaISBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvBusquedaAutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvBusquedaNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvBusquedaPerfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pContent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
@@ -81,53 +80,12 @@
             this.dgvBusquedaISBN,
             this.dgvBusquedaAutor,
             this.dgvBusquedaNombre,
-            this.dgvBusquedaArea,
             this.dgvBusquedaPerfil});
-            this.dgvLibros.Location = new System.Drawing.Point(21, 147);
+            this.dgvLibros.Location = new System.Drawing.Point(10, 147);
             this.dgvLibros.Name = "dgvLibros";
-            this.dgvLibros.Size = new System.Drawing.Size(633, 251);
+            this.dgvLibros.Size = new System.Drawing.Size(656, 251);
             this.dgvLibros.TabIndex = 118;
-            this.dgvLibros.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLibros_CellContentDoubleClick);
-            // 
-            // dgvBusquedaCodigo
-            // 
-            this.dgvBusquedaCodigo.DataPropertyName = "codigo";
-            this.dgvBusquedaCodigo.HeaderText = "Codigo";
-            this.dgvBusquedaCodigo.Name = "dgvBusquedaCodigo";
-            this.dgvBusquedaCodigo.Width = 50;
-            // 
-            // dgvBusquedaISBN
-            // 
-            this.dgvBusquedaISBN.DataPropertyName = "isbn";
-            this.dgvBusquedaISBN.HeaderText = "ISBN";
-            this.dgvBusquedaISBN.Name = "dgvBusquedaISBN";
-            this.dgvBusquedaISBN.Width = 40;
-            // 
-            // dgvBusquedaAutor
-            // 
-            this.dgvBusquedaAutor.DataPropertyName = "autor";
-            this.dgvBusquedaAutor.HeaderText = "Autor";
-            this.dgvBusquedaAutor.Name = "dgvBusquedaAutor";
-            this.dgvBusquedaAutor.Width = 140;
-            // 
-            // dgvBusquedaNombre
-            // 
-            this.dgvBusquedaNombre.DataPropertyName = "nombre";
-            this.dgvBusquedaNombre.HeaderText = "Libro";
-            this.dgvBusquedaNombre.Name = "dgvBusquedaNombre";
-            this.dgvBusquedaNombre.Width = 160;
-            // 
-            // dgvBusquedaArea
-            // 
-            this.dgvBusquedaArea.DataPropertyName = "area";
-            this.dgvBusquedaArea.HeaderText = "Area";
-            this.dgvBusquedaArea.Name = "dgvBusquedaArea";
-            // 
-            // dgvBusquedaPerfil
-            // 
-            this.dgvBusquedaPerfil.DataPropertyName = "perfil";
-            this.dgvBusquedaPerfil.HeaderText = "Perfil";
-            this.dgvBusquedaPerfil.Name = "dgvBusquedaPerfil";
+            this.dgvLibros.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLibros_CellDoubleClick);
             // 
             // btnBuscar
             // 
@@ -141,7 +99,6 @@
             this.btnBuscar.TabIndex = 117;
             this.btnBuscar.TabStop = false;
             this.btnBuscar.Zoom = 10;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnSalir
             // 
@@ -216,6 +173,40 @@
             this.label1.TabIndex = 109;
             this.label1.Text = "Buscar por Nombre:";
             // 
+            // dgvBusquedaCodigo
+            // 
+            this.dgvBusquedaCodigo.DataPropertyName = "codigo";
+            this.dgvBusquedaCodigo.HeaderText = "Codigo";
+            this.dgvBusquedaCodigo.Name = "dgvBusquedaCodigo";
+            this.dgvBusquedaCodigo.Width = 50;
+            // 
+            // dgvBusquedaISBN
+            // 
+            this.dgvBusquedaISBN.DataPropertyName = "isbn";
+            this.dgvBusquedaISBN.HeaderText = "ISBN";
+            this.dgvBusquedaISBN.Name = "dgvBusquedaISBN";
+            this.dgvBusquedaISBN.Width = 40;
+            // 
+            // dgvBusquedaAutor
+            // 
+            this.dgvBusquedaAutor.DataPropertyName = "autor";
+            this.dgvBusquedaAutor.HeaderText = "Autor";
+            this.dgvBusquedaAutor.Name = "dgvBusquedaAutor";
+            this.dgvBusquedaAutor.Width = 220;
+            // 
+            // dgvBusquedaNombre
+            // 
+            this.dgvBusquedaNombre.DataPropertyName = "nombre";
+            this.dgvBusquedaNombre.HeaderText = "Libro";
+            this.dgvBusquedaNombre.Name = "dgvBusquedaNombre";
+            this.dgvBusquedaNombre.Width = 200;
+            // 
+            // dgvBusquedaPerfil
+            // 
+            this.dgvBusquedaPerfil.DataPropertyName = "perfil";
+            this.dgvBusquedaPerfil.HeaderText = "Perfil";
+            this.dgvBusquedaPerfil.Name = "dgvBusquedaPerfil";
+            // 
             // ConsultarLibros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -255,7 +246,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvBusquedaISBN;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvBusquedaAutor;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvBusquedaNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvBusquedaArea;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvBusquedaPerfil;
     }
 }

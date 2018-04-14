@@ -41,7 +41,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtCodigoM = new System.Windows.Forms.TextBox();
             this.lblPerfil = new System.Windows.Forms.Label();
-            this.cmbPerfilCodigoM = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtEditorialM = new System.Windows.Forms.TextBox();
             this.btnModificarLibro = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -71,6 +70,7 @@
             this.btnSalir = new Bunifu.Framework.UI.BunifuImageButton();
             this.toolTipAgregar = new System.Windows.Forms.ToolTip(this.components);
             this.toolTipBusqueda = new System.Windows.Forms.ToolTip(this.components);
+            this.txtPerfilCodigo = new System.Windows.Forms.TextBox();
             this.pContent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscarLibro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbModificarL)).BeginInit();
@@ -85,6 +85,7 @@
             // 
             this.pContent.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pContent.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pContent.Controls.Add(this.txtPerfilCodigo);
             this.pContent.Controls.Add(this.cbxStatus);
             this.pContent.Controls.Add(this.txtFecha);
             this.pContent.Controls.Add(this.label1);
@@ -95,7 +96,6 @@
             this.pContent.Controls.Add(this.label9);
             this.pContent.Controls.Add(this.txtCodigoM);
             this.pContent.Controls.Add(this.lblPerfil);
-            this.pContent.Controls.Add(this.cmbPerfilCodigoM);
             this.pContent.Controls.Add(this.label3);
             this.pContent.Controls.Add(this.txtEditorialM);
             this.pContent.Controls.Add(this.btnModificarLibro);
@@ -235,16 +235,6 @@
             this.lblPerfil.Size = new System.Drawing.Size(38, 18);
             this.lblPerfil.TabIndex = 120;
             this.lblPerfil.Text = "Perfil";
-            // 
-            // cmbPerfilCodigoM
-            // 
-            this.cmbPerfilCodigoM.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmbPerfilCodigoM.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbPerfilCodigoM.FormattingEnabled = true;
-            this.cmbPerfilCodigoM.Location = new System.Drawing.Point(69, 19);
-            this.cmbPerfilCodigoM.Name = "cmbPerfilCodigoM";
-            this.cmbPerfilCodigoM.Size = new System.Drawing.Size(148, 26);
-            this.cmbPerfilCodigoM.TabIndex = 1;
             // 
             // label3
             // 
@@ -578,6 +568,16 @@
             this.btnSalir.Zoom = 10;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // txtPerfilCodigo
+            // 
+            this.txtPerfilCodigo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtPerfilCodigo.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPerfilCodigo.Location = new System.Drawing.Point(69, 19);
+            this.txtPerfilCodigo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPerfilCodigo.Name = "txtPerfilCodigo";
+            this.txtPerfilCodigo.Size = new System.Drawing.Size(159, 26);
+            this.txtPerfilCodigo.TabIndex = 129;
+            // 
             // ModificarLibros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -614,7 +614,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblPerfil;
-        private System.Windows.Forms.ComboBox cmbPerfilCodigoM;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtEditorialM;
         private Bunifu.Framework.UI.BunifuThinButton2 btnModificarLibro;
@@ -649,5 +648,6 @@
         private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.ComboBox cbxStatus;
         public System.Windows.Forms.TextBox txtCodigoM;
+        private System.Windows.Forms.TextBox txtPerfilCodigo;
     }
 }
