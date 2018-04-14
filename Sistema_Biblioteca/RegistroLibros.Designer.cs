@@ -127,9 +127,9 @@
             this.pContent.Controls.Add(this.label9);
             this.pContent.Controls.Add(this.txtCodigo);
             this.pContent.Controls.Add(this.lblPerfil);
+            this.pContent.Controls.Add(this.btnAgregarLibro);
             this.pContent.Controls.Add(this.label3);
             this.pContent.Controls.Add(this.txtEditorial);
-            this.pContent.Controls.Add(this.btnAgregarLibro);
             this.pContent.Controls.Add(this.gbAutor);
             this.pContent.Controls.Add(this.label5);
             this.pContent.Controls.Add(this.label7);
@@ -277,7 +277,7 @@
             this.btnAgregarLibro.IdleFillColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAgregarLibro.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(162)))), ((int)(((byte)(255)))));
             this.btnAgregarLibro.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(162)))), ((int)(((byte)(255)))));
-            this.btnAgregarLibro.Location = new System.Drawing.Point(525, 300);
+            this.btnAgregarLibro.Location = new System.Drawing.Point(525, 314);
             this.btnAgregarLibro.Margin = new System.Windows.Forms.Padding(5);
             this.btnAgregarLibro.Name = "btnAgregarLibro";
             this.btnAgregarLibro.Size = new System.Drawing.Size(100, 39);
