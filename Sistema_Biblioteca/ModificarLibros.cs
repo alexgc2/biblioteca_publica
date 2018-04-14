@@ -70,6 +70,7 @@ namespace Sistema_Biblioteca
             {
                 conexion.modificar_libro(txtCodigoM.Text, txtTituloM.Text, txtNombre.Text, txtEditorialM.Text, txtEdicionM.Text, txtArea.Text, txtPerfil.Text, txtPerfilCodigo.Text, txtIsbnM.Text, txtCantidadM.Text, Convert.ToInt32(txtAñoM.Text), txtProveedorM.Text,cbxStatus.Text, id_autor);
                 MessageBox.Show("Se modificaron los datos correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
         }
 
@@ -153,11 +154,8 @@ namespace Sistema_Biblioteca
         {
             this.id_autor = id_autor;
             txtArea.Text = area;
-            txtArea.ReadOnly = true;
             txtPerfil.Text = perfil;
-            txtPerfil.ReadOnly = true;
             txtNombre.Text = autor;
-            txtNombre.ReadOnly = true;
         }
     }
 }

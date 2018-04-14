@@ -65,6 +65,7 @@ namespace Sistema_Biblioteca
             {
                 conexion.agregar_libro(txtCodigo.Text, txtTitulo.Text, txtNombre.Text, txtEditorial.Text, txtEdicion.Text, txtArea.Text,txtPerfilCodigo.Text, txtPerfil.Text, Convert.ToInt32(txtIsbn.Text), Convert.ToInt32(txtCantidad.Text), Convert.ToInt32(txtAño.Text), txtProveedor.Text, dtpFecha, id_autor);
                 MessageBox.Show("Libro registrado exitosamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
         }
 
@@ -148,11 +149,8 @@ namespace Sistema_Biblioteca
         {
             this.id_autor = id_autor;
             txtArea.Text = area;
-            txtArea.ReadOnly = true;
             txtPerfil.Text = perfil;
-            txtPerfil.ReadOnly = true;
             txtNombre.Text = autor;
-            txtNombre.ReadOnly = true;
         }
     }
 }
