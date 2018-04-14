@@ -278,15 +278,15 @@ namespace Sistema_Biblioteca
             return ds;
         }
 
-        public void llenarModificarMiembro(int id, string sexo, TextBox txtNombre, TextBox txtApellido, TextBox cbxTipo, TextBox txtTelefono, TextBox txtDireccion, TextBox txtCorreo, TextBox ocupacion, TextBox txtPago, TextBox txtStatus)
+        public void llenarModificarMiembro(int id, string sexo, TextBox txtNombre, TextBox txtApellido, TextBox cbxTipo, TextBox txtTelefono, TextBox txtDireccion, TextBox txtCorreo, TextBox ocupacion, TextBox txtPago, TextBox txtStatus, RadioButton rdbMasculino, RadioButton rdbFemenino)
         {
             try
             {
                 cn.Open();
-                cmd = new SqlCommand("select *from membresia where id_miembro = " + id + " ", cn);
+                cmd = new SqlCommand("select * from membresia where id_miembro = " + id + " ", cn);
                 dr = cmd.ExecuteReader();
 
-                while (dr.Read())
+                if (dr.Read())
                 {
                     txtApellido.Text = dr["apellido"].ToString();
                     txtNombre.Text = dr["nombre"].ToString();
@@ -299,7 +299,12 @@ namespace Sistema_Biblioteca
                     txtDireccion.Text = dr["direccion"].ToString();
                     txtStatus.Text = dr["status"].ToString();
                 }
-                dr.Close();
+                if (sexo == "MASCULINO")
+                    rdbMasculino.Checked = true;
+                else
+                    rdbFemenino.Checked = true;
+
+                    dr.Close();
                 cn.Close();
             }
             catch (Exception ex)

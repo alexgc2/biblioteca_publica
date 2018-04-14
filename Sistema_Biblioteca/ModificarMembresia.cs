@@ -116,12 +116,13 @@ namespace Sistema_Biblioteca
             {
                 conexion.modificar_miembro(Convert.ToInt32(txtID.Text),txtNombreM.Text, txtApellidoM.Text, txtOcupacionM.Text, txtDireccionM.Text, txtTelefonoM.Text, sexo, txtEmailM.Text, Convert.ToInt32(txtPrecio.Text), txtTipo.Text,txtEstatus.Text);
                 MessageBox.Show("Se modificaron los datos correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
         }
 
         private void txtID_TextChanged(object sender, EventArgs e)
         {
-            conexion.llenarModificarMiembro(Convert.ToInt32(txtID.Text), sexo, txtNombreM, txtApellidoM, txtTipo, txtTelefonoM, txtDireccionM, txtEmailM, txtOcupacionM, txtPrecio, txtEstatus);
+            conexion.llenarModificarMiembro(Convert.ToInt32(txtID.Text), sexo, txtNombreM, txtApellidoM, txtTipo, txtTelefonoM, txtDireccionM, txtEmailM, txtOcupacionM, txtPrecio, txtEstatus, rdMas, rdFem);
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

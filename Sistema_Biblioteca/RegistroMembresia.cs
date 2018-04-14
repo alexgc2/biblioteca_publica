@@ -74,6 +74,7 @@ namespace Sistema_Biblioteca
                 txtTelefono.Clear();
                 txtTipo.Clear();
                 sexo = "";
+                this.Close();
             }
         }
 
