@@ -96,7 +96,7 @@
             this.btnAgregarM.BackColor = System.Drawing.Color.Transparent;
             this.btnAgregarM.Image = global::Sistema_Biblioteca.Properties.Resources.new_add_user_info_16706;
             this.btnAgregarM.ImageActive = null;
-            this.btnAgregarM.Location = new System.Drawing.Point(357, 27);
+            this.btnAgregarM.Location = new System.Drawing.Point(430, 48);
             this.btnAgregarM.Name = "btnAgregarM";
             this.btnAgregarM.Size = new System.Drawing.Size(95, 95);
             this.btnAgregarM.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
