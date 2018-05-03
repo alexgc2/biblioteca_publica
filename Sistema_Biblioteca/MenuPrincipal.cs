@@ -13,6 +13,7 @@ namespace Sistema_Biblioteca
     public partial class MenuPrincipal : Form
     {
         int Fecha = 0;
+        Empleado EmpleadoActual = new Empleado();
         public MenuPrincipal()
         {
             InitializeComponent();
@@ -40,6 +41,10 @@ namespace Sistema_Biblioteca
 
         private void btnPrestamos_Click(object sender, EventArgs e)
         {
+            RegistroPrestamos RP = new RegistroPrestamos(EmpleadoActual);
+            RP.TopLevel = false;
+            RP.Parent = pVentanas;
+            RP.Show();
 
         }
 

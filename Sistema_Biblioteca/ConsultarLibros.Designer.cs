@@ -43,6 +43,10 @@
             this.dgvBusquedaAutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvBusquedaNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvBusquedaPerfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tbcCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tbcArea = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tbcEdicion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tbcId_libro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pContent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
@@ -74,14 +78,20 @@
             // dgvLibros
             // 
             this.dgvLibros.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dgvLibros.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvLibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLibros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvBusquedaCodigo,
             this.dgvBusquedaISBN,
             this.dgvBusquedaAutor,
             this.dgvBusquedaNombre,
-            this.dgvBusquedaPerfil});
+            this.dgvBusquedaPerfil,
+            this.tbcCantidad,
+            this.tbcArea,
+            this.tbcEdicion,
+            this.tbcId_libro});
             this.dgvLibros.Location = new System.Drawing.Point(10, 147);
+            this.dgvLibros.MultiSelect = false;
             this.dgvLibros.Name = "dgvLibros";
             this.dgvLibros.Size = new System.Drawing.Size(656, 251);
             this.dgvLibros.TabIndex = 118;
@@ -207,6 +217,34 @@
             this.dgvBusquedaPerfil.HeaderText = "Perfil";
             this.dgvBusquedaPerfil.Name = "dgvBusquedaPerfil";
             // 
+            // tbcCantidad
+            // 
+            this.tbcCantidad.DataPropertyName = "cantidad";
+            this.tbcCantidad.HeaderText = "Cantidad";
+            this.tbcCantidad.Name = "tbcCantidad";
+            this.tbcCantidad.Visible = false;
+            // 
+            // tbcArea
+            // 
+            this.tbcArea.DataPropertyName = "area";
+            this.tbcArea.HeaderText = "Area";
+            this.tbcArea.Name = "tbcArea";
+            this.tbcArea.Visible = false;
+            // 
+            // tbcEdicion
+            // 
+            this.tbcEdicion.DataPropertyName = "edicion";
+            this.tbcEdicion.HeaderText = "Edicion";
+            this.tbcEdicion.Name = "tbcEdicion";
+            this.tbcEdicion.Visible = false;
+            // 
+            // tbcId_libro
+            // 
+            this.tbcId_libro.DataPropertyName = "id_libro";
+            this.tbcId_libro.HeaderText = "ID_libro";
+            this.tbcId_libro.Name = "tbcId_libro";
+            this.tbcId_libro.Visible = false;
+            // 
             // ConsultarLibros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -247,5 +285,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvBusquedaAutor;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvBusquedaNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvBusquedaPerfil;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tbcCantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tbcArea;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tbcEdicion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tbcId_libro;
     }
 }

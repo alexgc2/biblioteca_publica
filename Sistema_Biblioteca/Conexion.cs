@@ -82,6 +82,25 @@ namespace Sistema_Biblioteca
             return "-1";
         }
 
+        public string RegistrarPrestamo(string id_miembro, string id_libro, string id_empleado, DateTime fecha_prestamo, DateTime fecha_entrega)
+        {
+            string salida = "Registrado Exitosamente";
+            try
+            {
+                cn.Open();
+                cmd = new SqlCommand(String.Format("insert into prestamo_libros(id_miembro, id_libro, id_empleado, fecha_prestamo, fecha_entrega)" +
+                    "values({0},{1},{2},'{3}','{4}')", id_miembro, id_libro, id_empleado, fecha_prestamo, fecha_entrega), cn);
+                cmd.ExecuteNonQuery();
+                cn.Close();
+            }
+
+            catch (Exception ex)
+            {
+                salida = "No se conecto: " + ex.ToString();
+            }
+            return salida;
+        }
+
         public string agregar_autor(string nombre, string area, string perfil)
         {
 
@@ -227,7 +246,7 @@ namespace Sistema_Biblioteca
 
         public DataSet ConsultarLibros(string nombre)
         {
-            query = "select codigo, isbn, autores.nombre as 'autor', libros.nombre, libros.perfil  from libros  " +
+            query = "select id_libro, codigo, isbn, autores.nombre as 'autor', libros.nombre, libros.perfil, cantidad, area, edicion  from libros  " +
                 "INNER JOIN autores ON libros.id_autor = autores.id_autors where STATUS = 'ACTIVO'";
             if (nombre != "")
                 query +="and nombre like '%" + nombre + "%'";

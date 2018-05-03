@@ -48,6 +48,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BuscarLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarLibro.Designer.cs">
+      <DependentUpon>BuscarLibro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarMiembros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarMiembros.Designer.cs">
+      <DependentUpon>BuscarMiembros.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConsultaMembresia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +169,19 @@
     <Compile Include="FormsViejos\Tipo Membresias.Designer.cs">
       <DependentUpon>Tipo Membresias.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistroPrestamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroPrestamos.Designer.cs">
+      <DependentUpon>RegistroPrestamos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empleado.cs" />
+    <EmbeddedResource Include="BuscarLibro.resx">
+      <DependentUpon>BuscarLibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarMiembros.resx">
+      <DependentUpon>BuscarMiembros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConsultaMembresia.resx">
       <DependentUpon>ConsultaMembresia.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormsViejos\Tipo Membresias.resx">
       <DependentUpon>Tipo Membresias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroPrestamos.resx">
+      <DependentUpon>RegistroPrestamos.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="BIBLIOTECA_PUBLICADataSet.xsc">
       <DependentUpon>BIBLIOTECA_PUBLICADataSet.xsd</DependentUpon>
@@ -372,6 +400,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\undoarrow_undo_1534.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_page_document_16676.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
