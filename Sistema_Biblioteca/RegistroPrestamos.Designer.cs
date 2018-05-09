@@ -71,7 +71,7 @@
             // pContent
             // 
             this.pContent.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pContent.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pContent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pContent.Controls.Add(this.groupBox1);
             this.pContent.Controls.Add(this.gbFecha);
             this.pContent.Controls.Add(this.lblRegistro);
@@ -109,7 +109,7 @@
             this.dtFechaEntrega.Name = "dtFechaEntrega";
             this.dtFechaEntrega.Size = new System.Drawing.Size(207, 31);
             this.dtFechaEntrega.TabIndex = 1;
-            this.dtFechaEntrega.Value = new System.DateTime(2018, 4, 22, 4, 34, 16, 910);
+            this.dtFechaEntrega.Value = new System.DateTime(2018, 5, 8, 0, 0, 0, 0);
             // 
             // gbFecha
             // 
@@ -134,7 +134,8 @@
             this.dtFechaPrestamo.Name = "dtFechaPrestamo";
             this.dtFechaPrestamo.Size = new System.Drawing.Size(207, 31);
             this.dtFechaPrestamo.TabIndex = 0;
-            this.dtFechaPrestamo.Value = new System.DateTime(2018, 4, 22, 4, 34, 16, 910);
+            this.dtFechaPrestamo.Tag = "";
+            this.dtFechaPrestamo.Value = new System.DateTime(2018, 5, 8, 17, 2, 7, 0);
             this.dtFechaPrestamo.onValueChanged += new System.EventHandler(this.dtFecha_onValueChanged);
             // 
             // lblRegistro
@@ -155,7 +156,7 @@
             this.btnSalir.BackColor = System.Drawing.Color.Transparent;
             this.btnSalir.Image = global::Sistema_Biblioteca.Properties.Resources.undoarrow_undo_1534;
             this.btnSalir.ImageActive = null;
-            this.btnSalir.Location = new System.Drawing.Point(605, 3);
+            this.btnSalir.Location = new System.Drawing.Point(607, 3);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(30, 33);
             this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -183,7 +184,7 @@
             this.btnAgregarLibro.IdleFillColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAgregarLibro.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(162)))), ((int)(((byte)(255)))));
             this.btnAgregarLibro.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(162)))), ((int)(((byte)(255)))));
-            this.btnAgregarLibro.Location = new System.Drawing.Point(516, 460);
+            this.btnAgregarLibro.Location = new System.Drawing.Point(517, 461);
             this.btnAgregarLibro.Margin = new System.Windows.Forms.Padding(5);
             this.btnAgregarLibro.Name = "btnAgregarLibro";
             this.btnAgregarLibro.Size = new System.Drawing.Size(100, 39);
@@ -521,7 +522,7 @@
             this.pbLibro.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbLibro.BackgroundImage = global::Sistema_Biblioteca.Properties.Resources.new_page_document_16676;
             this.pbLibro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbLibro.Location = new System.Drawing.Point(485, 51);
+            this.pbLibro.Location = new System.Drawing.Point(486, 52);
             this.pbLibro.Name = "pbLibro";
             this.pbLibro.Size = new System.Drawing.Size(131, 137);
             this.pbLibro.TabIndex = 124;
@@ -532,8 +533,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(645, 513);
+            this.ClientSize = new System.Drawing.Size(661, 552);
+            this.ControlBox = false;
             this.Controls.Add(this.pContent);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(661, 552);
             this.MinimizeBox = false;

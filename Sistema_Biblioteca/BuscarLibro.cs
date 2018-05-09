@@ -14,7 +14,7 @@ namespace Sistema_Biblioteca
     {
         RegistroPrestamos Caller;
         Conexion ObjQueries = new Conexion();
-        DataGridViewCellCollection Celda;
+        DataGridViewCellCollection Row;
         public BuscarLibro(RegistroPrestamos Caller)
         {
             InitializeComponent();
@@ -29,15 +29,16 @@ namespace Sistema_Biblioteca
 
         private void dgvLibros_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Celda = dgvLibros.CurrentRow.Cells;
+            Row = dgvLibros.CurrentRow.Cells;
+
             Caller.CapturarLibro(
-                Celda[0].Value.ToString(),
-                Celda[3].Value.ToString(),
-                Celda[6].Value.ToString(),
-                Celda[2].Value.ToString(),
-                Celda[7].Value.ToString(),
-                Celda[5].Value.ToString(),
-                Celda[8].Value.ToString());
+                Row[1].Value.ToString(),
+                Row[4].Value.ToString(),
+                Row[7].Value.ToString(),
+                Row[3].Value.ToString(),
+                Row[8].Value.ToString(),
+                Row[6].Value.ToString(),
+                Row[0].Value.ToString());
             this.Close();
         }
 

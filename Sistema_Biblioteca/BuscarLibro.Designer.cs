@@ -31,7 +31,6 @@
             this.txtFiltro = new System.Windows.Forms.TextBox();
             this.btnSalir = new Bunifu.Framework.UI.BunifuImageButton();
             this.dgvLibros = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.dgvBusquedaCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvBusquedaISBN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvBusquedaAutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,6 +40,7 @@
             this.tbcArea = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbcEdicion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbcId_libro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibros)).BeginInit();
             this.SuspendLayout();
@@ -88,15 +88,6 @@
             this.dgvLibros.Size = new System.Drawing.Size(614, 321);
             this.dgvLibros.TabIndex = 124;
             this.dgvLibros.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLibros_CellDoubleClick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 13);
-            this.label1.TabIndex = 125;
-            this.label1.Text = "Buscar por nombre";
             // 
             // dgvBusquedaCodigo
             // 
@@ -159,6 +150,15 @@
             this.tbcId_libro.HeaderText = "ID Libro";
             this.tbcId_libro.Name = "tbcId_libro";
             this.tbcId_libro.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(21, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(96, 13);
+            this.label1.TabIndex = 125;
+            this.label1.Text = "Buscar por nombre";
             // 
             // BuscarLibro
             // 

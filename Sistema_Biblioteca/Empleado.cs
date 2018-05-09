@@ -8,7 +8,7 @@ namespace Sistema_Biblioteca
 {
     public class Empleado
     {
-        string id = "15";
+        string id = "2001";
         string nombre;
         string apellidos;
         string direccion;

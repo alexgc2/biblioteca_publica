@@ -428,9 +428,9 @@
             this.pVentanas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pVentanas.Location = new System.Drawing.Point(351, 99);
+            this.pVentanas.Location = new System.Drawing.Point(341, 22);
             this.pVentanas.Name = "pVentanas";
-            this.pVentanas.Size = new System.Drawing.Size(340, 203);
+            this.pVentanas.Size = new System.Drawing.Size(340, 300);
             this.pVentanas.TabIndex = 0;
             // 
             // MenuPrincipal

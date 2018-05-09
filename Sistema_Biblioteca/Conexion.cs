@@ -82,9 +82,9 @@ namespace Sistema_Biblioteca
             return "-1";
         }
 
-        public string RegistrarPrestamo(string id_miembro, string id_libro, string id_empleado, DateTime fecha_prestamo, DateTime fecha_entrega)
-        {
-            string salida = "Registrado Exitosamente";
+        public string RegistrarPrestamo(string id_miembro, string id_libro, string id_empleado, string fecha_prestamo, string fecha_entrega)
+        { 
+            string salida = "OK";
             try
             {
                 cn.Open();

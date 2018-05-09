@@ -15,6 +15,7 @@ namespace Sistema_Biblioteca
         BuscarMiembros BuscarMiembros;
         BuscarLibro BuscarLibro;
         string id_libro;
+        string respuesta;
         Conexion ObjQueries = new Conexion();
         public RegistroPrestamos(Empleado EmpleadoActivo)
         {
@@ -41,7 +42,7 @@ namespace Sistema_Biblioteca
             txtNombre.Text = nombre_miembro;
             txtApellidos.Text = apellidos_miembro;
         }
-
+        
         public void CapturarLibro(string codigo, string nombre, string area, string autor, string edicion, string cantidad, string id_libro)
         {
             this.id_libro = id_libro;
@@ -51,6 +52,16 @@ namespace Sistema_Biblioteca
             txtAutor.Text = autor;
             txtEdicion.Text = edicion;
             txtCantidad.Text = cantidad;
+        }
+
+        public void LimpiarLibro() {
+            this.id_libro = null;
+            txtCodigo.Text = "";
+            txtNombreLibro.Text = "";
+            txtArea.Text = "";
+            txtAutor.Text = "";
+            txtEdicion.Text = "";
+            txtCantidad.Text = "";
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -66,9 +77,24 @@ namespace Sistema_Biblioteca
 
         private void btnAgregarLibro_Click(object sender, EventArgs e)
         {
-            ObjQueries.RegistrarPrestamo(
-                txtIDM.Text, id_libro, txtIDE.Text, dtFechaPrestamo.Value, dtFechaEntrega.Value
+            if (txtIDE.Text.Length == 0 || txtCodigo.Text.Length == 0 || txtIDM.Text.Length == 0)
+            {
+                MessageBox.Show("Favor de llenar todos los campos correspondientes", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            respuesta = ObjQueries.RegistrarPrestamo(
+                txtIDM.Text, id_libro, txtIDE.Text, dtFechaPrestamo.Value.ToShortDateString(), dtFechaEntrega.Value.ToShortDateString()
                 );
+
+            if (respuesta != "OK")
+            {
+                MessageBox.Show(respuesta, "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            MessageBox.Show("Se realizó el prestamo correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            LimpiarLibro();
         }
     }
 }
