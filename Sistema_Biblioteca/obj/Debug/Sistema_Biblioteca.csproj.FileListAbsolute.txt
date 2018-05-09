@@ -201,3 +201,4 @@ C:\Users\alex_\Desktop\biblioteca_publica\Sistema_Biblioteca\obj\Debug\Sistema_B
 C:\Users\alex_\Desktop\biblioteca_publica\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.pdb
 C:\Users\alex_\Desktop\biblioteca_publica\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.BuscarMiembros.resources
 C:\Users\alex_\Desktop\biblioteca_publica\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.BuscarLibro.resources
+C:\Users\alex_\Desktop\biblioteca_publica\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.RegistroEmpleado.resources

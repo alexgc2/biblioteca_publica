@@ -151,6 +151,12 @@
     <Compile Include="FormsViejos\Registro Libro.Designer.cs">
       <DependentUpon>Registro Libro.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistroEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroEmpleado.Designer.cs">
+      <DependentUpon>RegistroEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistroLibros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +236,9 @@
     </Compile>
     <EmbeddedResource Include="FormsViejos\Registro Libro.resx">
       <DependentUpon>Registro Libro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroEmpleado.resx">
+      <DependentUpon>RegistroEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroLibros.resx">
       <DependentUpon>RegistroLibros.cs</DependentUpon>
@@ -403,6 +412,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\new_page_document_16676.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_add_user_16734.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users_clients_group_16774.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

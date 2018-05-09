@@ -33,6 +33,23 @@ namespace Sistema_Biblioteca
             }
         }
 
+        public string BuscarIDEmpleado()
+        {
+            string id = "error";
+            cn.Open();
+            cmd = new SqlCommand("select ID_EMPLEADO From EMPLEADO", cn);
+            dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                id = dr["ID_EMPLEADO"].ToString();
+            }
+            dr.Close();
+            cn.Close();
+            return id;
+        }
+
+
+
         public string agregar_libro(string codigo, string nombre, string autor, string editorial, string edicion, string area, string perfilLibro , string perfilAutor, int isbn, int cantidad, int año, string proveedor, DateTimePicker date, string id_autor)
         {
 
@@ -53,9 +70,34 @@ namespace Sistema_Biblioteca
 
             catch (Exception ex)
             {
+                cn.Close();
                 salida = "No se conecto: " + ex.ToString();
             }
             return salida;
+        }
+
+        public string agregar_empleado(string nombre, string apellidos, string direccion, string contraseña, 
+            string fecha_nacimiento, string sexo, string telefono)
+        {
+
+            string salida = "OK";
+            try
+            {
+                cn.Open();
+                cmd = new SqlCommand(String.Format("insert into empleado(nombre, apellidos, dirección, contraseña, fecha_nacimiento," +
+                    "sexo, telefono) values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}',{6})",
+                    nombre, apellidos, direccion, contraseña, fecha_nacimiento, sexo, telefono), cn);
+                cmd.ExecuteNonQuery();
+                cn.Close();
+            }
+
+            catch (Exception ex)
+            {
+                salida = "No se conecto: " + ex.ToString();
+                cn.Close();
+            }
+            return salida;
+
         }
 
         public string BuscarIDAutor(string nombre, string autor, string perfil) {
@@ -97,6 +139,7 @@ namespace Sistema_Biblioteca
             catch (Exception ex)
             {
                 salida = "No se conecto: " + ex.ToString();
+                cn.Close();
             }
             return salida;
         }
@@ -116,6 +159,7 @@ namespace Sistema_Biblioteca
             catch (Exception ex)
             {
                 salida = "No se conecto: " + ex.ToString();
+                cn.Close();
             }
             return salida;
         }
@@ -139,6 +183,11 @@ namespace Sistema_Biblioteca
             catch (Exception ex)
             {
                 MessageBox.Show("No se pudo consultar: " + ex.ToString());
+                if (!dr.IsClosed)
+                {
+                    dr.Close();
+                }
+                cn.Close();
             }
             return contador;
         }
@@ -162,6 +211,7 @@ namespace Sistema_Biblioteca
             catch (Exception ex)
             {
                 salida = "No se pudieron actualizar los datos: " + ex.ToString();
+                cn.Close();
             }
             return salida;
         }
@@ -198,6 +248,11 @@ namespace Sistema_Biblioteca
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                if (!dr.IsClosed)
+                {
+                    dr.Close();
+                }
+                cn.Close();
             }
         }
 
@@ -216,6 +271,7 @@ namespace Sistema_Biblioteca
             catch (Exception ex)
             {
                 salida = "No se conecto: " + ex.ToString();
+                cn.Close();
             }
             return salida;
         }
@@ -239,6 +295,11 @@ namespace Sistema_Biblioteca
             catch (Exception ex)
             {
                 MessageBox.Show("No se pudo consultar: " + ex.ToString());
+                if (!dr.IsClosed)
+                {
+                    dr.Close();
+                }
+                cn.Close();
             }
             return contador;
         }
@@ -329,6 +390,11 @@ namespace Sistema_Biblioteca
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                if (!dr.IsClosed)
+                {
+                    dr.Close();
+                }
+                cn.Close();
             }
         }
 
@@ -346,6 +412,7 @@ namespace Sistema_Biblioteca
 
             catch (Exception ex)
             {
+                cn.Close();
                 salida = "No se conecto: " + ex.ToString();
             }
             return salida;
@@ -365,10 +432,11 @@ namespace Sistema_Biblioteca
 
             catch (Exception ex)
             {
+                cn.Close();
                 salida = "No se conecto: " + ex.ToString();
             }
             return salida;
-        }   
+        }
      
     }
 }

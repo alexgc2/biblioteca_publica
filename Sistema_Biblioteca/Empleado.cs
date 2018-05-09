@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,7 @@ namespace Sistema_Biblioteca
 {
     public class Empleado
     {
-        string id = "2001";
+        string id;
         string nombre;
         string apellidos;
         string direccion;
@@ -16,6 +17,13 @@ namespace Sistema_Biblioteca
         string sexo;
         string telefono;
         string status;
+
+        Conexion objQueries = new Conexion();
+        public Empleado() {
+            this.id = objQueries.BuscarIDEmpleado();
+            
+        }
+
 
         #region getters y setters
         public string Id { get => id; set => id = value; }

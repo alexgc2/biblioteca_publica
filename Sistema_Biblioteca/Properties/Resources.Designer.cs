@@ -343,6 +343,16 @@ namespace Sistema_Biblioteca.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap new_add_user_16734 {
+            get {
+                object obj = ResourceManager.GetObject("new_add_user_16734", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap new_add_user_info_16706 {
             get {
                 object obj = ResourceManager.GetObject("new_add_user_info_16706", resourceCulture);
@@ -476,6 +486,16 @@ namespace Sistema_Biblioteca.Properties {
         internal static System.Drawing.Bitmap undoarrow_undo_1534 {
             get {
                 object obj = ResourceManager.GetObject("undoarrow_undo_1534", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap users_clients_group_16774 {
+            get {
+                object obj = ResourceManager.GetObject("users_clients_group_16774", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

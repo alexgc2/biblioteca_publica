@@ -31,53 +31,55 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.pTitulo = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnSalir = new Bunifu.Framework.UI.BunifuImageButton();
             this.pLogin = new System.Windows.Forms.Panel();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.txtClave = new System.Windows.Forms.TextBox();
             this.lblClave = new System.Windows.Forms.Label();
             this.lblUser = new System.Windows.Forms.Label();
-            this.btnLogout = new Bunifu.Framework.UI.BunifuImageButton();
             this.pSesion = new System.Windows.Forms.Panel();
-            this.btnface = new Bunifu.Framework.UI.BunifuImageButton();
             this.lblUserActivo = new System.Windows.Forms.Label();
-            this.btntt = new Bunifu.Framework.UI.BunifuImageButton();
             this.lblFecha = new System.Windows.Forms.Label();
-            this.btnIn = new Bunifu.Framework.UI.BunifuImageButton();
             this.lblF = new System.Windows.Forms.Label();
             this.lblUs = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.lblH = new System.Windows.Forms.Label();
             this.pMenu = new System.Windows.Forms.Panel();
-            this.btnPrestamos = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnSalas = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnComputadoras = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnMembresias = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnLibros = new Bunifu.Framework.UI.BunifuImageButton();
             this.Tiempo = new System.Windows.Forms.Timer(this.components);
-            this.pPrincipal = new System.Windows.Forms.Panel();
-            this.pVentanas = new System.Windows.Forms.Panel();
             this.toolTipPrestamo = new System.Windows.Forms.ToolTip(this.components);
             this.toolTipLibros = new System.Windows.Forms.ToolTip(this.components);
             this.toolTipMembresias = new System.Windows.Forms.ToolTip(this.components);
             this.toolTipComputadoras = new System.Windows.Forms.ToolTip(this.components);
             this.toolTipSalas = new System.Windows.Forms.ToolTip(this.components);
+            this.pPrincipal = new System.Windows.Forms.Panel();
+            this.pVentanas = new System.Windows.Forms.Panel();
+            this.btnEmpleados = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnPrestamos = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnSalas = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnComputadoras = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnMembresias = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnLibros = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnface = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btntt = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnIn = new Bunifu.Framework.UI.BunifuImageButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnSalir = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnLogout = new Bunifu.Framework.UI.BunifuImageButton();
             this.pTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             this.pLogin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
             this.pSesion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnface)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btntt)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnIn)).BeginInit();
             this.pMenu.SuspendLayout();
+            this.pPrincipal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEmpleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPrestamos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnComputadoras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMembresias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnLibros)).BeginInit();
-            this.pPrincipal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnface)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btntt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnIn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
             this.SuspendLayout();
             // 
             // pTitulo
@@ -91,30 +93,6 @@
             this.pTitulo.Name = "pTitulo";
             this.pTitulo.Size = new System.Drawing.Size(1034, 37);
             this.pTitulo.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = global::Sistema_Biblioteca.Properties.Resources.BibliotecaManagerTitlw;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Location = new System.Drawing.Point(4, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(195, 29);
-            this.panel2.TabIndex = 1;
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.BackColor = System.Drawing.Color.Transparent;
-            this.btnSalir.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnSalir.Image = global::Sistema_Biblioteca.Properties.Resources.shutdown_off_close_exit_15253;
-            this.btnSalir.ImageActive = null;
-            this.btnSalir.Location = new System.Drawing.Point(999, 0);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(35, 37);
-            this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnSalir.TabIndex = 0;
-            this.btnSalir.TabStop = false;
-            this.btnSalir.Zoom = 10;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // pLogin
             // 
@@ -172,20 +150,6 @@
             this.lblUser.TabIndex = 2;
             this.lblUser.Text = "Usuario";
             // 
-            // btnLogout
-            // 
-            this.btnLogout.BackColor = System.Drawing.Color.Transparent;
-            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnLogout.Image = global::Sistema_Biblioteca.Properties.Resources.off_downnearexit_apagado_abajo_6017;
-            this.btnLogout.ImageActive = null;
-            this.btnLogout.Location = new System.Drawing.Point(438, 0);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(22, 26);
-            this.btnLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnLogout.TabIndex = 1;
-            this.btnLogout.TabStop = false;
-            this.btnLogout.Zoom = 10;
-            // 
             // pSesion
             // 
             this.pSesion.Controls.Add(this.btnface);
@@ -203,20 +167,6 @@
             this.pSesion.Size = new System.Drawing.Size(1034, 32);
             this.pSesion.TabIndex = 1;
             // 
-            // btnface
-            // 
-            this.btnface.BackColor = System.Drawing.Color.Transparent;
-            this.btnface.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnface.Image = global::Sistema_Biblioteca.Properties.Resources.Facebook_Icono;
-            this.btnface.ImageActive = null;
-            this.btnface.Location = new System.Drawing.Point(944, 0);
-            this.btnface.Name = "btnface";
-            this.btnface.Size = new System.Drawing.Size(30, 32);
-            this.btnface.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnface.TabIndex = 3;
-            this.btnface.TabStop = false;
-            this.btnface.Zoom = 10;
-            // 
             // lblUserActivo
             // 
             this.lblUserActivo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -229,20 +179,6 @@
             this.lblUserActivo.TabIndex = 5;
             this.lblUserActivo.Text = "-";
             // 
-            // btntt
-            // 
-            this.btntt.BackColor = System.Drawing.Color.Transparent;
-            this.btntt.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btntt.Image = global::Sistema_Biblioteca.Properties.Resources.twitter;
-            this.btntt.ImageActive = null;
-            this.btntt.Location = new System.Drawing.Point(974, 0);
-            this.btntt.Name = "btntt";
-            this.btntt.Size = new System.Drawing.Size(30, 32);
-            this.btntt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btntt.TabIndex = 2;
-            this.btntt.TabStop = false;
-            this.btntt.Zoom = 10;
-            // 
             // lblFecha
             // 
             this.lblFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -254,20 +190,6 @@
             this.lblFecha.Size = new System.Drawing.Size(11, 14);
             this.lblFecha.TabIndex = 4;
             this.lblFecha.Text = "-";
-            // 
-            // btnIn
-            // 
-            this.btnIn.BackColor = System.Drawing.Color.Transparent;
-            this.btnIn.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnIn.Image = global::Sistema_Biblioteca.Properties.Resources.Instagram_grey;
-            this.btnIn.ImageActive = null;
-            this.btnIn.Location = new System.Drawing.Point(1004, 0);
-            this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(30, 32);
-            this.btnIn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnIn.TabIndex = 1;
-            this.btnIn.TabStop = false;
-            this.btnIn.Zoom = 10;
             // 
             // lblF
             // 
@@ -319,6 +241,7 @@
             // 
             // pMenu
             // 
+            this.pMenu.Controls.Add(this.btnEmpleados);
             this.pMenu.Controls.Add(this.btnPrestamos);
             this.pMenu.Controls.Add(this.btnSalas);
             this.pMenu.Controls.Add(this.btnComputadoras);
@@ -330,81 +253,6 @@
             this.pMenu.Size = new System.Drawing.Size(1034, 100);
             this.pMenu.TabIndex = 2;
             this.pMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.pMenu_Paint);
-            // 
-            // btnPrestamos
-            // 
-            this.btnPrestamos.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnPrestamos.BackColor = System.Drawing.Color.Transparent;
-            this.btnPrestamos.Image = global::Sistema_Biblioteca.Properties.Resources.page_document_empty_16752;
-            this.btnPrestamos.ImageActive = null;
-            this.btnPrestamos.Location = new System.Drawing.Point(107, 7);
-            this.btnPrestamos.Name = "btnPrestamos";
-            this.btnPrestamos.Size = new System.Drawing.Size(85, 85);
-            this.btnPrestamos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnPrestamos.TabIndex = 4;
-            this.btnPrestamos.TabStop = false;
-            this.btnPrestamos.Zoom = 10;
-            this.btnPrestamos.Click += new System.EventHandler(this.btnPrestamos_Click);
-            // 
-            // btnSalas
-            // 
-            this.btnSalas.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSalas.BackColor = System.Drawing.Color.Transparent;
-            this.btnSalas.Image = global::Sistema_Biblioteca.Properties.Resources.events_rooms;
-            this.btnSalas.ImageActive = null;
-            this.btnSalas.Location = new System.Drawing.Point(826, 7);
-            this.btnSalas.Name = "btnSalas";
-            this.btnSalas.Size = new System.Drawing.Size(85, 85);
-            this.btnSalas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnSalas.TabIndex = 3;
-            this.btnSalas.TabStop = false;
-            this.btnSalas.Zoom = 10;
-            this.btnSalas.Click += new System.EventHandler(this.btnSalas_Click);
-            // 
-            // btnComputadoras
-            // 
-            this.btnComputadoras.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnComputadoras.BackColor = System.Drawing.Color.Transparent;
-            this.btnComputadoras.Image = global::Sistema_Biblioteca.Properties.Resources.computer_pc_10894;
-            this.btnComputadoras.ImageActive = null;
-            this.btnComputadoras.Location = new System.Drawing.Point(656, 7);
-            this.btnComputadoras.Name = "btnComputadoras";
-            this.btnComputadoras.Size = new System.Drawing.Size(85, 85);
-            this.btnComputadoras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnComputadoras.TabIndex = 2;
-            this.btnComputadoras.TabStop = false;
-            this.btnComputadoras.Zoom = 10;
-            this.btnComputadoras.Click += new System.EventHandler(this.btnComputadoras_Click);
-            // 
-            // btnMembresias
-            // 
-            this.btnMembresias.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnMembresias.BackColor = System.Drawing.Color.Transparent;
-            this.btnMembresias.Image = global::Sistema_Biblioteca.Properties.Resources.tag_user_card_16777;
-            this.btnMembresias.ImageActive = null;
-            this.btnMembresias.Location = new System.Drawing.Point(478, 7);
-            this.btnMembresias.Name = "btnMembresias";
-            this.btnMembresias.Size = new System.Drawing.Size(85, 85);
-            this.btnMembresias.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnMembresias.TabIndex = 1;
-            this.btnMembresias.TabStop = false;
-            this.btnMembresias.Zoom = 10;
-            this.btnMembresias.Click += new System.EventHandler(this.btnMembresias_Click);
-            // 
-            // btnLibros
-            // 
-            this.btnLibros.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnLibros.BackColor = System.Drawing.Color.Transparent;
-            this.btnLibros.Image = global::Sistema_Biblioteca.Properties.Resources.mimetypes_addressbookoffice_384;
-            this.btnLibros.ImageActive = null;
-            this.btnLibros.Location = new System.Drawing.Point(291, 7);
-            this.btnLibros.Name = "btnLibros";
-            this.btnLibros.Size = new System.Drawing.Size(85, 85);
-            this.btnLibros.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnLibros.TabIndex = 0;
-            this.btnLibros.TabStop = false;
-            this.btnLibros.Zoom = 10;
-            this.btnLibros.Click += new System.EventHandler(this.btnLibros_Click);
             // 
             // Tiempo
             // 
@@ -433,6 +281,176 @@
             this.pVentanas.Size = new System.Drawing.Size(340, 300);
             this.pVentanas.TabIndex = 0;
             // 
+            // btnEmpleados
+            // 
+            this.btnEmpleados.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEmpleados.BackColor = System.Drawing.Color.Transparent;
+            this.btnEmpleados.Image = global::Sistema_Biblioteca.Properties.Resources.users_clients_group_16774;
+            this.btnEmpleados.ImageActive = null;
+            this.btnEmpleados.Location = new System.Drawing.Point(32, 6);
+            this.btnEmpleados.Name = "btnEmpleados";
+            this.btnEmpleados.Size = new System.Drawing.Size(85, 85);
+            this.btnEmpleados.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnEmpleados.TabIndex = 5;
+            this.btnEmpleados.TabStop = false;
+            this.btnEmpleados.Zoom = 10;
+            this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
+            // 
+            // btnPrestamos
+            // 
+            this.btnPrestamos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPrestamos.BackColor = System.Drawing.Color.Transparent;
+            this.btnPrestamos.Image = global::Sistema_Biblioteca.Properties.Resources.page_document_empty_16752;
+            this.btnPrestamos.ImageActive = null;
+            this.btnPrestamos.Location = new System.Drawing.Point(187, 6);
+            this.btnPrestamos.Name = "btnPrestamos";
+            this.btnPrestamos.Size = new System.Drawing.Size(85, 85);
+            this.btnPrestamos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnPrestamos.TabIndex = 4;
+            this.btnPrestamos.TabStop = false;
+            this.btnPrestamos.Zoom = 10;
+            this.btnPrestamos.Click += new System.EventHandler(this.btnPrestamos_Click);
+            // 
+            // btnSalas
+            // 
+            this.btnSalas.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSalas.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalas.Image = global::Sistema_Biblioteca.Properties.Resources.events_rooms;
+            this.btnSalas.ImageActive = null;
+            this.btnSalas.Location = new System.Drawing.Point(906, 6);
+            this.btnSalas.Name = "btnSalas";
+            this.btnSalas.Size = new System.Drawing.Size(85, 85);
+            this.btnSalas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnSalas.TabIndex = 3;
+            this.btnSalas.TabStop = false;
+            this.btnSalas.Zoom = 10;
+            this.btnSalas.Click += new System.EventHandler(this.btnSalas_Click);
+            // 
+            // btnComputadoras
+            // 
+            this.btnComputadoras.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnComputadoras.BackColor = System.Drawing.Color.Transparent;
+            this.btnComputadoras.Image = global::Sistema_Biblioteca.Properties.Resources.computer_pc_10894;
+            this.btnComputadoras.ImageActive = null;
+            this.btnComputadoras.Location = new System.Drawing.Point(736, 6);
+            this.btnComputadoras.Name = "btnComputadoras";
+            this.btnComputadoras.Size = new System.Drawing.Size(85, 85);
+            this.btnComputadoras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnComputadoras.TabIndex = 2;
+            this.btnComputadoras.TabStop = false;
+            this.btnComputadoras.Zoom = 10;
+            this.btnComputadoras.Click += new System.EventHandler(this.btnComputadoras_Click);
+            // 
+            // btnMembresias
+            // 
+            this.btnMembresias.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnMembresias.BackColor = System.Drawing.Color.Transparent;
+            this.btnMembresias.Image = global::Sistema_Biblioteca.Properties.Resources.tag_user_card_16777;
+            this.btnMembresias.ImageActive = null;
+            this.btnMembresias.Location = new System.Drawing.Point(558, 6);
+            this.btnMembresias.Name = "btnMembresias";
+            this.btnMembresias.Size = new System.Drawing.Size(85, 85);
+            this.btnMembresias.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMembresias.TabIndex = 1;
+            this.btnMembresias.TabStop = false;
+            this.btnMembresias.Zoom = 10;
+            this.btnMembresias.Click += new System.EventHandler(this.btnMembresias_Click);
+            // 
+            // btnLibros
+            // 
+            this.btnLibros.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnLibros.BackColor = System.Drawing.Color.Transparent;
+            this.btnLibros.Image = global::Sistema_Biblioteca.Properties.Resources.mimetypes_addressbookoffice_384;
+            this.btnLibros.ImageActive = null;
+            this.btnLibros.Location = new System.Drawing.Point(371, 6);
+            this.btnLibros.Name = "btnLibros";
+            this.btnLibros.Size = new System.Drawing.Size(85, 85);
+            this.btnLibros.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnLibros.TabIndex = 0;
+            this.btnLibros.TabStop = false;
+            this.btnLibros.Zoom = 10;
+            this.btnLibros.Click += new System.EventHandler(this.btnLibros_Click);
+            // 
+            // btnface
+            // 
+            this.btnface.BackColor = System.Drawing.Color.Transparent;
+            this.btnface.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnface.Image = global::Sistema_Biblioteca.Properties.Resources.Facebook_Icono;
+            this.btnface.ImageActive = null;
+            this.btnface.Location = new System.Drawing.Point(944, 0);
+            this.btnface.Name = "btnface";
+            this.btnface.Size = new System.Drawing.Size(30, 32);
+            this.btnface.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnface.TabIndex = 3;
+            this.btnface.TabStop = false;
+            this.btnface.Zoom = 10;
+            // 
+            // btntt
+            // 
+            this.btntt.BackColor = System.Drawing.Color.Transparent;
+            this.btntt.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btntt.Image = global::Sistema_Biblioteca.Properties.Resources.twitter;
+            this.btntt.ImageActive = null;
+            this.btntt.Location = new System.Drawing.Point(974, 0);
+            this.btntt.Name = "btntt";
+            this.btntt.Size = new System.Drawing.Size(30, 32);
+            this.btntt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btntt.TabIndex = 2;
+            this.btntt.TabStop = false;
+            this.btntt.Zoom = 10;
+            // 
+            // btnIn
+            // 
+            this.btnIn.BackColor = System.Drawing.Color.Transparent;
+            this.btnIn.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnIn.Image = global::Sistema_Biblioteca.Properties.Resources.Instagram_grey;
+            this.btnIn.ImageActive = null;
+            this.btnIn.Location = new System.Drawing.Point(1004, 0);
+            this.btnIn.Name = "btnIn";
+            this.btnIn.Size = new System.Drawing.Size(30, 32);
+            this.btnIn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnIn.TabIndex = 1;
+            this.btnIn.TabStop = false;
+            this.btnIn.Zoom = 10;
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = global::Sistema_Biblioteca.Properties.Resources.BibliotecaManagerTitlw;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Location = new System.Drawing.Point(4, 4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(195, 29);
+            this.panel2.TabIndex = 1;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalir.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnSalir.Image = global::Sistema_Biblioteca.Properties.Resources.shutdown_off_close_exit_15253;
+            this.btnSalir.ImageActive = null;
+            this.btnSalir.Location = new System.Drawing.Point(999, 0);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(35, 37);
+            this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnSalir.TabIndex = 0;
+            this.btnSalir.TabStop = false;
+            this.btnSalir.Zoom = 10;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnLogout.Image = global::Sistema_Biblioteca.Properties.Resources.off_downnearexit_apagado_abajo_6017;
+            this.btnLogout.ImageActive = null;
+            this.btnLogout.Location = new System.Drawing.Point(438, 0);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(22, 26);
+            this.btnLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnLogout.TabIndex = 1;
+            this.btnLogout.TabStop = false;
+            this.btnLogout.Zoom = 10;
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -450,22 +468,23 @@
             this.Text = "MenuPrincipal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pTitulo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             this.pLogin.ResumeLayout(false);
             this.pLogin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).EndInit();
             this.pSesion.ResumeLayout(false);
             this.pSesion.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnface)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btntt)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnIn)).EndInit();
             this.pMenu.ResumeLayout(false);
+            this.pPrincipal.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnEmpleados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnPrestamos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnComputadoras)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMembresias)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnLibros)).EndInit();
-            this.pPrincipal.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnface)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btntt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnIn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -505,5 +524,6 @@
         private System.Windows.Forms.ToolTip toolTipMembresias;
         private System.Windows.Forms.ToolTip toolTipComputadoras;
         private System.Windows.Forms.ToolTip toolTipSalas;
+        private Bunifu.Framework.UI.BunifuImageButton btnEmpleados;
     }
 }

@@ -87,5 +87,13 @@ namespace Sistema_Biblioteca
             toolTipComputadoras.SetToolTip(btnComputadoras, "Computadoras");
             toolTipSalas.SetToolTip(btnSalas, "Salas");
         }
+
+        private void btnEmpleados_Click(object sender, EventArgs e)
+        {
+            RegistroEmpleado RE = new RegistroEmpleado();
+            RE.TopLevel = false;
+            RE.Parent = pVentanas;
+            RE.Show();
+        }
     }
 }
