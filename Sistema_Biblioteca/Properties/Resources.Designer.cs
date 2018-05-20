@@ -19,7 +19,7 @@ namespace Sistema_Biblioteca.Properties {
     // a través de una herramienta como ResGen o Visual Studio.
     // Para agregar o quitar un miembro, edite el archivo .ResX y, a continuación, vuelva a ejecutar ResGen
     // con la opción /str o recompile su proyecto de VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -123,6 +123,26 @@ namespace Sistema_Biblioteca.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_pc {
+            get {
+                object obj = ResourceManager.GetObject("add_pc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap add_sala {
+            get {
+                object obj = ResourceManager.GetObject("add_sala", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BibliotecaManagerLogo {
             get {
                 object obj = ResourceManager.GetObject("BibliotecaManagerLogo", resourceCulture);
@@ -203,6 +223,16 @@ namespace Sistema_Biblioteca.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap computer_pc_108941 {
+            get {
+                object obj = ResourceManager.GetObject("computer_pc_108941", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap configura_book {
             get {
                 object obj = ResourceManager.GetObject("configura_book", resourceCulture);
@@ -276,6 +306,16 @@ namespace Sistema_Biblioteca.Properties {
         internal static System.Drawing.Bitmap events_rooms {
             get {
                 object obj = ResourceManager.GetObject("events_rooms", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap events_rooms1 {
+            get {
+                object obj = ResourceManager.GetObject("events_rooms1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -49,7 +49,6 @@ namespace Sistema_Biblioteca
         }
 
 
-
         public string agregar_libro(string codigo, string nombre, string autor, string editorial, string edicion, string area, string perfilLibro , string perfilAutor, int isbn, int cantidad, int año, string proveedor, DateTimePicker date, string id_autor)
         {
 
@@ -124,7 +123,7 @@ namespace Sistema_Biblioteca
             return "-1";
         }
 
-        public string RegistrarPrestamo(string id_miembro, string id_libro, string id_empleado, string fecha_prestamo, string fecha_entrega)
+        public string RegistrarPrestamoLibro(string id_miembro, string id_libro, string id_empleado, string fecha_prestamo, string fecha_entrega)
         { 
             string salida = "OK";
             try
@@ -132,6 +131,27 @@ namespace Sistema_Biblioteca
                 cn.Open();
                 cmd = new SqlCommand(String.Format("insert into prestamo_libros(id_miembro, id_libro, id_empleado, fecha_prestamo, fecha_entrega)" +
                     "values({0},{1},{2},'{3}','{4}')", id_miembro, id_libro, id_empleado, fecha_prestamo, fecha_entrega), cn);
+                cmd.ExecuteNonQuery();
+                cn.Close();
+            }
+
+            catch (Exception ex)
+            {
+                salida = "No se conecto: " + ex.ToString();
+                cn.Close();
+            }
+            return salida;
+        }
+
+        public string RegistrarPrestamoComputadora
+        (string id_miembro, string id_computadora, string id_empleado, string hora_entrada, string hora_salida)
+        {
+            string salida = "OK";
+            try
+            {
+                cn.Open();
+                cmd = new SqlCommand(String.Format("insert into PRESTAMO_COMPUTADORA (ID_MIEMC, ID_COMP,ID_EMP, HORA_ENTRADA, HORA_SALIDA)" +
+                    "values({0},{1},{2},'{3}','{4}')", id_miembro, id_computadora, id_empleado, hora_entrada, hora_salida), cn);
                 cmd.ExecuteNonQuery();
                 cn.Close();
             }
@@ -218,7 +238,6 @@ namespace Sistema_Biblioteca
 
         public void llenarModificarLibro(TextBox txtCodigo, TextBox txtPerfilCodigo, TextBox txtTitulo, TextBox Autor, TextBox txtEditorial, TextBox txtEdicion, TextBox Area, TextBox txtPerfil, TextBox txtISBN, TextBox txtCantidad, TextBox txtAño, TextBox txtProveedor, ComboBox txtStatus, TextBox Fecha)
         {
-            string id_autor ;
             try
             {
                 cn.Open();
@@ -437,6 +456,111 @@ namespace Sistema_Biblioteca
             }
             return salida;
         }
-     
+
+
+        #region computadoras
+        public string agergar_equipo(string tipo, string proveedor)
+        {
+            string salida = "Registrado Exitosamente";
+            try
+            {
+                cn.Open();
+                cmd = new SqlCommand("insert into computadoras(tipo,proveedor)values('" + tipo + "','" + proveedor + "')", cn);
+                cmd.ExecuteNonQuery();
+                cn.Close();
+            }
+
+            catch (Exception ex)
+            {
+                salida = "No se conecto: " + ex.ToString();
+            }
+            return salida;
+        }
+
+        public string modificar_equipo(string tipo, string proveedor, int id)
+        {
+            string salida = "Registrado Exitosamente";
+            try
+            {
+                cn.Open();
+                cmd = new SqlCommand("update computadoras set tipo='" + tipo + "', proveedor='" + proveedor + "' where id_computadora = " + id + "", cn);
+                cmd.ExecuteNonQuery();
+                cn.Close();
+            }
+
+            catch (Exception ex)
+            {
+                salida = "No se conecto: " + ex.ToString();
+            }
+            return salida;
+        }
+
+        public DataSet ConsultarEquipo(string filtro)
+        {
+            query = "select id_computadora , tipo, proveedor from COMPUTADORAS";
+            if (filtro != "")
+                query += " where tipo like '%" + filtro + "%' or id_Computadora like '%" + filtro + "%' or proveedor like '%"+filtro+"%'";
+            cmd = new SqlCommand(query, cn);
+            cmd.CommandType = CommandType.Text;
+            da = new SqlDataAdapter(cmd);
+            ds = new DataSet();
+            da.Fill(ds, "COMPUTADORAS");
+            return ds;
+        }
+        #endregion
+
+
+        #region salas
+
+        public string agergar_sala(int num_sala, int max_personas, string tipo_evento)
+        {
+            string salida = "Registrado Exitosamente";
+            try
+            {
+                cn.Open();
+                cmd = new SqlCommand("insert into salas(num_sala, max_personas, tipo_eventos, ESTATUS)values(" + num_sala + "," + max_personas + ",'" + tipo_evento + "','Disponible')", cn);
+                cmd.ExecuteNonQuery();
+                cn.Close();
+            }
+
+            catch (Exception ex)
+            {
+                salida = "No se conecto: " + ex.ToString();
+            }
+            return salida;
+        }
+
+        public string modificar_sala(int sala, int max_personas, string tipo_evento, string status, int id)
+        {
+            string salida = "Registrado Exitosamente";
+            try
+            {
+                cn.Open();
+                cmd = new SqlCommand("update SALAS set NUM_SALA=" + sala + ", MAX_PERSONAS=" + max_personas + ", TIPO_EVENTOS ='" + tipo_evento + "', estatus = '" + status + "' where id_salas = " + id + "", cn);
+                cmd.ExecuteNonQuery();
+                cn.Close();
+            }
+
+            catch (Exception ex)
+            {
+                salida = "No se conecto: " + ex.ToString();
+            }
+            return salida;
+        }
+
+        public DataSet ConsultarSala(string nombre)
+        {
+            query = "select ID_SALAS, NUM_SALA, MAX_PERSONAS, TIPO_EVENTOS, ESTATUS from SALAS";
+            if (nombre != "")
+                query += " where NUM_SALA like '%" + nombre + "%' or id_SALAS like '%" + nombre + "%'";
+            cmd = new SqlCommand(query, cn);
+            cmd.CommandType = CommandType.Text;
+            da = new SqlDataAdapter(cmd);
+            ds = new DataSet();
+            da.Fill(ds, "SALAS");
+            return ds;
+        }
+        #endregion
+
     }
 }

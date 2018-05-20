@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BuscarEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarEquipo.Designer.cs">
+      <DependentUpon>BuscarEquipo.cs</DependentUpon>
+    </Compile>
     <Compile Include="BuscarLibro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +65,12 @@
     </Compile>
     <Compile Include="BuscarMiembros.Designer.cs">
       <DependentUpon>BuscarMiembros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaEquipos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaEquipos.Designer.cs">
+      <DependentUpon>ConsultaEquipos.cs</DependentUpon>
     </Compile>
     <Compile Include="ConsultaMembresia.cs">
       <SubType>Form</SubType>
@@ -83,6 +95,12 @@
     </Compile>
     <Compile Include="ConsultarTiposMembresias.Designer.cs">
       <DependentUpon>ConsultarTiposMembresias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaSalas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaSalas.Designer.cs">
+      <DependentUpon>ConsultaSalas.cs</DependentUpon>
     </Compile>
     <Compile Include="FormsViejos\Agregar_Autor.cs">
       <SubType>Form</SubType>
@@ -151,6 +169,12 @@
     <Compile Include="FormsViejos\Registro Libro.Designer.cs">
       <DependentUpon>Registro Libro.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistroPrestamoEquipos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroPrestamoEquipos.Designer.cs">
+      <DependentUpon>RegistroPrestamoEquipos.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistroEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,18 +199,30 @@
     <Compile Include="FormsViejos\Tipo Membresias.Designer.cs">
       <DependentUpon>Tipo Membresias.cs</DependentUpon>
     </Compile>
-    <Compile Include="RegistroPrestamos.cs">
+    <Compile Include="RegistroPrestamosLibros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegistroPrestamos.Designer.cs">
-      <DependentUpon>RegistroPrestamos.cs</DependentUpon>
+    <Compile Include="RegistroPrestamosLibros.Designer.cs">
+      <DependentUpon>RegistroPrestamosLibros.cs</DependentUpon>
     </Compile>
     <Compile Include="Empleado.cs" />
+    <Compile Include="RegistroPrestamoSalas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroPrestamoSalas.Designer.cs">
+      <DependentUpon>RegistroPrestamoSalas.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BuscarEquipo.resx">
+      <DependentUpon>BuscarEquipo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BuscarLibro.resx">
       <DependentUpon>BuscarLibro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BuscarMiembros.resx">
       <DependentUpon>BuscarMiembros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaEquipos.resx">
+      <DependentUpon>ConsultaEquipos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaMembresia.resx">
       <DependentUpon>ConsultaMembresia.cs</DependentUpon>
@@ -199,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultarTiposMembresias.resx">
       <DependentUpon>ConsultarTiposMembresias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaSalas.resx">
+      <DependentUpon>ConsultaSalas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsViejos\Agregar_Autor.resx">
       <DependentUpon>Agregar_Autor.cs</DependentUpon>
@@ -237,6 +276,9 @@
     <EmbeddedResource Include="FormsViejos\Registro Libro.resx">
       <DependentUpon>Registro Libro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RegistroPrestamoEquipos.resx">
+      <DependentUpon>RegistroPrestamoEquipos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegistroEmpleado.resx">
       <DependentUpon>RegistroEmpleado.cs</DependentUpon>
     </EmbeddedResource>
@@ -249,8 +291,11 @@
     <EmbeddedResource Include="FormsViejos\Tipo Membresias.resx">
       <DependentUpon>Tipo Membresias.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegistroPrestamos.resx">
-      <DependentUpon>RegistroPrestamos.cs</DependentUpon>
+    <EmbeddedResource Include="RegistroPrestamosLibros.resx">
+      <DependentUpon>RegistroPrestamosLibros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroPrestamoSalas.resx">
+      <DependentUpon>RegistroPrestamoSalas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="BIBLIOTECA_PUBLICADataSet.xsc">
       <DependentUpon>BIBLIOTECA_PUBLICADataSet.xsd</DependentUpon>
@@ -418,6 +463,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\users_clients_group_16774.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\computer_pc_108941.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_pc1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\events_rooms1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_sala1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

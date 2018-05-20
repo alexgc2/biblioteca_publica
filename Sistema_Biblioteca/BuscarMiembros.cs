@@ -13,17 +13,23 @@ namespace Sistema_Biblioteca
     public partial class BuscarMiembros : Form
     {
         Conexion ObjQueries = new Conexion();
-        RegistroPrestamos Caller;
+        RegistroPrestamosLibros LibrosCaller;
+        RegistroPrestamoEquipos EquiposCaller;
         DataGridViewCellCollection Celda;
-        public BuscarMiembros(RegistroPrestamos Caller)
+        public BuscarMiembros(RegistroPrestamosLibros Caller)
         {
             InitializeComponent();
-            this.Caller = Caller;
+            LibrosCaller = Caller;
+        }
+        public BuscarMiembros(RegistroPrestamoEquipos Caller)
+        {
+            InitializeComponent();
+            EquiposCaller = Caller;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void txtFiltro_TextChanged(object sender, EventArgs e)
@@ -34,8 +40,26 @@ namespace Sistema_Biblioteca
         private void dgvAutores_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             Celda = dgvMiembros.CurrentRow.Cells;
-            Caller.CapturarMiembro(Celda[0].Value.ToString(), Celda[1].Value.ToString(), Celda[2].Value.ToString(), Celda[3].Value.ToString(), Celda[4].Value.ToString());
-            this.Close();
+            if (LibrosCaller != null)
+            {
+                LibrosCaller.CapturarMiembro(
+                    Celda[0].Value.ToString(),
+                    Celda[3].Value.ToString(),
+                    Celda[5].Value.ToString(),
+                    Celda[1].Value.ToString(),
+                    Celda[2].Value.ToString()
+                );
+                Close();
+                return;
+            }
+            EquiposCaller.CapturarMiembro(
+                    Celda[0].Value.ToString(),
+                    Celda[3].Value.ToString(),
+                    Celda[5].Value.ToString(),
+                    Celda[1].Value.ToString(),
+                    Celda[2].Value.ToString()
+                );
+            Close();
         }
 
         private void BuscarMiembros_Load(object sender, EventArgs e)

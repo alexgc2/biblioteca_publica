@@ -127,6 +127,9 @@
   <data name="Actions-bookmarks-organize-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Actions-bookmarks-organize-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="off_downnearexit_apagado_abajo_6017" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\off_downnearexit_apagado_abajo_6017.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="add_icon-icons.com_74429" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\add_icon-icons.com_74429.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,8 +139,8 @@
   <data name="sign-question-icon_34359" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sign-question-icon_34359.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="computer_pc_10894" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\computer_pc_10894.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="computer_pc_108941" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\computer_pc_108941.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="new_add_user_info_167061" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new_add_user_info_167061.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,8 +151,8 @@
   <data name="mimetypes_addressbookoffice_384" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mimetypes_addressbookoffice_384.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="contactcard_contactcard_tarjetadecontacto_4815" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\contactcard_contactcard_tarjetadecontacto_4815.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="users_clients_group_16774" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\users_clients_group_16774.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="configura_info_user_16714" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\configura_info_user_16714.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,8 +199,8 @@
   <data name="twitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\twitter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Instagram-grey" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Instagram-grey.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="events_rooms1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\events_rooms1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="new_page_document_16676" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new_page_document_16676.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,11 +208,14 @@
   <data name="find_search_card_user_16713" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\find_search_card_user_16713.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="add_pc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add_pc1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="configura_info_user_167141" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\configura_info_user_167141.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Google_Play_Books_icon-icons.com_75718 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Google_Play_Books_icon-icons.com_75718 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="contactcard_contactcard_tarjetadecontacto_4815" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\contactcard_contactcard_tarjetadecontacto_4815.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Facebook Icono" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Facebook Icono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -232,22 +238,28 @@
   <data name="configura_book1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\configura_book1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="new_add_user_16734" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new_add_user_16734.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="undoarrow_undo_1534" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\undoarrow_undo_1534.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="off_downnearexit_apagado_abajo_6017" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\off_downnearexit_apagado_abajo_6017.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Instagram-grey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Instagram-grey.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="dollar_money_17872" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dollar_money_17872.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="new_add_user_16734" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\new_add_user_16734.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Google_Play_Books_icon-icons.com_75718 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Google_Play_Books_icon-icons.com_75718 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="computer_pc_10894" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\computer_pc_10894.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Search_find_locate_1542" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Search_find_locate_1542.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="users_clients_group_16774" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\users_clients_group_16774.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="add_sala" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add_sala1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

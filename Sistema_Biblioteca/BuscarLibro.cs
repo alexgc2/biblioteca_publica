@@ -12,10 +12,10 @@ namespace Sistema_Biblioteca
 {
     public partial class BuscarLibro : Form
     {
-        RegistroPrestamos Caller;
+        RegistroPrestamosLibros Caller;
         Conexion ObjQueries = new Conexion();
         DataGridViewCellCollection Row;
-        public BuscarLibro(RegistroPrestamos Caller)
+        public BuscarLibro(RegistroPrestamosLibros Caller)
         {
             InitializeComponent();
             this.Caller = Caller;
@@ -23,13 +23,13 @@ namespace Sistema_Biblioteca
 
         private void BuscarLibro_Load(object sender, EventArgs e)
         {
-            dgvLibros.DataSource =
+            dgvEquipos.DataSource =
                 ObjQueries.ConsultarLibros(txtFiltro.Text).Tables["LIBROS"];
         }
 
         private void dgvLibros_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Row = dgvLibros.CurrentRow.Cells;
+            Row = dgvEquipos.CurrentRow.Cells;
 
             Caller.CapturarLibro(
                 Row[1].Value.ToString(),

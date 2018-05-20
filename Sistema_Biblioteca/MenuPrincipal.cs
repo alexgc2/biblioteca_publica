@@ -41,7 +41,7 @@ namespace Sistema_Biblioteca
 
         private void btnPrestamos_Click(object sender, EventArgs e)
         {
-            RegistroPrestamos RP = new RegistroPrestamos(EmpleadoActual);
+            RegistroPrestamosLibros RP = new RegistroPrestamosLibros(EmpleadoActual);
             RP.TopLevel = false;
             RP.Parent = pVentanas;
             RP.Show();
@@ -66,12 +66,18 @@ namespace Sistema_Biblioteca
 
         private void btnComputadoras_Click(object sender, EventArgs e)
         {
-
+            RegistroPrestamoEquipos RPE = new RegistroPrestamoEquipos(EmpleadoActual);
+            RPE.TopLevel = false;
+            RPE.Parent = pVentanas;
+            RPE.Show();
         }
 
         private void btnSalas_Click(object sender, EventArgs e)
         {
-
+            RegistroPrestamoSalas RPS = new RegistroPrestamoSalas();
+            RPS.TopLevel = false;
+            RPS.Parent = pVentanas;
+            RPS.Show();
         }
 
         private void pPrincipal_Paint(object sender, PaintEventArgs e)
