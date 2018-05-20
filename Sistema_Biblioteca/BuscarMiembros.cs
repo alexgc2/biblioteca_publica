@@ -15,6 +15,7 @@ namespace Sistema_Biblioteca
         Conexion ObjQueries = new Conexion();
         RegistroPrestamosLibros LibrosCaller;
         RegistroPrestamoEquipos EquiposCaller;
+        RegistroPrestamoSalas SalasCaller;
         DataGridViewCellCollection Celda;
         public BuscarMiembros(RegistroPrestamosLibros Caller)
         {
@@ -25,6 +26,11 @@ namespace Sistema_Biblioteca
         {
             InitializeComponent();
             EquiposCaller = Caller;
+        }
+        public BuscarMiembros(RegistroPrestamoSalas Caller)
+        {
+            InitializeComponent();
+            SalasCaller = Caller;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -49,16 +55,25 @@ namespace Sistema_Biblioteca
                     Celda[1].Value.ToString(),
                     Celda[2].Value.ToString()
                 );
-                Close();
-                return;
             }
-            EquiposCaller.CapturarMiembro(
+            else if (EquiposCaller != null)
+            {
+                EquiposCaller.CapturarMiembro(
+                        Celda[0].Value.ToString(),
+                        Celda[3].Value.ToString(),
+                        Celda[5].Value.ToString(),
+                        Celda[1].Value.ToString(),
+                        Celda[2].Value.ToString()
+                    );
+            }
+            else if (SalasCaller != null)
+            {
+                SalasCaller.CapturarMiembro(
                     Celda[0].Value.ToString(),
-                    Celda[3].Value.ToString(),
-                    Celda[5].Value.ToString(),
-                    Celda[1].Value.ToString(),
-                    Celda[2].Value.ToString()
+                    Celda[1].Value.ToString() + " "+ Celda[2].Value.ToString()
                 );
+
+            }
             Close();
         }
 

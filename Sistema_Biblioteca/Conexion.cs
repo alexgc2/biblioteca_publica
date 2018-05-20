@@ -75,6 +75,30 @@ namespace Sistema_Biblioteca
             return salida;
         }
 
+        public string RegistrarPrestamoSalas(string id_sala, string id_empleado, string id_miembro_encargado,
+            string nombre_evento, string fecha_evento, string duracion, string num_asistentes)
+        {
+            string salida = "OK";
+            try
+            {
+                cn.Open();
+                cmd = new SqlCommand(String.Format("insert into prestamo_salas(id_sala, id_empleado, id_miembro_encargado," +
+                    " nombre_evento, fecha_evento, duracion, num_asistentes)" +
+                    "values({0},{1},{2},'{3}','{4}', '{5}', '{6}')", 
+                    id_sala, id_empleado, id_miembro_encargado, nombre_evento, fecha_evento, duracion, num_asistentes)
+                    , cn);
+                cmd.ExecuteNonQuery();
+                cn.Close();
+            }
+
+            catch (Exception ex)
+            {
+                salida = "No se conecto: " + ex.ToString();
+                cn.Close();
+            }
+            return salida;
+        }
+
         public string agregar_empleado(string nombre, string apellidos, string direccion, string contraseña, 
             string fecha_nacimiento, string sexo, string telefono)
         {

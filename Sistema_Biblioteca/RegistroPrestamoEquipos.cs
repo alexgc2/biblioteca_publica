@@ -92,7 +92,14 @@ namespace Sistema_Biblioteca
             }
 
             MessageBox.Show("Se realizó el prestamo correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //clean shit
+            LimpiarInterfaz();
+        }
+
+        internal void LimpiarInterfaz() {
+            txtIDM.Text = ""; txtIDC.Text = "";
+            txtOcupacion.Text = ""; txtTipo.Text = ""; txtNombre.Text = ""; txtApellidos.Text = "";
+            txtTipoC.Text = ""; txtProveedorC.Text = "";
+            dtpHoraEntrega.Value = DateTime.Now;
         }
         
     }

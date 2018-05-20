@@ -45,14 +45,14 @@
             this.ddNoSala = new Bunifu.Framework.UI.BunifuDropdown();
             this.lblRyCS = new System.Windows.Forms.Label();
             this.txtID = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.ID_SALAS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NUM_SALA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MAX_PERSONAS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TIPO_EVENTOS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSalir = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnAgregar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pbConsultaEmpl = new System.Windows.Forms.PictureBox();
             this.btnGuardar = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.ID_SALAS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NUM_SALA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MAX_PERSONAS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TIPO_EVENTOS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgSalas)).BeginInit();
             this.gbTipoS.SuspendLayout();
             this.gbNSala.SuspendLayout();
@@ -166,7 +166,7 @@
             // 
             // cbEditar
             // 
-            this.cbEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(162)))), ((int)(((byte)(255)))));
+            this.cbEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
             this.cbEditar.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
             this.cbEditar.Checked = false;
             this.cbEditar.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(162)))), ((int)(((byte)(255)))));
@@ -285,38 +285,6 @@
             this.txtID.TabIndex = 202;
             this.txtID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // ID_SALAS
-            // 
-            this.ID_SALAS.DataPropertyName = "ID_SALAS";
-            this.ID_SALAS.HeaderText = "ID Sala";
-            this.ID_SALAS.Name = "ID_SALAS";
-            this.ID_SALAS.ReadOnly = true;
-            this.ID_SALAS.Width = 69;
-            // 
-            // NUM_SALA
-            // 
-            this.NUM_SALA.DataPropertyName = "NUM_SALA";
-            this.NUM_SALA.HeaderText = "No. Sala";
-            this.NUM_SALA.Name = "NUM_SALA";
-            this.NUM_SALA.ReadOnly = true;
-            this.NUM_SALA.Width = 76;
-            // 
-            // MAX_PERSONAS
-            // 
-            this.MAX_PERSONAS.DataPropertyName = "MAX_PERSONAS";
-            this.MAX_PERSONAS.HeaderText = "Max. Personas";
-            this.MAX_PERSONAS.Name = "MAX_PERSONAS";
-            this.MAX_PERSONAS.ReadOnly = true;
-            this.MAX_PERSONAS.Width = 109;
-            // 
-            // TIPO_EVENTOS
-            // 
-            this.TIPO_EVENTOS.DataPropertyName = "TIPO_EVENTOS";
-            this.TIPO_EVENTOS.HeaderText = "Tipo Sala";
-            this.TIPO_EVENTOS.Name = "TIPO_EVENTOS";
-            this.TIPO_EVENTOS.ReadOnly = true;
-            this.TIPO_EVENTOS.Width = 80;
-            // 
             // btnSalir
             // 
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -397,6 +365,38 @@
             this.btnGuardar.TabIndex = 211;
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // ID_SALAS
+            // 
+            this.ID_SALAS.DataPropertyName = "ID_SALAS";
+            this.ID_SALAS.HeaderText = "ID Sala";
+            this.ID_SALAS.Name = "ID_SALAS";
+            this.ID_SALAS.ReadOnly = true;
+            this.ID_SALAS.Width = 69;
+            // 
+            // NUM_SALA
+            // 
+            this.NUM_SALA.DataPropertyName = "NUM_SALA";
+            this.NUM_SALA.HeaderText = "No. Sala";
+            this.NUM_SALA.Name = "NUM_SALA";
+            this.NUM_SALA.ReadOnly = true;
+            this.NUM_SALA.Width = 76;
+            // 
+            // MAX_PERSONAS
+            // 
+            this.MAX_PERSONAS.DataPropertyName = "MAX_PERSONAS";
+            this.MAX_PERSONAS.HeaderText = "Max. Personas";
+            this.MAX_PERSONAS.Name = "MAX_PERSONAS";
+            this.MAX_PERSONAS.ReadOnly = true;
+            this.MAX_PERSONAS.Width = 109;
+            // 
+            // TIPO_EVENTOS
+            // 
+            this.TIPO_EVENTOS.DataPropertyName = "TIPO_EVENTOS";
+            this.TIPO_EVENTOS.HeaderText = "Tipo Sala";
+            this.TIPO_EVENTOS.Name = "TIPO_EVENTOS";
+            this.TIPO_EVENTOS.ReadOnly = true;
+            this.TIPO_EVENTOS.Width = 80;
             // 
             // ConsultaSalas
             // 

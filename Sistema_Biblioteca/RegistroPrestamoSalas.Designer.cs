@@ -30,12 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroPrestamoSalas));
             this.pContent = new System.Windows.Forms.Panel();
-            this.gbPrestamista = new System.Windows.Forms.GroupBox();
-            this.txtNoAsis = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.gbxInfoEvento = new System.Windows.Forms.GroupBox();
             this.txtNombreE = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtNoAsis = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtDuracion = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.bunifuMaterialTextbox3 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtNombre = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.gbPrestamista = new System.Windows.Forms.GroupBox();
+            this.btnBuscarMiembro = new Bunifu.Framework.UI.BunifuImageButton();
+            this.txtNombreM = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtIDM = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.gbFecha = new System.Windows.Forms.GroupBox();
             this.dtFecha = new Bunifu.Framework.UI.BunifuDatepicker();
             this.lblRegistro = new System.Windows.Forms.Label();
@@ -51,7 +53,9 @@
             this.txtIDE = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.pbLibro = new System.Windows.Forms.PictureBox();
             this.pContent.SuspendLayout();
+            this.gbxInfoEvento.SuspendLayout();
             this.gbPrestamista.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBuscarMiembro)).BeginInit();
             this.gbFecha.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
             this.gbSala.SuspendLayout();
@@ -64,58 +68,37 @@
             // 
             this.pContent.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pContent.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pContent.Controls.Add(this.gbxInfoEvento);
             this.pContent.Controls.Add(this.gbPrestamista);
-            this.pContent.Controls.Add(this.gbFecha);
             this.pContent.Controls.Add(this.lblRegistro);
             this.pContent.Controls.Add(this.btnSalir);
             this.pContent.Controls.Add(this.btnAgregarLibro);
             this.pContent.Controls.Add(this.gbSala);
             this.pContent.Controls.Add(this.gbEmp);
             this.pContent.Controls.Add(this.pbLibro);
+            this.pContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pContent.Location = new System.Drawing.Point(0, 0);
             this.pContent.Name = "pContent";
-            this.pContent.Size = new System.Drawing.Size(655, 468);
+            this.pContent.Size = new System.Drawing.Size(633, 458);
             this.pContent.TabIndex = 106;
             // 
-            // gbPrestamista
+            // gbxInfoEvento
             // 
-            this.gbPrestamista.Controls.Add(this.txtNoAsis);
-            this.gbPrestamista.Controls.Add(this.txtNombreE);
-            this.gbPrestamista.Controls.Add(this.txtDuracion);
-            this.gbPrestamista.Controls.Add(this.bunifuMaterialTextbox3);
-            this.gbPrestamista.Controls.Add(this.txtNombre);
-            this.gbPrestamista.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbPrestamista.Location = new System.Drawing.Point(42, 194);
-            this.gbPrestamista.Name = "gbPrestamista";
-            this.gbPrestamista.Size = new System.Drawing.Size(580, 130);
-            this.gbPrestamista.TabIndex = 196;
-            this.gbPrestamista.TabStop = false;
-            this.gbPrestamista.Text = "Prestamista";
-            // 
-            // txtNoAsis
-            // 
-            this.txtNoAsis.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNoAsis.Enabled = false;
-            this.txtNoAsis.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtNoAsis.ForeColor = System.Drawing.Color.Black;
-            this.txtNoAsis.HintForeColor = System.Drawing.Color.Gray;
-            this.txtNoAsis.HintText = "No. Asistentes";
-            this.txtNoAsis.isPassword = false;
-            this.txtNoAsis.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(162)))), ((int)(((byte)(255)))));
-            this.txtNoAsis.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtNoAsis.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(162)))), ((int)(((byte)(255)))));
-            this.txtNoAsis.LineThickness = 3;
-            this.txtNoAsis.Location = new System.Drawing.Point(449, 82);
-            this.txtNoAsis.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNoAsis.Name = "txtNoAsis";
-            this.txtNoAsis.Size = new System.Drawing.Size(104, 31);
-            this.txtNoAsis.TabIndex = 197;
-            this.txtNoAsis.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gbxInfoEvento.Controls.Add(this.txtNombreE);
+            this.gbxInfoEvento.Controls.Add(this.txtNoAsis);
+            this.gbxInfoEvento.Controls.Add(this.gbFecha);
+            this.gbxInfoEvento.Controls.Add(this.txtDuracion);
+            this.gbxInfoEvento.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbxInfoEvento.Location = new System.Drawing.Point(33, 203);
+            this.gbxInfoEvento.Name = "gbxInfoEvento";
+            this.gbxInfoEvento.Size = new System.Drawing.Size(580, 123);
+            this.gbxInfoEvento.TabIndex = 198;
+            this.gbxInfoEvento.TabStop = false;
+            this.gbxInfoEvento.Text = "Información del Evento";
             // 
             // txtNombreE
             // 
             this.txtNombreE.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNombreE.Enabled = false;
             this.txtNombreE.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtNombreE.ForeColor = System.Drawing.Color.Black;
             this.txtNombreE.HintForeColor = System.Drawing.Color.Gray;
@@ -125,17 +108,35 @@
             this.txtNombreE.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtNombreE.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(162)))), ((int)(((byte)(255)))));
             this.txtNombreE.LineThickness = 3;
-            this.txtNombreE.Location = new System.Drawing.Point(16, 82);
+            this.txtNombreE.Location = new System.Drawing.Point(17, 22);
             this.txtNombreE.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreE.Name = "txtNombreE";
             this.txtNombreE.Size = new System.Drawing.Size(276, 31);
             this.txtNombreE.TabIndex = 196;
             this.txtNombreE.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // txtNoAsis
+            // 
+            this.txtNoAsis.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNoAsis.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtNoAsis.ForeColor = System.Drawing.Color.Black;
+            this.txtNoAsis.HintForeColor = System.Drawing.Color.Gray;
+            this.txtNoAsis.HintText = "No. Asistentes";
+            this.txtNoAsis.isPassword = false;
+            this.txtNoAsis.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(162)))), ((int)(((byte)(255)))));
+            this.txtNoAsis.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtNoAsis.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(162)))), ((int)(((byte)(255)))));
+            this.txtNoAsis.LineThickness = 3;
+            this.txtNoAsis.Location = new System.Drawing.Point(36, 75);
+            this.txtNoAsis.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNoAsis.Name = "txtNoAsis";
+            this.txtNoAsis.Size = new System.Drawing.Size(104, 31);
+            this.txtNoAsis.TabIndex = 197;
+            this.txtNoAsis.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // txtDuracion
             // 
             this.txtDuracion.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDuracion.Enabled = false;
             this.txtDuracion.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtDuracion.ForeColor = System.Drawing.Color.Black;
             this.txtDuracion.HintForeColor = System.Drawing.Color.Gray;
@@ -145,57 +146,85 @@
             this.txtDuracion.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtDuracion.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(162)))), ((int)(((byte)(255)))));
             this.txtDuracion.LineThickness = 3;
-            this.txtDuracion.Location = new System.Drawing.Point(306, 82);
+            this.txtDuracion.Location = new System.Drawing.Point(164, 75);
             this.txtDuracion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDuracion.Name = "txtDuracion";
             this.txtDuracion.Size = new System.Drawing.Size(102, 31);
             this.txtDuracion.TabIndex = 195;
             this.txtDuracion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // bunifuMaterialTextbox3
+            // gbPrestamista
             // 
-            this.bunifuMaterialTextbox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox3.ForeColor = System.Drawing.Color.Black;
-            this.bunifuMaterialTextbox3.HintForeColor = System.Drawing.Color.Gray;
-            this.bunifuMaterialTextbox3.HintText = "ID";
-            this.bunifuMaterialTextbox3.isPassword = false;
-            this.bunifuMaterialTextbox3.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(162)))), ((int)(((byte)(255)))));
-            this.bunifuMaterialTextbox3.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMaterialTextbox3.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(162)))), ((int)(((byte)(255)))));
-            this.bunifuMaterialTextbox3.LineThickness = 3;
-            this.bunifuMaterialTextbox3.Location = new System.Drawing.Point(26, 28);
-            this.bunifuMaterialTextbox3.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox3.Name = "bunifuMaterialTextbox3";
-            this.bunifuMaterialTextbox3.Size = new System.Drawing.Size(81, 31);
-            this.bunifuMaterialTextbox3.TabIndex = 194;
-            this.bunifuMaterialTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gbPrestamista.Controls.Add(this.btnBuscarMiembro);
+            this.gbPrestamista.Controls.Add(this.txtNombreM);
+            this.gbPrestamista.Controls.Add(this.txtIDM);
+            this.gbPrestamista.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbPrestamista.Location = new System.Drawing.Point(33, 128);
+            this.gbPrestamista.Name = "gbPrestamista";
+            this.gbPrestamista.Size = new System.Drawing.Size(413, 69);
+            this.gbPrestamista.TabIndex = 196;
+            this.gbPrestamista.TabStop = false;
+            this.gbPrestamista.Text = "Miembro Responsable";
             // 
-            // txtNombre
+            // btnBuscarMiembro
             // 
-            this.txtNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNombre.Enabled = false;
-            this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtNombre.ForeColor = System.Drawing.Color.Black;
-            this.txtNombre.HintForeColor = System.Drawing.Color.Gray;
-            this.txtNombre.HintText = "Nombre Encargado";
-            this.txtNombre.isPassword = false;
-            this.txtNombre.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(162)))), ((int)(((byte)(255)))));
-            this.txtNombre.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtNombre.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(162)))), ((int)(((byte)(255)))));
-            this.txtNombre.LineThickness = 3;
-            this.txtNombre.Location = new System.Drawing.Point(115, 28);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(360, 31);
-            this.txtNombre.TabIndex = 193;
-            this.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnBuscarMiembro.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuscarMiembro.Image = global::Sistema_Biblioteca.Properties.Resources.Search_find_locate_15421;
+            this.btnBuscarMiembro.ImageActive = null;
+            this.btnBuscarMiembro.Location = new System.Drawing.Point(362, 22);
+            this.btnBuscarMiembro.Name = "btnBuscarMiembro";
+            this.btnBuscarMiembro.Size = new System.Drawing.Size(35, 35);
+            this.btnBuscarMiembro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnBuscarMiembro.TabIndex = 195;
+            this.btnBuscarMiembro.TabStop = false;
+            this.btnBuscarMiembro.Zoom = 10;
+            this.btnBuscarMiembro.Click += new System.EventHandler(this.btnBuscarMiembro_Click);
+            // 
+            // txtNombreM
+            // 
+            this.txtNombreM.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNombreM.Enabled = false;
+            this.txtNombreM.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtNombreM.ForeColor = System.Drawing.Color.Black;
+            this.txtNombreM.HintForeColor = System.Drawing.Color.Gray;
+            this.txtNombreM.HintText = "Nombre Encargado";
+            this.txtNombreM.isPassword = false;
+            this.txtNombreM.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(162)))), ((int)(((byte)(255)))));
+            this.txtNombreM.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtNombreM.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(162)))), ((int)(((byte)(255)))));
+            this.txtNombreM.LineThickness = 3;
+            this.txtNombreM.Location = new System.Drawing.Point(74, 22);
+            this.txtNombreM.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombreM.Name = "txtNombreM";
+            this.txtNombreM.Size = new System.Drawing.Size(281, 31);
+            this.txtNombreM.TabIndex = 193;
+            this.txtNombreM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtIDM
+            // 
+            this.txtIDM.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtIDM.Enabled = false;
+            this.txtIDM.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtIDM.ForeColor = System.Drawing.Color.Black;
+            this.txtIDM.HintForeColor = System.Drawing.Color.Gray;
+            this.txtIDM.HintText = "ID";
+            this.txtIDM.isPassword = false;
+            this.txtIDM.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(162)))), ((int)(((byte)(255)))));
+            this.txtIDM.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtIDM.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(162)))), ((int)(((byte)(255)))));
+            this.txtIDM.LineThickness = 3;
+            this.txtIDM.Location = new System.Drawing.Point(17, 22);
+            this.txtIDM.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIDM.Name = "txtIDM";
+            this.txtIDM.Size = new System.Drawing.Size(49, 31);
+            this.txtIDM.TabIndex = 194;
+            this.txtIDM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // gbFecha
             // 
             this.gbFecha.Controls.Add(this.dtFecha);
             this.gbFecha.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbFecha.Location = new System.Drawing.Point(222, 120);
+            this.gbFecha.Location = new System.Drawing.Point(323, 33);
             this.gbFecha.Name = "gbFecha";
             this.gbFecha.Size = new System.Drawing.Size(219, 62);
             this.gbFecha.TabIndex = 162;
@@ -212,7 +241,7 @@
             this.dtFecha.Location = new System.Drawing.Point(6, 20);
             this.dtFecha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtFecha.Name = "dtFecha";
-            this.dtFecha.Size = new System.Drawing.Size(207, 31);
+            this.dtFecha.Size = new System.Drawing.Size(206, 31);
             this.dtFecha.TabIndex = 0;
             this.dtFecha.Value = new System.DateTime(2018, 4, 22, 4, 34, 16, 910);
             // 
@@ -234,7 +263,7 @@
             this.btnSalir.BackColor = System.Drawing.Color.Transparent;
             this.btnSalir.Image = global::Sistema_Biblioteca.Properties.Resources.undoarrow_undo_1534;
             this.btnSalir.ImageActive = null;
-            this.btnSalir.Location = new System.Drawing.Point(618, 3);
+            this.btnSalir.Location = new System.Drawing.Point(596, 3);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(30, 33);
             this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -262,12 +291,13 @@
             this.btnAgregarLibro.IdleFillColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAgregarLibro.IdleForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(162)))), ((int)(((byte)(255)))));
             this.btnAgregarLibro.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(162)))), ((int)(((byte)(255)))));
-            this.btnAgregarLibro.Location = new System.Drawing.Point(480, 386);
+            this.btnAgregarLibro.Location = new System.Drawing.Point(455, 365);
             this.btnAgregarLibro.Margin = new System.Windows.Forms.Padding(5);
             this.btnAgregarLibro.Name = "btnAgregarLibro";
             this.btnAgregarLibro.Size = new System.Drawing.Size(100, 39);
             this.btnAgregarLibro.TabIndex = 130;
             this.btnAgregarLibro.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAgregarLibro.Click += new System.EventHandler(this.btnAgregarLibro_Click);
             // 
             // gbSala
             // 
@@ -277,7 +307,7 @@
             this.gbSala.Controls.Add(this.txtTipoSala);
             this.gbSala.Controls.Add(this.btnBuscarLibro);
             this.gbSala.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbSala.Location = new System.Drawing.Point(42, 346);
+            this.gbSala.Location = new System.Drawing.Point(33, 332);
             this.gbSala.Name = "gbSala";
             this.gbSala.Size = new System.Drawing.Size(355, 106);
             this.gbSala.TabIndex = 129;
@@ -327,6 +357,7 @@
             // txtIDS
             // 
             this.txtIDS.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtIDS.Enabled = false;
             this.txtIDS.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtIDS.ForeColor = System.Drawing.Color.Black;
             this.txtIDS.HintForeColor = System.Drawing.Color.Gray;
@@ -368,7 +399,7 @@
             this.btnBuscarLibro.BackColor = System.Drawing.Color.Transparent;
             this.btnBuscarLibro.Image = global::Sistema_Biblioteca.Properties.Resources.Search_find_locate_15421;
             this.btnBuscarLibro.ImageActive = null;
-            this.btnBuscarLibro.Location = new System.Drawing.Point(306, 18);
+            this.btnBuscarLibro.Location = new System.Drawing.Point(286, 18);
             this.btnBuscarLibro.Name = "btnBuscarLibro";
             this.btnBuscarLibro.Size = new System.Drawing.Size(35, 35);
             this.btnBuscarLibro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -381,7 +412,7 @@
             // 
             this.gbEmp.Controls.Add(this.txtIDE);
             this.gbEmp.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbEmp.Location = new System.Drawing.Point(77, 120);
+            this.gbEmp.Location = new System.Drawing.Point(33, 61);
             this.gbEmp.Name = "gbEmp";
             this.gbEmp.Size = new System.Drawing.Size(104, 62);
             this.gbEmp.TabIndex = 125;
@@ -413,7 +444,7 @@
             this.pbLibro.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbLibro.BackgroundImage = global::Sistema_Biblioteca.Properties.Resources.add_sala;
             this.pbLibro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbLibro.Location = new System.Drawing.Point(480, 51);
+            this.pbLibro.Location = new System.Drawing.Point(473, 50);
             this.pbLibro.Name = "pbLibro";
             this.pbLibro.Size = new System.Drawing.Size(131, 137);
             this.pbLibro.TabIndex = 124;
@@ -424,7 +455,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(655, 515);
+            this.ClientSize = new System.Drawing.Size(633, 458);
             this.Controls.Add(this.pContent);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RegistroPrestamoSalas";
@@ -432,7 +463,9 @@
             this.Text = "RegistroPrestamoSalas";
             this.pContent.ResumeLayout(false);
             this.pContent.PerformLayout();
+            this.gbxInfoEvento.ResumeLayout(false);
             this.gbPrestamista.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnBuscarMiembro)).EndInit();
             this.gbFecha.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
             this.gbSala.ResumeLayout(false);
@@ -446,12 +479,6 @@
         #endregion
 
         private System.Windows.Forms.Panel pContent;
-        private System.Windows.Forms.GroupBox gbPrestamista;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtNoAsis;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtNombreE;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtDuracion;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox3;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtNombre;
         private System.Windows.Forms.GroupBox gbFecha;
         private Bunifu.Framework.UI.BunifuDatepicker dtFecha;
         private System.Windows.Forms.Label lblRegistro;
@@ -466,5 +493,13 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtIDE;
         private System.Windows.Forms.PictureBox pbLibro;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtCapacidadMaxima;
+        private System.Windows.Forms.GroupBox gbPrestamista;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtNoAsis;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtNombreE;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtDuracion;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtIDM;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtNombreM;
+        private System.Windows.Forms.GroupBox gbxInfoEvento;
+        private Bunifu.Framework.UI.BunifuImageButton btnBuscarMiembro;
     }
 }
