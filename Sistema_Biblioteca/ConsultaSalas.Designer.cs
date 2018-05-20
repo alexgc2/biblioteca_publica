@@ -35,13 +35,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultaSalas));
             this.dgSalas = new System.Windows.Forms.DataGridView();
-            this.ID_SALAS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NUM_SALA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MAX_PERSONAS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TIPO_EVENTOS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gbstatus = new System.Windows.Forms.GroupBox();
-            this.ddstatus = new Bunifu.Framework.UI.BunifuDropdown();
             this.gbTipoS = new System.Windows.Forms.GroupBox();
             this.ddTipoSala = new Bunifu.Framework.UI.BunifuDropdown();
             this.lblEditar = new System.Windows.Forms.Label();
@@ -52,12 +45,15 @@
             this.ddNoSala = new Bunifu.Framework.UI.BunifuDropdown();
             this.lblRyCS = new System.Windows.Forms.Label();
             this.txtID = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.ID_SALAS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NUM_SALA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MAX_PERSONAS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TIPO_EVENTOS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSalir = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnAgregar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pbConsultaEmpl = new System.Windows.Forms.PictureBox();
             this.btnGuardar = new Bunifu.Framework.UI.BunifuThinButton2();
             ((System.ComponentModel.ISupportInitialize)(this.dgSalas)).BeginInit();
-            this.gbstatus.SuspendLayout();
             this.gbTipoS.SuspendLayout();
             this.gbNSala.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
@@ -90,8 +86,7 @@
             this.ID_SALAS,
             this.NUM_SALA,
             this.MAX_PERSONAS,
-            this.TIPO_EVENTOS,
-            this.Estatus});
+            this.TIPO_EVENTOS});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -102,7 +97,7 @@
             this.dgSalas.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgSalas.EnableHeadersVisualStyles = false;
             this.dgSalas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(162)))), ((int)(((byte)(255)))));
-            this.dgSalas.Location = new System.Drawing.Point(80, 333);
+            this.dgSalas.Location = new System.Drawing.Point(80, 286);
             this.dgSalas.Name = "dgSalas";
             this.dgSalas.ReadOnly = true;
             this.dgSalas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -123,78 +118,9 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
             this.dgSalas.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgSalas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgSalas.Size = new System.Drawing.Size(480, 126);
+            this.dgSalas.Size = new System.Drawing.Size(341, 216);
             this.dgSalas.TabIndex = 213;
             this.dgSalas.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgSalas_CellContentDoubleClick);
-            // 
-            // ID_SALAS
-            // 
-            this.ID_SALAS.DataPropertyName = "ID_SALAS";
-            this.ID_SALAS.HeaderText = "ID Sala";
-            this.ID_SALAS.Name = "ID_SALAS";
-            this.ID_SALAS.ReadOnly = true;
-            this.ID_SALAS.Width = 69;
-            // 
-            // NUM_SALA
-            // 
-            this.NUM_SALA.DataPropertyName = "NUM_SALA";
-            this.NUM_SALA.HeaderText = "No. Sala";
-            this.NUM_SALA.Name = "NUM_SALA";
-            this.NUM_SALA.ReadOnly = true;
-            this.NUM_SALA.Width = 76;
-            // 
-            // MAX_PERSONAS
-            // 
-            this.MAX_PERSONAS.DataPropertyName = "MAX_PERSONAS";
-            this.MAX_PERSONAS.HeaderText = "Max. Personas";
-            this.MAX_PERSONAS.Name = "MAX_PERSONAS";
-            this.MAX_PERSONAS.ReadOnly = true;
-            this.MAX_PERSONAS.Width = 109;
-            // 
-            // TIPO_EVENTOS
-            // 
-            this.TIPO_EVENTOS.DataPropertyName = "TIPO_EVENTOS";
-            this.TIPO_EVENTOS.HeaderText = "Tipo Sala";
-            this.TIPO_EVENTOS.Name = "TIPO_EVENTOS";
-            this.TIPO_EVENTOS.ReadOnly = true;
-            this.TIPO_EVENTOS.Width = 80;
-            // 
-            // Estatus
-            // 
-            this.Estatus.DataPropertyName = "Estatus";
-            this.Estatus.HeaderText = "Estatus";
-            this.Estatus.Name = "Estatus";
-            this.Estatus.ReadOnly = true;
-            this.Estatus.Width = 68;
-            // 
-            // gbstatus
-            // 
-            this.gbstatus.Controls.Add(this.ddstatus);
-            this.gbstatus.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbstatus.Location = new System.Drawing.Point(283, 132);
-            this.gbstatus.Name = "gbstatus";
-            this.gbstatus.Size = new System.Drawing.Size(173, 62);
-            this.gbstatus.TabIndex = 212;
-            this.gbstatus.TabStop = false;
-            this.gbstatus.Text = "Estatus";
-            // 
-            // ddstatus
-            // 
-            this.ddstatus.BackColor = System.Drawing.Color.Transparent;
-            this.ddstatus.BorderRadius = 3;
-            this.ddstatus.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ddstatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ddstatus.Items = new string[] {
-        "Disponible",
-        "Ocupada"};
-            this.ddstatus.Location = new System.Drawing.Point(6, 22);
-            this.ddstatus.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ddstatus.Name = "ddstatus";
-            this.ddstatus.NomalColor = System.Drawing.Color.White;
-            this.ddstatus.onHoverColor = System.Drawing.SystemColors.ControlLight;
-            this.ddstatus.selectedIndex = -1;
-            this.ddstatus.Size = new System.Drawing.Size(161, 31);
-            this.ddstatus.TabIndex = 168;
             // 
             // gbTipoS
             // 
@@ -232,7 +158,7 @@
             this.lblEditar.AutoSize = true;
             this.lblEditar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblEditar.Location = new System.Drawing.Point(529, 218);
+            this.lblEditar.Location = new System.Drawing.Point(364, 167);
             this.lblEditar.Name = "lblEditar";
             this.lblEditar.Size = new System.Drawing.Size(45, 17);
             this.lblEditar.TabIndex = 210;
@@ -240,12 +166,12 @@
             // 
             // cbEditar
             // 
-            this.cbEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.cbEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(162)))), ((int)(((byte)(255)))));
             this.cbEditar.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
             this.cbEditar.Checked = false;
             this.cbEditar.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(162)))), ((int)(((byte)(255)))));
             this.cbEditar.ForeColor = System.Drawing.Color.White;
-            this.cbEditar.Location = new System.Drawing.Point(503, 216);
+            this.cbEditar.Location = new System.Drawing.Point(338, 165);
             this.cbEditar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbEditar.Name = "cbEditar";
             this.cbEditar.Size = new System.Drawing.Size(20, 20);
@@ -311,7 +237,13 @@
             this.ddNoSala.Items = new string[] {
         "1",
         "2",
-        "3"};
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"};
             this.ddNoSala.Location = new System.Drawing.Point(6, 22);
             this.ddNoSala.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ddNoSala.Name = "ddNoSala";
@@ -352,6 +284,38 @@
             this.txtID.Size = new System.Drawing.Size(72, 31);
             this.txtID.TabIndex = 202;
             this.txtID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ID_SALAS
+            // 
+            this.ID_SALAS.DataPropertyName = "ID_SALAS";
+            this.ID_SALAS.HeaderText = "ID Sala";
+            this.ID_SALAS.Name = "ID_SALAS";
+            this.ID_SALAS.ReadOnly = true;
+            this.ID_SALAS.Width = 69;
+            // 
+            // NUM_SALA
+            // 
+            this.NUM_SALA.DataPropertyName = "NUM_SALA";
+            this.NUM_SALA.HeaderText = "No. Sala";
+            this.NUM_SALA.Name = "NUM_SALA";
+            this.NUM_SALA.ReadOnly = true;
+            this.NUM_SALA.Width = 76;
+            // 
+            // MAX_PERSONAS
+            // 
+            this.MAX_PERSONAS.DataPropertyName = "MAX_PERSONAS";
+            this.MAX_PERSONAS.HeaderText = "Max. Personas";
+            this.MAX_PERSONAS.Name = "MAX_PERSONAS";
+            this.MAX_PERSONAS.ReadOnly = true;
+            this.MAX_PERSONAS.Width = 109;
+            // 
+            // TIPO_EVENTOS
+            // 
+            this.TIPO_EVENTOS.DataPropertyName = "TIPO_EVENTOS";
+            this.TIPO_EVENTOS.HeaderText = "Tipo Sala";
+            this.TIPO_EVENTOS.Name = "TIPO_EVENTOS";
+            this.TIPO_EVENTOS.ReadOnly = true;
+            this.TIPO_EVENTOS.Width = 80;
             // 
             // btnSalir
             // 
@@ -441,7 +405,6 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(654, 514);
             this.Controls.Add(this.dgSalas);
-            this.Controls.Add(this.gbstatus);
             this.Controls.Add(this.gbTipoS);
             this.Controls.Add(this.lblEditar);
             this.Controls.Add(this.cbEditar);
@@ -461,7 +424,6 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ConsultaSalas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgSalas)).EndInit();
-            this.gbstatus.ResumeLayout(false);
             this.gbTipoS.ResumeLayout(false);
             this.gbNSala.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
@@ -474,13 +436,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgSalas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_SALAS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NUM_SALA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MAX_PERSONAS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TIPO_EVENTOS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estatus;
-        private System.Windows.Forms.GroupBox gbstatus;
-        private Bunifu.Framework.UI.BunifuDropdown ddstatus;
         private System.Windows.Forms.GroupBox gbTipoS;
         private Bunifu.Framework.UI.BunifuDropdown ddTipoSala;
         private System.Windows.Forms.Label lblEditar;
@@ -495,5 +450,9 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtID;
         private System.Windows.Forms.PictureBox pbConsultaEmpl;
         private Bunifu.Framework.UI.BunifuThinButton2 btnGuardar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_SALAS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NUM_SALA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MAX_PERSONAS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TIPO_EVENTOS;
     }
 }

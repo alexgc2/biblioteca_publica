@@ -74,7 +74,7 @@ namespace Sistema_Biblioteca
 
         private void btnSalas_Click(object sender, EventArgs e)
         {
-            RegistroPrestamoSalas RPS = new RegistroPrestamoSalas();
+            RegistroPrestamoSalas RPS = new RegistroPrestamoSalas(EmpleadoActual);
             RPS.TopLevel = false;
             RPS.Parent = pVentanas;
             RPS.Show();

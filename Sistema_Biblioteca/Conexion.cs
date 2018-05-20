@@ -518,7 +518,7 @@ namespace Sistema_Biblioteca
             try
             {
                 cn.Open();
-                cmd = new SqlCommand("insert into salas(num_sala, max_personas, tipo_eventos, ESTATUS)values(" + num_sala + "," + max_personas + ",'" + tipo_evento + "','Disponible')", cn);
+                cmd = new SqlCommand("insert into salas(num_sala, max_personas, tipo_eventos)values(" + num_sala + "," + max_personas + ",'" + tipo_evento + "')", cn);
                 cmd.ExecuteNonQuery();
                 cn.Close();
             }
@@ -530,13 +530,13 @@ namespace Sistema_Biblioteca
             return salida;
         }
 
-        public string modificar_sala(int sala, int max_personas, string tipo_evento, string status, int id)
+        public string modificar_sala(int sala, int max_personas, string tipo_evento, int id)
         {
             string salida = "Registrado Exitosamente";
             try
             {
                 cn.Open();
-                cmd = new SqlCommand("update SALAS set NUM_SALA=" + sala + ", MAX_PERSONAS=" + max_personas + ", TIPO_EVENTOS ='" + tipo_evento + "', estatus = '" + status + "' where id_salas = " + id + "", cn);
+                cmd = new SqlCommand("update SALAS set NUM_SALA=" + sala + ", MAX_PERSONAS=" + max_personas + ", TIPO_EVENTOS ='" + tipo_evento +"' where id_salas = " + id + "", cn);
                 cmd.ExecuteNonQuery();
                 cn.Close();
             }
@@ -550,7 +550,7 @@ namespace Sistema_Biblioteca
 
         public DataSet ConsultarSala(string nombre)
         {
-            query = "select ID_SALAS, NUM_SALA, MAX_PERSONAS, TIPO_EVENTOS, ESTATUS from SALAS";
+            query = "select ID_SALAS, NUM_SALA, MAX_PERSONAS, TIPO_EVENTOS from SALAS";
             if (nombre != "")
                 query += " where NUM_SALA like '%" + nombre + "%' or id_SALAS like '%" + nombre + "%'";
             cmd = new SqlCommand(query, cn);

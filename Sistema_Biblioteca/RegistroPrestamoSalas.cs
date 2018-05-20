@@ -12,9 +12,11 @@ namespace Sistema_Biblioteca
 {
     public partial class RegistroPrestamoSalas : Form
     {
-        public RegistroPrestamoSalas()
+        BuscarSala BuscarSala;
+        public RegistroPrestamoSalas(Empleado EmpleadoActivo)
         {
             InitializeComponent();
+            txtIDE.Text = EmpleadoActivo.Id;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -28,6 +30,20 @@ namespace Sistema_Biblioteca
             CS.TopLevel = false;
             CS.Parent = pContent;
             CS.Show();
+        }
+
+        internal void CapturarSala(string id_sala, string no_sala, string cap_maxima, string tipo_sala)
+        {
+            txtIDS.Text = id_sala;
+            txtNoSala.Text = no_sala;
+            txtCapacidadMaxima.Text = cap_maxima;
+            txtTipoSala.Text = tipo_sala;
+        }
+
+        private void btnBuscarLibro_Click(object sender, EventArgs e)
+        {
+            BuscarSala = new BuscarSala(this);
+            BuscarSala.Show();
         }
     }
 }

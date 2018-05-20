@@ -239,3 +239,4 @@ C:\Users\alex_\Desktop\biblioteca_publica\Sistema_Biblioteca\obj\Debug\Sistema_B
 C:\Users\alex_\Desktop\biblioteca_publica\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.RegistroPrestamoEquipos.resources
 C:\Users\alex_\Desktop\biblioteca_publica\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.BuscarEquipo.resources
 C:\Users\alex_\Desktop\biblioteca_publica\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.RegistroPrestamosLibros.resources
+C:\Users\alex_\Desktop\biblioteca_publica\Sistema_Biblioteca\obj\Debug\Sistema_Biblioteca.BuscarSala.resources

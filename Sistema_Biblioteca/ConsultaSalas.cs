@@ -22,19 +22,18 @@ namespace Sistema_Biblioteca
         {
             if (cbEditar.Checked == true)
             {
-                gbstatus.Show();
                 btnGuardar.Show();
             }
             else if (cbEditar.Checked == false)
             {
-                gbstatus.Hide();
                 btnGuardar.Hide();
             }
         }
 
         private void ConsultaSalas_Load(object sender, EventArgs e)
         {
-            
+            dgSalas.AutoGenerateColumns = false;
+            dgSalas.DataSource = c.ConsultarSala(txtBuscar.Text).Tables["SALAS"];
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -68,7 +67,6 @@ namespace Sistema_Biblioteca
             txtmaxper.Text = Convert.ToString(dgSalas.CurrentRow.Cells[2].Value);
             btnAgregar.Hide();
             btnGuardar.Show();
-            gbstatus.Show();
             cbEditar.Checked = true;
             tipo();
             txtBuscar.Text = "";
@@ -110,16 +108,7 @@ namespace Sistema_Biblioteca
             }
             #endregion
 
-            #region estatus
-            if (Convert.ToString(dgSalas.CurrentRow.Cells[4].Value) == "Disponible")
-            {
-                ddstatus.selectedIndex = 0;
-            }
-            else if (Convert.ToString(dgSalas.CurrentRow.Cells[4].Value) == "Ocupada")
-            {
-                ddstatus.selectedIndex = 1;
-            }
-            #endregion
+            
         }
 
         public void borrar()
@@ -134,9 +123,9 @@ namespace Sistema_Biblioteca
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (txtmaxper.Text.Length > 0 && ddTipoSala.selectedIndex >= 0 && ddNoSala.selectedIndex >= 0 && ddstatus.selectedIndex >= 0)
+            if (txtmaxper.Text.Length > 0 && ddTipoSala.selectedIndex >= 0 && ddNoSala.selectedIndex >= 0)
             {
-                c.modificar_sala(Convert.ToInt32(ddNoSala.selectedValue), Convert.ToInt32(txtmaxper.Text), ddTipoSala.selectedValue, ddstatus.selectedValue, Convert.ToInt32(txtID.Text));
+                c.modificar_sala(Convert.ToInt32(ddNoSala.selectedValue), Convert.ToInt32(txtmaxper.Text), ddTipoSala.selectedValue, Convert.ToInt32(txtID.Text));
                 MessageBox.Show("Guardado Correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 borrar();
             }
