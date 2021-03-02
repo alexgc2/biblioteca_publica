@@ -1,3 +1,4 @@
 ﻿# biblioteca_publica
-Sistema desarrollado para clase de metodologías ágiles
+Sistema desarrollado para Implementacion de Metodologias Agiles
+
 
